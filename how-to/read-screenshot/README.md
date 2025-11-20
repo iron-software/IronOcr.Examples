@@ -1,59 +1,74 @@
-# How to Extract Text from Screenshots with IronOCR
+# Utilizing IronOCR to Extract Text from Screenshots
 
 ***Based on <https://ironsoftware.com/how-to/read-screenshot/>***
 
 
-Extracting text from screenshots often presents challenges due to varying image dimensions and background noise. This typically hinders the efficiency of OCR technologies in decoding these images competently. Nonetheless, IronOCR addresses these difficulties by offering tailored methods like `ReadScreenShot`, which is specifically designed to handle screenshots and extract textual content with enhanced accuracy.
+Screenshots represent a convenient method for quickly sharing and capturing essential information, which you can distribute among colleagues and peers. However, extracting text from screenshots can be challenging due to the inherent noise and dimensions of these images. This often reduces the effectiveness of OCR technology when applied to screenshots.
 
-In this tutorial, we'll explore the process of using IronOCR to recognize text from screenshots, detailing the steps involved and the characteristics of the result object derived from the process.
+Nonetheless, IronOCR has addressed these limitations by introducing the `ReadScreenshot` method. This method is specifically tailored for screenshot OCR tasks and supports various common file formats.
 
-Firstly, ensure that you have installed the [IronOcr.Extension.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package.
+To employ this functionality, ensure to install the [IronOcr.Extension.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package.
 
-## How to Utilize IronOCR to Read Screenshots
+## Quick Guide: Extract Text from a Screenshot Using IronOCR
 
-The `ReadScreenShot` method embraces an `OcrInput` object for input and fine-tunes the OCR process for screenshots – an upgrade from the general `Read` method. Here’s how to implement it:
-
-- The method supports multiple languages including English, Chinese, Japanese, Korean, and the Latin alphabet.
-- The advanced scanning feature requires that the .NET Framework project is set to the x64 architecture for optimal performance.
-
-### Example Input
-
-The following image showcases various text fonts and sizes, serving as our input for this demonstration.
-
-![Input Image](https://ironsoftware.com/static-assets/ocr/how-to/read-screenshot/input.webp)
-
-### Implementation Code
+Jump right into using IronOCR's `ReadScreenshot`. Simply load your screenshot into an `OcrInput`, invoke `ReadScreenShot`, and you'll immediately gain access to the extracted text, confidence score, and detailed text regions.
 
 ```cs
+:title=Instant Screenshot Text Extraction Example
+// Creating an instance of IronTesseract
+IronTesseract ocr = new IronTesseract();
+
+// Load the screenshot image into the OcrInput
+OcrInput screenshotInput = new OcrInput();
+screenshotInput.LoadImage("screenshot.png");
+
+// Extract text from the loaded screenshot
+OcrPhotoResult extractedText = ocr.ReadScreenShot(screenshotInput);
+```
+
+This guide aims to provide a clear and concise overview of using IronOCR for screenshot text extraction, exploring various examples and exploring the properties of the result object itself.
+
+## Reading Screenshots with IronOCR
+
+Below, the steps involved in reading a screenshot using IronOCR are mapped out. The `ReadScreenshot` method has been optimized specifically for screenshots and requires an `OcrInput` object for the file input.
+
+This method supports multiple languages such as English, Chinese, Japanese, Korean, and other Latin-based alphabets. Note that using the advanced scan feature on .NET Framework mandates running your project on x64 architecture.
+
+### Sample Input
+
+Here's our example input for demonstrating the adaptability of the `ReadScreenshot` method across different text fonts and sizes.
+
+![Input](https://ironsoftware.com/static-assets/ocr/how-to/read-screenshot/input.webp)
+
+### Example Code
+
+```csharp
 using IronOcr;
 using System;
 using System.Linq;
 
-// Create OCR engine instance
+// Initialize the IronOCR engine
 var ocr = new IronTesseract();
 
-using var inputScreenshot = new OcrInput("screenshotOCR.png"); // Load the screenshot image
+// Setup the OCR input with the image path
+using var inputScreenshot = new OcrInput("screenshotOCR.png");
 
-// Execute OCR on the screenshot
+// Perform the OCR process
 OcrPhotoResult result = ocr.ReadScreenShot(inputScreenshot);
 
-// Display extracted information from the screenshot
-Console.WriteLine(result.Text);
-Console.WriteLine(result.TextRegions.First().Region.X); // X coordinate of the first text region
-Console.WriteLine(result.TextRegions.Last().Region.Width); // Width of the last text region
-Console.WriteLine(result.Confidence); // Confidence level of text recognition
+// Print out details of the extracted text
+Console.WriteLine("Extracted Text: " + result.Text);
+Console.WriteLine("First Text Region X Coordinate: " + result.TextRegions.First().Region.X);
+Console.WriteLine("Width of Last Text Region: " + result.TextRegions.Last().Region.Width);
+Console.WriteLine("OCR Confidence Level: " + result.Confidence);
 ```
 
-### Example Output
+### Output Example
 
-As delineated below, the console output effectively extracts and displays text from the provided screenshot.
+![Output](https://ironsoftware.com/static-assets/ocr/how-to/read-screenshot/output.webp)
 
-![Output Image](https://ironsoftware.com/static-assets/ocr/how-to/read-screenshot/output.webp)
+The console output clearly displays the extracted text. Here's a closer look at the properties of `OcrPhotoResult`:
 
-Further examination of the `OcrPhotoResult` properties:
-
-**Text**: This property contains the text extracted from the OCR input.
-
-**Confidence**: This `double` type property indicates the OCR accuracy on a scale where 1 is most accurate and 0 least accurate.
-
-**TextRegion**: This array consists of `TextRegion` objects, each representing a detectable text area in the image. These regions are based on the `Rectangle` class from IronOCR, specifying the coordinates, height, and width of each textual block.
+- **`Text`**: The actual text retrieved from the OCR operation.
+- **`Confidence`**: A measurement of how accurate the OCR results are, represented as a double. A confidence level of 1 indicates the highest accuracy.
+- **`TextRegion`**: This is an array containing `TextRegion` objects that define the text regions within the screenshot. Each `TextRegion` is essentially a `Rectangle` as per the IronOCR model, detailing the x and y coordinates, alongside the height and width of each textual area.

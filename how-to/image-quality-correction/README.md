@@ -1,34 +1,46 @@
-# Using Image Filters to Enhance OCR Accuracy
+# Enhancing Image Quality Using Correction Filters for OCR
 
 ***Based on <https://ironsoftware.com/how-to/image-quality-correction/>***
 
 
-Image filters are essential tools in digital image processing that enhance the quality and properties of an image to improve text recognition and extraction. In IronOcr, you have access to several useful filters such as sharpen, enhance resolution, denoise, dilate, and erode, which are crucial for preparing images for OCR by enhancing text clarity and minimizing noise and other disruptions.
+Digital image correction techniques are essential for enhancing the quality of images, particularly when preparing them for text extraction via Optical Character Recognition (OCR). IronOcr includes several effective image correction filters such as sharpening, resolution enhancement, noise reduction, dilation, and erosion.
 
-### Getting Started with IronOCR
+These filters are indispensable for pre-processing steps in OCR, as they enhance the legibility and overall quality of the text while minimizing any undesired noise and artifacts.
 
----
+### Quickstart: Using the Sharpen Filter for Enhanced Text Clarity
 
-## Example of Using the Sharpen Filter
-
-The sharpen filter boosts edge contrast, making text more defined and legible, which aids in the OCR process. To apply this filter, just use the `Sharpen` method on the `OcrImageInput` object.
+With IronOCR's `OcrImageInput`, you can quickly sharpen a blurred image using just one line of code, streamlining your preparation for high-accuracy OCR with minimal effort.
 
 ```cs
-using IronOcr;
-
-// Create a new instance of IronTesseract
-IronTesseract ocr = new IronTesseract();
-
-// Load in the image
-using var imageInput = new OcrImageInput("sample.jpg");
-// Enhance the image sharpness
-imageInput.Sharpen();
-
-// Save the sharpened image 
-imageInput.SaveAsImages("sharpened");
+// Quickly fix a blurry image
+new IronOcr.OcrImageInput("sample.png").Sharpen().SaveAsImages("output.png");
 ```
 
-You can use the `SaveAsImages` method to save the enhanced image. See the difference in the images below before and after applying the sharpen filter.
+## Illustration of the Sharpen Filter
+
+The sharpen filter boosts edge contrast, accentuating details and text clarity, which facilitates easier character recognition by OCR tools.
+
+### Applying the Sharpen Filter
+
+To employ the sharpen filter in IronOCR, call the `Sharpen` method on an `OcrImageInput` instance.
+
+```csharp
+using IronOcr;
+
+// Initialize IronTesseract OCR
+IronTesseract ocrTesseract = new IronTesseract();
+
+// Load image
+using var imageInput = new OcrImageInput("sample.jpg");
+
+// Enhance image sharpness
+imageInput.Sharpen();
+
+// Save the enhanced image
+imageInput.SaveAsImages("sharpen.jpg");
+```
+
+Here is a visual before and after comparison when the sharpen filter is applied:
 
 <div class="competitors-section__wrapper-even-1">
     <div class="competitors__card" style="width: 48%;">
@@ -43,14 +55,16 @@ You can use the `SaveAsImages` method to save the enhanced image. See the differ
 
 <hr>
 
-## Enhance Resolution Filter Example
+## Example of Applying the Resolution Enhancement Filter
 
-This filter improves the pixel density, enhancing overall sharpness and text readability, especially in lower resolution images. To apply the enhance resolution filter, use the `EnhanceResolution` method. The default DPI is 225.
+Enhance the pixel density using the `EnhanceResolution` method, improving the sharpness and clarity of images which enhances text legibility particularly in lower-resolution images.
 
-```cs
-// Enhance the image resolution
+```csharp
+// Enhancing image resolution
 imageInput.EnhanceResolution();
 ```
+
+Before and after applying the enhance resolution filter:
 
 <div class="competitors-section__wrapper-even-1">
     <div class="competitors__card" style="width: 48%;">
@@ -65,14 +79,16 @@ imageInput.EnhanceResolution();
 
 <hr>
 
-## Denoise Filter Example
+## Application of the Denoise Filter
 
-Reducing image noise is essential, as it helps eliminate background interference, enhancing the OCR's capability to discern text. Activate the `DeNoise` method to apply this filter. If you want a stronger denoising effect, pass 'true' for a 3x3 morphology.
+The denoise filter reduces image noise, crucial for isolating text from background distortion for cleaner OCR results.
 
-```cs
-// Reduce image noise
+```csharp
+// Reducing image noise
 imageInput.DeNoise();
 ```
+
+Visual comparison of denoise filter effects:
 
 <div class="competitors-section__wrapper-even-1">
     <div class="competitors__card" style="width: 48%;">
@@ -89,12 +105,14 @@ imageInput.DeNoise();
 
 ## Dilate Filter Example
 
-The dilation filter expands the bright areas which enhances and thickens text, aiding its legibility during OCR. Invoke the `Dilate` method to apply this filter. Passing 'true' will switch to a stronger 3x3 morphology.
+Dilate the image to expand bright areas, enhancing and thickening text for better OCR interpretation.
 
-```cs
-// Expand bright image areas
+```csharp
+// Expanding bright areas
 imageInput.Dilate();
 ```
+
+Before and after dilation:
 
 <div class="competitors-section__wrapper-even-1">
     <div class="competitors__card" style="width: 48%;">
@@ -109,22 +127,4 @@ imageInput.Dilate();
 
 <hr>
 
-## Erode Filter Example
-
-Contrarily, erosion minimizes bright regions, refining text and line appearances, useful for correcting thick or blurred characters. Use the `Erode` method to erode the image. A 3x3 morphology is applied when 'true' is passed.
-
-```cs
-// Minimize bright areas
-imageInput.Erode();
-```
-
-<div class="competitors-section__wrapper-even-1">
-    <div class="competitors__card" style="width: 48%;">
-        <img src="https://ironsoftware.com/static-assets/ocr/how-to/image-quality-correction/sample.jpg" alt="Sample image" class="img-responsive add-shadow">
-        <p class="competitors__download-link" style="color: #181818; font-style: italic;">Before</p>
-    </div>
-    <div class="competitors__card" style="width: 50%;">
-        <img src="https://ironsoftware.com/static-assets/ocr/how-to/image-quality-correction/erode_0.webp" alt="Erode filter applied" class="img-responsive add-shadow">
-        <p class="competitors__download-link" style="color: #181818; font-style: italic;">After</p>
-    </div>
-</div
+## Example of Using the Erode Filter

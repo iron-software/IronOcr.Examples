@@ -6,15 +6,25 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         public static void Run()
         {
             IronTesseract ocr = new IronTesseract();
-            using OcrInput input = new OcrInput();
-            input.LoadPdf("example.pdf", Password: "password");
-            // We can also select specific PDF page numbers to OCR
             
-            OcrResult result = ocr.Read(input);
+            using (OcrInput input = new OcrInput())
+            {
+                try
+                {
+                    // Load password-protected PDF if needed
+                    input.LoadPdf("example.pdf", "password");
             
-            Console.WriteLine(result.Text);
-            Console.WriteLine($"{result.Pages.Length} Pages");
-            // 1 page for every page of the PDF
+                    // Process entire document
+                    OcrResult result = ocr.Read(input);
+            
+                    Console.WriteLine(result.Text);
+                    Console.WriteLine($"{result.Pages.Count} Pages recognized");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error processing PDF: {ex.Message}");
+                }
+            }
         }
     }
 }

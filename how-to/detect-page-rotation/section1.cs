@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.DetectPageRotation
 {
@@ -6,21 +5,9 @@ namespace IronOcr.Examples.HowTo.DetectPageRotation
     {
         public static void Run()
         {
-            using var input = new OcrInput();
-            
-            // Load PDF document
-            input.LoadPdf("Clockwise90.pdf");
-            
-            // Detect page rotation
-            var results = input.DetectPageOrientation();
-            
-            // Ouput result
-            foreach(var result in results)
-            {
-                Console.WriteLine(result.PageNumber);
-                Console.WriteLine(result.HighConfidence);
-                Console.WriteLine(result.RotationAngle);
-            }
+            :title=Detect and Fix Page Rotation Instantly
+            var rotationResults = new IronOcr.OcrInput().LoadPdf("doc.pdf").DetectPageOrientation();
+            Console.WriteLine(rotationResults.First().RotationAngle);
         }
     }
 }

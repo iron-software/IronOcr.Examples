@@ -1,20 +1,14 @@
 ***Based on <https://ironsoftware.com/examples/read-passport/>***
 
-Here's a paraphrased version of the article, with URLs resolved to ironsoftware.com:
+The following example illustrates how to employ the IronTesseract OCR engine to analyze and obtain information from a passport image.
 
----
+Firstly, an instance of the IronTesseract OCR engine is created. We then initiate an `OcrInput` object, which loads the image of the passport ("passport.jpg") using the `LoadImage` method. Next, the `ReadPassport` method is executed to process the image and retrieve information like names, country, passport number, date of birth, and expiry date. This data is encapsulated in an `OcrPassportResult` object. The information pulled from the passport is then displayed on the console:
 
-The following code snippet illustrates how to extract and process passport details from an image using the IronTesseract OCR engine.
+- Access the given names using `result.PassportInfo.GivenNames`.
+- Retrieve the country information from `result.PassportInfo.Country`.
+- Obtain the passport number via `result.PassportInfo.PassportNumber`.
+- Extract the surname with `result.PassportInfo.Surname`.
+- The date of birth is displayed using `result.PassportInfo.DateOfBirth`.
+- Finally, the expiry date is presented through `result.PassportInfo.DateOfExpiry`.
 
-- To begin, the `IronTesseract` OCR engine is initialized.
-- An `OcrInput` instance is then prepared to hold the image of the passport by calling the `LoadImage` method with "passport.jpg" as an argument.
-- Next, the `ReadPassport` method is employed to analyze the image and extract information from the passport, producing an `OcrPassportResult` object. This object includes important passport details such as the first names, last name, issuing country, passport number, birth date, and expiration date.
-- The following steps output the extracted information to the console:
-  - The first names are fetched using `result.PassportInfo.GivenNames`.
-  - The issuing country is obtained from `result.PassportInfo.Country`.
-  - The passport number can be accessed through `result.PassportInfo.PassportNumber`.
-  - The surname is retrieved using `result.PassportInfo.Surname`.
-  - The date of birth is printed via `result.PassportInfo.DateOfBirth`.
-  - The date of expiration is displayed using `result.PassportInfo.DateOfExpiry`.
-
-This approach is effective for automating the process of extracting crucial passport data for tasks like data validation or processing needs.
+[Learn how to extract passport information with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-passport/)

@@ -1,9 +1,22 @@
 ***Based on <https://ironsoftware.com/examples/simple-csharp-ocr-tesseract/>***
 
-IronOCR stands out for its capacity to seamlessly identify and decipher text from scans and PDFs that may not be optimally clear. The `IronTesseract` class offers an exceptionally straightforward API for developers to use.
+IronOCR excels in reading and recognizing text from imperfectly scanned documents and images using its `IronTesseract` class, which offers a noteworthily simple API interface.
 
-Explore additional code examples to enhance precision in your C# OCR tasks.
+For those interested in deeper functionality, further code samples are available to refine your C# OCR processes.
 
-IronOCR incorporates the most sophisticated version of Tesseract available across all platforms, improved in terms of speed and accuracy, complemented by a native DLL and API.
+IronOCR is globally recognized for delivering the most advanced version of Tesseract across any platform. This offers notable improvements in speed and accuracy while providing a native DLL and API support.
 
-The library supports Tesseract versions 3, 4, and 5, compatible with .NET Framework, .NET Standard, .NET Core, Xamarin, and Mono.
+The library is compatible with Tesseract versions 3, 4, and 5 and supports environments like .NET Framework, .NET Standard, .NET Core, Xamarin, and Mono.
+
+<div class="hsg-featured-snippet examples__featured-snippet">
+    <h2>How to OCR in VB.NET</h2>
+    <ol>
+        <li><a class="js-modal-open" data-modal-id="trial-license-after-download" href="https://nuget.org/packages/IronOcr/">Install the VB.NET library for OCR on images or PDFs</a></li>
+        <li>Create an instance of <code>IronTesseract</code> to access user-friendly APIs</li>
+        <li>Use the <code>Read</code> method to carry out OCR tasks in VB.NET</li>
+        <li>Access the OCR output through the <code>Text</code> property</li>
+        <li>Combine the steps above into a single line of code for efficiency.</li>
+    </ol>
+</div>
+
+<a href="https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/" class="code_content__related-link__doc-cta-link">Learn more in the IronTesseract C# OCR How-To Guide</a>

@@ -3,37 +3,41 @@
 ***Based on <https://ironsoftware.com/how-to/image-orientation-correction/>***
 
 
-Adjusting the orientation of images is crucial in image processing, especially for purposes such as optical character recognition (OCR). The IronOcr library facilitates these adjustments, which include rotating, deskewing, and resizing images to improve the accuracy of text extraction.
+Adjusting the orientation of an image is a key step in image processing, particularly for applications like text recognition. IronOcr, a library by Iron Software, excels in refining image orientation, which includes tasks like rotating, deskewing, and scaling the image.
 
-These procedures are critical for rendering images suitable for precise text recognition by ensuring that the text is appropriately aligned, oriented, and scaled.
+These adjustments are crucial in ensuring that the text in images is aligned correctly, rightly oriented, and scaled suitably for effective extraction.
 
-### Getting Started with IronOCR
+## Quickstart: Streamlined Image Adjustment
 
----
-
-## Example: Rotating an Image
-
-To change the orientation of an image, you may need to rotate it to a specific angle, such as 90 degrees clockwise or counterclockwise, to make sure the text is upright and properly aligned.
-
-You can rotate an image by passing a degree value to the `Rotate` method. Use a positive value for clockwise rotation or a negative value for counterclockwise adjustments.
+Efficiently prepare your image for OCR by chaining rotation, deskewing, and scaling operations in a single line with IronOCR’s `OcrInput`. This approach helps you get started with minimal setup, readying your image for precise OCR processing swiftly.
 
 ```cs
-using IronOcr;
-
-// Creating an instance of IronTesseract
-IronTesseract ocrTesseract = new IronTesseract();
-
-// Loading an image
-using var imageInput = new OcrImageInput("paragraph_skewed.png");
-
-// Rotating the image 180 degrees clockwise
-imageInput.Rotate(180);
-
-// Saving the modified image
-imageInput.SaveAsImages("rotate");
+:title=Optimize Image Orientation Quickly Using IronOCR
+var result = new IronOcr.OcrInput().LoadImage("skewed-image.png").Rotate(90).Deskew(45).Scale(150).Let(input => new IronOcr.IronTesseract().Read(input));
 ```
 
-The `SaveAsImages` method allows you to easily export the rotated image. See below for a visual before and after the rotation process.
+
+## Example of Image Rotation
+
+Image rotation adjusts the angle of the image to make sure its content is upright and aligned correctly for further processing. Specify the angle with the `Rotate` method—positive values for clockwise and negative for counterclockwise rotation.
+
+```csharp
+using IronOcr;
+
+// Initialize IronTesseract
+IronTesseract ocrEngine = new IronTesseract();
+
+// Load the image
+using var imageInput = new OcrImageInput("example_skewed.png");
+
+// Apply 180 degrees clockwise rotation
+imageInput.Rotate(180);
+
+// Save the adjusted image
+imageInput.SaveAsImages("rotated-image");
+```
+
+Below, see the visual comparison of the unrotated and rotated image.
 
 <div class="competitors-section__wrapper-even-1">
     <div class="competitors__card" style="width: 48%;">
@@ -48,14 +52,12 @@ The `SaveAsImages` method allows you to easily export the rotated image. See bel
 
 <hr>
 
-## Example: Deskewing an Image
+## Deskewing Example
 
-Deskewing adjusts images that are slightly tilted or skewed. This rectification ensures that the text appears horizontally aligned.
+Deskewing adjusts images that are slightly tilted. By using the `Deskew` method, which requires an angle as input, the image is straightened to align the text horizontally.
 
-To deskew an image, employ the `Deskew` method, which requires an integer value representing the maximum skew angle to adjust. High values offer greater correction but might slow down processing and increase error risks, like rendering pages upside down.
-
-```cs
-// Executing the deskew function
+```csharp
+// Correct slight tilts in the image
 imageInput.Deskew();
 ```
 
@@ -72,18 +74,16 @@ imageInput.Deskew();
 
 <hr>
 
-## Example: Scaling an Image
+## Scaling Example
 
-Resizing an image to specific dimensions or aspect ratios helps standardize image sizes for uniform text recognition.
+Scaling adjusts the size of the image, which is essential for maintaining consistency in text recognition projects. The `Scale` method alters the image size based on a percentage, where values lower than 100 reduce size, and values higher than 100 increase it.
 
-To scale an image, utilize the `Scale` method, which accepts a percentage value for resizing. A parameter of 100% retains the original size. Set the second parameter, **ScaleCropArea**, to 'true' to proportionally adjust associated crop areas.
-
-```cs
-// Applying scaling to an image
+```csharp
+// Resize the image by 70%
 imageInput.Scale(70);
 ```
 
-### Visual Size Comparison
+### Visual Comparison of Sizes
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">

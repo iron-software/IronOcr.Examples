@@ -7,15 +7,17 @@ namespace IronOcr.Examples.Overview.Quickstart
         {
             IronTesseract ocr = new IronTesseract();
             using OcrInput input = new OcrInput();
+            var pageindices = new int[] { 1, 2 };
+            input.LoadImageFrames(@"img\Potter.tiff", pageindices);
             
-            // We can also select specific PDF page numbers to OCR
-            input.LoadPdf("example.pdf", Password: "password");
+            // fixes digital noise and poor scanning
+            input.DeNoise();
+            
+            // fixes rotation and perspective
+            input.Deskew();
             
             OcrResult result = ocr.Read(input);
             Console.WriteLine(result.Text);
-            
-            // 1 page for every page of the PDF
-            Console.WriteLine($"{result.Pages.Length} Pages");
         }
     }
 }

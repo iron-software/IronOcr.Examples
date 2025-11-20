@@ -1,5 +1,7 @@
 ***Based on <https://ironsoftware.com/examples/abort-token/>***
 
-The functionality enables users to pause the current thread for a designated duration in milliseconds.
+This capability enables the suspension of the active thread for a designated duration, measured in milliseconds.
 
-This is particularly useful when dealing with large input files, allowing the program to handle situations where it may become unresponsive during execution.
+It is particularly useful for handling large input files, especially if the application or program experiences a freeze during execution.
+
+[Explore Asynchronous OCR Operations with IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/async/)

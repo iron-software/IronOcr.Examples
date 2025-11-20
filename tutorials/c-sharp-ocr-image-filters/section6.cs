@@ -6,15 +6,18 @@ namespace IronOcr.Examples.Tutorial.CSharpOcrImageFilters
     {
         public static void Run()
         {
-            var image = @"no-binarize.jpg";
+            var image = @"small_barcode.png";
             var ocr = new IronTesseract();
+            
+            // Optional: This example uses a barcode
+            ocr.Configuration.ReadBarCodes = true;
             
             using var input = new OcrInput();
             // Load at least one image
             input.LoadImage(image);
             
-            // Apply Binarize
-            input.Binarize();
+            // Apply scale
+            input.Scale(400); // 400% is 4 times larger
             
             // Read image into variable: result
             var result = ocr.Read(input);

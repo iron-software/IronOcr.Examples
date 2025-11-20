@@ -11,25 +11,21 @@ namespace IronOcr.Examples.HowTo.ReadResults
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();
             
-            // Enable barcodes detection
-            ocrTesseract.Configuration.ReadBarCodes = true;
-            
             // Add image
-            using OcrInput ocrInput = new OcrInput();
-            ocrInput.LoadPdf("sample.pdf");
-            
+            using var imageInput = new OcrImageInput("sample.jpg");
             // Perform OCR
-            OcrResult ocrResult = ocrTesseract.Read(ocrInput);
+            OcrResult ocrResult = ocrTesseract.Read(imageInput);
+            
+            // Retrieve list of detected paragraphs
+            Paragraph[] paragraphs = ocrResult.Paragraphs;
             
             // Output information to console
-            foreach(var barcode in ocrResult.Barcodes)
-            {
-                Console.WriteLine("Format = " + barcode.Format);
-                Console.WriteLine("Value = " + barcode.Value);
-                Console.WriteLine("X = " + barcode.X);
-                Console.WriteLine("Y = " + barcode.Y);
-            }
-            Console.WriteLine(ocrResult.Text);
+            Console.WriteLine($"Text: {paragraphs[0].Text}");
+            Console.WriteLine($"X: {paragraphs[0].X}");
+            Console.WriteLine($"Y: {paragraphs[0].Y}");
+            Console.WriteLine($"Width: {paragraphs[0].Width}");
+            Console.WriteLine($"Height: {paragraphs[0].Height}");
+            Console.WriteLine($"Text direction: {paragraphs[0].TextDirection}");
         }
     }
 }

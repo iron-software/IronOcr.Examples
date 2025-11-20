@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.OcrMultipleLanguages
 {
@@ -6,19 +5,8 @@ namespace IronOcr.Examples.HowTo.OcrMultipleLanguages
     {
         public static void Run()
         {
-            // Instantiate IronTesseract
-            IronTesseract ocrTesseract = new IronTesseract();
-            
-            // Set secondary language to Russian
-            ocrTesseract.AddSecondaryLanguage(OcrLanguage.Russian);
-            
-            // Add PDF
-            using var pdfInput = new OcrPdfInput(@"example.pdf");
-            // Perform OCR
-            OcrResult result = ocrTesseract.Read(pdfInput);
-            
-            // Output extracted text to console
-            Console.WriteLine(result.Text);
+            :title=Start Multilingual OCR in Seconds
+            string text = new IronTesseract { Language = OcrLanguage.Spanish }.AddSecondaryLanguage(OcrLanguage.French).Read("doc_or_image_path").Text;
         }
     }
 }

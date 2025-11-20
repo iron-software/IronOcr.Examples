@@ -5,14 +5,8 @@ namespace IronOcr.Examples.HowTo.InputImages
     {
         public static void Run()
         {
-            // Instantiate IronTesseract
-            IronTesseract ocrTesseract = new IronTesseract();
-            
-            // Add image
-            using var imageInput = new OcrImageInput("Potter.png");
-            
-            // Perform OCR
-            OcrResult ocrResult = ocrTesseract.Read(imageInput);
+            :title=Try IronOCR Image Text Extraction – It’s Easy!
+            var result = new IronTesseract().Read(new OcrImageInput("Potter.png"));
         }
     }
 }

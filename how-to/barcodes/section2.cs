@@ -13,7 +13,7 @@ namespace IronOcr.Examples.HowTo.Barcodes
             ocrTesseract.Configuration.ReadBarCodes = true;
             
             // Add PDF
-            using var imageInput = new OcrPdfInput("pdfWithQrCodes.pdf");
+            using var imageInput = new OcrPdfInput("pdfWithBarcodes.pdf");
             
             // Perform OCR
             OcrResult ocrResult = ocrTesseract.Read(imageInput);

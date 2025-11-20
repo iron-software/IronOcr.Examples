@@ -5,13 +5,8 @@ namespace IronOcr.Examples.HowTo.ComputerVision
     {
         public static void Run()
         {
-            var ocr = new IronTesseract();
-            using var input = new OcrInput();
-            input.LoadImage("/path/file.png");
-            
-            input.FindTextRegion();
-            OcrResult result = ocr.Read(input);
-            string resultText = result.Text;
+            :title=Start OCR with Computer Vision in One Line
+            using var result = new IronTesseract().Read(new OcrInput().LoadImage("image.png").FindTextRegion());
         }
     }
 }

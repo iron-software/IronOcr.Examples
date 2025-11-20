@@ -1,4 +1,4 @@
-using System;
+using IronSoftware.Drawing;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.InputSystemDrawing
 {
@@ -9,16 +9,13 @@ namespace IronOcr.Examples.HowTo.InputSystemDrawing
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();
             
-            // Specify crop region
-            Rectangle scanRegion = new Rectangle(800, 200, 900, 400);
+            // Open image file as AnyBitmap
+            AnyBitmap anyBitmap = AnyBitmap.FromFile("Potter.tiff");
             
-            // Add image
-            using var imageInput = new OcrImageInput("Potter.tiff", ContentArea: scanRegion);
+            // Import IronSoftware.Drawing.AnyBitmap
+            using var imageInput = new OcrImageInput(anyBitmap);
             // Perform OCR
             OcrResult ocrResult = ocrTesseract.Read(imageInput);
-            
-            // Output the result to console
-            Console.WriteLine(ocrResult.Text);
         }
     }
 }

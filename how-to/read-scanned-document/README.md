@@ -1,53 +1,62 @@
-# Working with IronOCR to Process Scanned Documents
+# Guide to Reading Scanned Documents with IronOCR
 
 ***Based on <https://ironsoftware.com/how-to/read-scanned-document/>***
 
 
-Extracting text from PDFs that contain image-based and non-searchable content can be quite challenging. IronOCR offers a robust solution to convert such text into searchable content, significantly enhancing ease of access and searching capabilities. This is particularly beneficial for individuals with visual impairments and those dealing with large volumes of documentation.
+IronOCR excels at transforming the non-searchable, image-based text commonly found in many PDFs into fully searchable content. This facilitates easier information retrieval and increases document accessibility, benefiting those with visual impairments significantly.
 
-Automated extraction through IronOCR not only avoids the inaccuracies of manual copying but also significantly improves efficiency in dealing with critical data. Such capabilities are crucial for sectors requiring precise documentation, including legal and research fields, and for businesses looking to streamline data integration into their systems.
+By automating the extraction of text and images, IronOCR bypasses the need for manual transcription, enhancing both accuracy and productivity. This functionality proves invaluable in fields like research, legal affairs, and content production where repurposing specific segments of PDFs is frequent.
 
-Additionally, the technology proves invaluable for designers and marketers who need to repurpose images contained within these documents.
+Companies can leverage IronOCR to pull essential data from PDFs for further analysis or system integration, optimizing their business processes. Similarly, designers and marketers can extract images for modification and incorporation into diverse projects.
 
-In this guide, let's dive into how the `OcrPdfInput` methods provided by IronOCR can be leveraged to streamline text and image extraction from PDFs across various professional settings.
+Throughout this guide, we illuminate the usage of `OcrPdfInput` methods, detailing the assorted settings and parameters to illustrate how IronOCR streamlines the process of extracting text and images from PDFs across various use cases.
 
+Before beginning, ensure to install the [`IronOcr.Extensions.AdvancedScan`](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package.
 
+### Quickstart: Text Extraction from a Scanned PDF or Image
 
-In order to begin utilizing these capabilities, be sure to include the [IronOcr.Extension.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package in your project.
-
-## Example of Reading Scanned Documents
-
-For extracting text from images within a document, the `ReadDocument` method is employed. Once executed, this method delivers an object that carries the extracted text, accessible via the Text property. The following example demonstrates extracting text from a [sample TIFF](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/Potter.tiff) image file.
-
-- Note: Current language support includes English, Chinese, Japanese, Korean, and Latin Alphabet.
-- Reminder: Utilizing advanced scan functionalities requires running the project on an x64 architecture within the .NET Framework.
-
-### Sample Input
-
-![Sample Input Image](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/input.webp)
-
-### Implementation Code
+Kickstart your project instantly—utilize either IronOCR's `OcrInput.LoadPdf` or `LoadImage` methods to load your scanned PDF or image. Immediately after, extract text using the `ReadDocument` functionality, a must-have for developers seeking swift implementation of OCR.
 
 ```cs
+// Title: Efficiently OCR Your Scanned Document
+var text = new IronOcr.IronTesseract().ReadDocument(new IronOcr.OcrInput().LoadPdf("scanned.pdf")).Text;
+```
+
+
+## Example: Reading Scanned Documents
+
+To retrieve text from all images in a document, apply the `ReadDocument` method. This method processes the document and yields an object with the extracted text, available via the Text property. Below is how to employ this method with a [sample TIFF](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/potter.tiff) image.
+
+
+- Currently, the method supports languages including English, Chinese, Japanese, Korean, and the Latin Alphabet.
+- Running advanced scans on .NET Framework mandates the use of x64 architecture.
+
+
+### Input
+
+![Input Image](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/input.webp)
+
+### Code
+
+```csharp
 using IronOcr;
 using System;
 
-// Initialize the OCR engine
+// Create OCR engine instance
 var ocr = new IronTesseract();
 
-// Set up the OCR input
+// Set up OCR engine
 using var input = new OcrInput();
 input.LoadImage("potter.tiff");
 
 // Execute OCR
 OcrResult result = ocr.ReadDocument(input);
 
-// Output the result
 Console.WriteLine(result.Text);
 ```
 
-### Expected Output
+### Output
 
-![Processed Output](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/output.webp)
+![Output Image](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/output.webp)
 
-For instances where you need to extract text from PDF documents, simply substitute the `LoadImage` method with `LoadPdf` in the above code. This adjustment will enable IronOCR to effectively handle and extract textual content from scanned PDFs, similar to its processing of image files.
+For OCR operations on PDF files, simply substitute `LoadImage` with `LoadPdf`, permitting IronOCR to apply its text extraction capabilities to scanned PDFs equivalently.

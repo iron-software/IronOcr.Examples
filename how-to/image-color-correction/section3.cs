@@ -5,8 +5,8 @@ namespace IronOcr.Examples.HowTo.ImageColorCorrection
     {
         public static void Run()
         {
-            // Apply invert affect
-            imageInput.Invert();
+            // Apply grayscale affect
+            imageInput.ToGrayScale();
         }
     }
 }

@@ -6,24 +6,24 @@ namespace IronOcr.Examples.Tutorial.CSharpOcrImageFilters
     {
         public static void Run()
         {
-            var image = @"small_barcode.png";
+            var image = @"paragraph_skewed.png";
             var ocr = new IronTesseract();
-            
-            // Optional: This example uses a barcode
-            ocr.Configuration.ReadBarCodes = true;
-            
             using var input = new OcrInput();
             // Load at least one image
             input.LoadImage(image);
             
-            // Apply scale
-            input.Scale(400); // 400% is 4 times larger
-            
-            // Read image into variable: result
-            var result = ocr.Read(input);
-            
-            // Example print to console
-            Console.WriteLine(result.Text);
+            // Apply deskew with 15 degree snap
+            bool didDeskew = input.Deskew(15);
+            if (didDeskew)
+            {
+                // Read image into variable: result
+                var result = ocr.Read(input);
+                Console.WriteLine(result.Text);
+            }
+            else
+            {
+                Console.WriteLine("Deskew not applied because Image Orientation could not be determined.");
+            }
         }
     }
 }

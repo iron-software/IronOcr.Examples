@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.Tutorial.CSharpOcrImageFilters
 {
@@ -6,13 +5,8 @@ namespace IronOcr.Examples.Tutorial.CSharpOcrImageFilters
     {
         public static void Run()
         {
-            var ocr = new IronTesseract();
-            using var input = new OcrInput();
-            input.LoadImage("my_image.png");
-            input.Deskew();
-            
-            var result = ocr.Read(input);
-            Console.WriteLine(result.Text);
+            :title=Enhance OCR Quality Instantly
+            using var input = new IronOcr.OcrInput("scan.jpg"); input.DeNoise(true).Binarize().Deskew(45); var result = new IronOcr.IronTesseract().Read(input);
         }
     }
 }

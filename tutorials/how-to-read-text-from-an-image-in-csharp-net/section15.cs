@@ -5,19 +5,28 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
     {
         public static void Run()
         {
-            IronTesseract ocr = new IronTesseract();
+            // Enable combined text and barcode recognition
+            using IronOcr;
             
+            var ocr = new IronTesseract();
+            
+            // Enable barcode detection
             ocr.Configuration.ReadBarCodes = true;
             
-            using OcrInput input = new OcrInput();
-            input.LoadImage("img/Barcode.png");
-            
-            OcrResult result = ocr.Read(input);
-            
-            foreach (var barcode in result.Barcodes)
+            using (var input = new OcrInput())
             {
-                Console.WriteLine(barcode.Value);
-                // type and location properties also exposed
+                // Load image containing both text and barcodes
+                input.AddImage("img/Barcode.png");
+            
+                // Process both text and barcodes
+                var result = ocr.Read(input);
+            
+                // Extract barcode data
+                foreach (var barcode in result.Barcodes)
+                {
+                    Console.WriteLine($"Barcode Value: {barcode.Value}");
+                    Console.WriteLine($"Type: {barcode.Type}, Location: {barcode.Location}");
+                }
             }
         }
     }

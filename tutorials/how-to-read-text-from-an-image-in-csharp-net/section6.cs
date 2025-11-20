@@ -5,23 +5,24 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
     {
         public static void Run()
         {
-            // PM> Install IronOcr.Languages.Arabic
+            // Install-Package IronOcr.Languages.Arabic
             using IronOcr;
             
-            IronTesseract ocr = new IronTesseract();
+            // Configure for Arabic language OCR
+            var ocr = new IronTesseract();
             ocr.Language = OcrLanguage.Arabic;
             
-            using OcrInput input = new OcrInput();
-            input.LoadImageFrame("img/arabic.gif", 1);
-            // add image filters if needed
-            // In this case, even thought input is very low quality
-            // IronTesseract can read what conventional Tesseract cannot.
+            using (var input = new OcrInput())
+            {
+                // Load Arabic text image
+                input.AddImage("img/arabic.gif");
+                
+                // IronOCR handles low-quality Arabic text that standard Tesseract cannot
+                var result = ocr.Read(input);
             
-            OcrResult result = ocr.Read(input);
-            
-            // Console can't print Arabic on Windows easily.
-            // Let's save to disk instead.
-            result.SaveAsTextFile("arabic.txt");
+                // Save to file (console may not display Arabic correctly)
+                result.SaveAsTextFile("arabic.txt");
+            }
         }
     }
 }

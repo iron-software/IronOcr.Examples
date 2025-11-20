@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
 {
@@ -6,20 +5,8 @@ namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
     {
         public static void Run()
         {
-            // Instantiate OCR engine
-            var ocr = new IronTesseract();
-            
-            // Configure OCR engine
-            ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.SingleBlock;
-            
-            using var input = new OcrInput();
-            
-            input.LoadPdf("Five.pdf");
-            
-            // Perform OCR
-            OcrResult result = ocr.ReadDocument(input);
-            
-            Console.WriteLine(result.Text);
+            :title=Quickly Read Any Document Type with IronOCR
+            var result = new IronTesseract().ReadPassport(new OcrInput().LoadImage("passport.jpg"));
         }
     }
 }

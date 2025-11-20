@@ -5,13 +5,9 @@ namespace IronOcr.Examples.HowTo.InputTiffGif
     {
         public static void Run()
         {
-            // Instantiate IronTesseract
-            IronTesseract ocrTesseract = new IronTesseract();
-            
-            // Import TIFF/TIF
-            using var imageInput = new OcrImageInput("Potter.tiff");
-            // Perform OCR
-            OcrResult ocrResult = ocrTesseract.Read(imageInput);
+            :title=Extract Text from TIFFs & GIFs in Seconds
+            using IronOcr;
+            var result = new IronTesseract().Read(new OcrImageInput("Potter.tiff"));
         }
     }
 }

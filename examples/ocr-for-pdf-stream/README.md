@@ -1,7 +1,9 @@
 ***Based on <https://ironsoftware.com/examples/ocr-for-pdf-stream/>***
 
-IronOCR is also capable of handling streams.
+IronOCR is compatible with Stream input.
 
-In this illustration, IronPDF is utilized to generate a PDF stream, which can subsequently be employed for text recognition through IronOCR.
+In this demonstration, we use IronPDF to generate a PDF Stream. This stream can subsequently be utilized for text recognition through IronOCR.
 
-It's important to highlight that IronOCR can accept streams as input; however, it does not support exporting data back as a stream output.
+It's important to note that while IronOCR accepts Stream for input, it does not provide the capability to export data directly to a Stream as an output.
+
+[Learn to Input PDFs with IronOCR in C#](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/)

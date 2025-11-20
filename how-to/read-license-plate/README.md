@@ -1,96 +1,97 @@
-# Utilizing IronOCR for Automated License Plate Recognition
+# How to Perform License Plate Recognition with IronOCR
 
 ***Based on <https://ironsoftware.com/how-to/read-license-plate/>***
 
 
-Automated license plate recognition with IronOCR streamlines the tedious task of manually analyzing numerous vehicle images. This technology notably enhances efficiency and accuracy. IronOCR's `ReadLicensePlate` method allows for programmatically extracting numbers from license plates, thus optimizing time and improving data reliability.
+Automating the extraction of license plate numbers from vehicle images is a critical efficiency boost, especially when dealing with high volumes. IronOCR offers a powerful solution with its `ReadLicensePlate` method, which extracts license plate numbers programmatically. This not only saves time but also enhances data precision.
 
-This tutorial outlines how to employ IronOCR for the automation of reading license plates, including step-by-step examples and adjustable settings that simplify the process. By capitalizing on these techniques, developers facilitate various operations such as parking management, toll collection, and security monitoring through automated license plate recognition.
+This tutorial explores how to utilize IronOCR for accurate license plate recognition. Through step-by-step examples and configurable options, you'll learn how to streamline automated license plate detection for uses like parking systems, toll operations, and security monitoring.
 
-Before initiating, ensure the installation of the [IronOcr.Extension.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package.
+Before beginning, ensure you have the [`IronOcr.Extension.AdvancedScan`](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package installed.
 
-## Implementing License Plate Recognition with IronOCR
+### Quickstart: Instant License Plate Number Extraction
 
-To perform license plate recognition using IronOCR, follow these outlined steps:
-- Invoke the `ReadLicensePlate` method, designed specifically for license plate recognition and receiving an `OcrInput` parameter.
-- Optionally, configure IronOCR to only recognize certain characters typical in license plates, enhancing processing speed.
-
-- This method supports several languages, including English, Chinese, Japanese, Korean, and the Latin alphabet.
-- Note: Utilizing this functionality on .NET Framework requires the application to be run on a 64-bit architecture.
-
-### License Plate Example
-
-![License plate](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/license-plate.webp)
-
-### Sample Code
+IronOCR’s `ReadLicensePlate` method allows for instant extraction of license plate text from images. Simply load your image, invoke the method, and immediately receive the plate number along with its confidence level.
 
 ```cs
+// Example: Extracting a License Plate with One Line of Code using IronOCR
+OcrLicensePlateResult result = new IronTesseract().ReadLicensePlate(new OcrInput("plate.jpg"));
+```
+
+## Working with IronOCR to Read License Plates
+
+Reading a license plate with IronOCR involves the following:
+
+- Employ the `ReadLicensePlate` method, which requires an `OcrInput` object for the image. This method is specifically optimized for license plate recognition.
+- Optionally, configure IronOCR to only recognize certain characters on the license plates to enhance processing speed.
+
+Currently, this method supports various scripts including English, Chinese, Japanese, Korean, and the Latin alphabet. Note that using the advanced scan on .NET Framework mandates an x64 architecture setup.
+
+### License Plate Recognition Example
+
+#### License Plate Sample
+
+![License plate sample](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/license-plate.webp)
+
+#### Implementation
+
+```csharp
+// Initializing IronOcr
 using IronOcr;
 using System;
 
-// Initialize IronTesseract
 var ocr = new IronTesseract();
-// Specify characters expected in a license plate
 ocr.Configuration.WhiteListCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
 
-// Prepare the image
-using var inputLicensePlate = new OcrInput("plate.jpeg");
+using var inputLicensePlate = new OcrInput();
+inputLicensePlate.LoadImage("plate.jpeg");
 
-// Extract license plate data
-var result = ocr.ReadLicensePlate(inputLicensePlate);
+// Performing the license plate recognition
+OcrLicensePlateResult result = ocr.ReadLicensePlate(inputLicensePlate);
 
-// Display the result and confidence level
-string output = $"{result.Text}\nResult Confidence: {result.Confidence}";
+// Output the recognized license plate number and confidence
+string output = $"Detected License Plate: {result.Text}\nConfidence Level: {result.Confidence}";
+
 Console.WriteLine(output);
 ```
 
-### Result
+#### Recognition Results
 
-![License plate result](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/license-plate-result.webp)
+![License plate recognition results](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/license-plate-result.webp)
 
-The initial step is importing the image into an `OcrInput` to correctly utilize the `ReadLicensePlate` method. The output, as demonstrated, accurately reflects the text and state from the license plate shown in the input image.
+The code illustrates how to input an image for OCR processing and utilize the `ReadLicensePlate` method to identify and extract license plate information. The result demonstrates the OCR's accuracy through the recognized license plate text and the accompanying confidence level.
 
-**Text**: Extracted text from the OCR input.
+### License Plate Detection on a Car
 
-**Confidence**: A double representing the statistical confidence accuracy per character, with a range between 0 (lowest) and 1 (highest).
+The license plate reading method is also effective when extracting information from images featuring cars with visible plates, and it can provide the license plate’s location within the image.
 
-<hr>
-
-## Recognizing a License Plate Directly from a Vehicle Image
-
-This functionality is also effective when applied to individual images featuring cars with visible license plates. The following code is identical to the previous example, differing only by the image input. This method also allows for the extraction of the exact coordinates of the license plate on the image.
-
-### Example Input
+#### Car Image
 
 ![Car license plate](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/car-license.webp)
 
-```cs
+```csharp
+// Implementing License Plate OCR on a Car Image
 using IronOcr;
+using IronSoftware.Drawing;
 using System;
 
-// Initialize IronTesseract
 var ocr = new IronTesseract();
-using var inputLicensePlate = new OcrInput("car_license.jpg");
+using var inputLicensePlate = new OcrInput();
+inputLicensePlate.LoadImage("car_license.jpg");
 
-// Process the license plate image
-var result = ocr.ReadLicensePlate(inputLicensePlate);
+// Execute license plate reading
+OcrLicensePlateResult result = ocr.ReadLicensePlate(inputLicensePlate);
 
-// Extract coordinates of the license plate
-var rectangle = result.Licenseplate;
-
-// Format output to show license plate number and its coordinates
-string output = $"License Plate Number:\n{result.Text}\n\n"
-              + $"License Plate Area:\n"
-              + $"Starting X: {rectangle.X}\n"
-              + $"Starting Y: {rectangle.Y}\n"
-              + $"Width: {rectangle.Width}\n"
-              + $"Height: {rectangle.Height}";
+// Retrieving license plate details and coordinates
+RectangleF rectangle = result.Licenseplate;
+string output = $"Detected Plate Number:\n{result.Text}\n\nPlate Coordinates:\n"
+              + $"X: {rectangle.X}, Y: {rectangle.Y}, Width: {rectangle.Width}, Height: {rectangle.Height}";
 
 Console.WriteLine(output);
 ```
 
-### Result
+#### Results with Coordinates
 
-![Car license plate result](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/car-license-with-coordinates.webp)
+![Car license plate extraction results](https://ironsoftware.com/static-assets/ocr/how-to/read-license-plate/car-license-with-coordinates.webp)
 
-As illustrated, the output displays the license plate along with exact coordinates of the license plate within the image. This method is tuned specifically to identify individual license plates, ensuring precision in various scenarios like stock images.
+This demonstration shows effective use of the `ReadLicensePlate` method for locating and identifying license plates on car images. It successfully extracts both text and coordinates, showcasing its efficacy in applications that require precise spatial data.

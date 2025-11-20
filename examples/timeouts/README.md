@@ -1,7 +1,9 @@
 ***Based on <https://ironsoftware.com/examples/timeouts/>***
 
-`TimeoutMs` offers an optional timeout measure in milliseconds, which cancels the OCR read operation if it exceeds the specified duration.
+The `TimeoutMs` property sets a cap on the time, in milliseconds, allocated for the OCR operation before it terminates.
 
-Like the `AbortToken`, `TimeoutMS` is particularly useful for handling large input files during instances when the program or application becomes non-responsive.
+Like `AbortToken`, `TimeoutMs` is beneficial when dealing with substantial input files that might cause the program or application to hang.
 
-It's important to mention that this functionality is not available in .NET Framework 4.x.x.
+It's important to note that this functionality is not available in .NET Framework 4.x.x.
+
+[Learn more about Asynchronous OCR Processing with IronOCR in C#](https://ironsoftware.com/csharp/ocr/how-to/async/)

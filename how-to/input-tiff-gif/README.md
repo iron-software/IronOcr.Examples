@@ -1,87 +1,88 @@
-# Managing Multi-Frame/Page GIFs and TIFFs with IronOCR
+# Reading Multi-Frame/Page GIFs and TIFFs
 
 ***Based on <https://ironsoftware.com/how-to/input-tiff-gif/>***
 
 
-TIFF (Tagged Image File Format) is favored for storing images in high quality. Its ability to use lossless compression is particularly useful for retaining the pristine quality of scanned documents and professional photographs.
+TIFF (Tagged Image File Format) is an ideal format for storing high-quality images. It uses lossless compression to preserve the pristine condition of images, which is crucial for scanned documents or high-resolution photography.
 
-On the other hand, GIF (Graphics Interchange Format) is typically used for creating lightweight, web-optimized images and animations. This format is celebrated for its capability to house animated sequences in a single file, leading to its prevalent use in web graphics and digital communications.
+GIF (Graphics Interchange Format) is typically used for simpler web graphics and animations. This format is flexible in that it supports both lossless and lossy compression methods and is widely used for its ability to display animated images in a single file, commonly in web contexts and digital communication.
 
-IronOCR seamlessly handles both TIFF and GIF formats, including those with multiple frames or pages. Just load your image file with our easy-to-use methods, and let IronOCR take care of the rest.
+*as-heading:2(Quickstart: OCR with Multi-Frame TIFF or GIF Files)*
 
-<h3>Get Started with IronOCR</h3>
-
----
-
-## Example: OCR on Single/Multi-Frame TIFF
-
-First, create an instance of the `IronTesseract` class. Use a `using` statement for memory management and initialize an `OcrImageInput` object to handle either single or multi-frame TIFF files. Then, apply the `Read` method to start the OCR process on the TIFF.
+Discover the simplicity of extracting text from multi-page TIFFs or animated GIFs using IronOCR. Only a few steps are necessary, starting with an `OcrImageInput` and a `Read` function.
 
 ```cs
+:title=Text Extraction from TIFFs & GIFs in Moments
+using IronOcr;
+var result = new IronTesseract().Read(new OcrImageInput("Potter.tiff"));
+```
+
+## OCR on a Single/Multi-Frame TIFF Example
+
+Begin by creating an instance of the IronTesseract class. Use a `using` statement to initiate the `OcrImageInput` object, which accepts both single and multi-frame TIFF files. Then, execute the `Read` method to perform OCR on your chosen TIFF image.
+
+```csharp
 using IronOcr;
 
-// Create an IronTesseract instance
+// Initialize the IronTesseract engine
 IronTesseract ocrTesseract = new IronTesseract();
 
-// Load the TIFF image into IronOCR
+// Load the TIFF/TIF image
 using var imageInput = new OcrImageInput("Potter.tiff");
-
 // Execute OCR
 OcrResult ocrResult = ocrTesseract.Read(imageInput);
 ```
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/ocr/how-to/input-tiff-gif/read-tiff.webp" alt="Read TIFF image" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/ocr/how-to/input-tiff-gif/read-tiff.webp" alt="Reading TIFF image" class="img-responsive add-shadow">
     </div>
 </div>
 
-## OCR with GIFs
+## OCR on GIFs
 
-To read GIF images, just specify the path to your GIF file while initializing your `OcrImageInput`. The constructor automatically handles the image loading.
+For GIFs, the procedure is straightforward: define the GIF file path while initializing the `OcrImageInput` object, which will manage all necessary preparations for the image.
 
-```cs
+```csharp
 using IronOcr;
 
-// Initialize IronTesseract
+// Set up IronTesseract OCR engine
 IronTesseract ocrTesseract = new IronTesseract();
 
-// Load GIF for OCR
+// Load the GIF image
 using var imageInput = new OcrImageInput("Potter.gif");
-
-// Start OCR process
+// Conduct OCR
 OcrResult ocrResult = ocrTesseract.Read(imageInput);
 ```
 
-## Defining a Scan Region
+## Specifying a Scanning Region
 
-You can enhance OCR performance by defining a specific scan region within the image. Create a `CropRectangle` during the initialization of `OcrImageInput` to specify the area you want to focus on.
+Enhance OCR accuracy by using the `CropRectangle` object in the `OcrImageInput` class initialization. This allows you to specify a particular region in the image for OCR, improving performance on larger or detailed documents.
 
-```cs
+```csharp
 using IronOcr;
-using IronSoftware.Drawing;  // Needed for Rectangle
-using System;  // Using System for the Console class
+using IronSoftware.Drawing;
+using System;
 
-// Initialize IronTesseract
+// Initialize IronTesseract OCR engine
 IronTesseract ocrTesseract = new IronTesseract();
 
-// Define the crop area
+// Define the OCR scan region
 Rectangle scanRegion = new Rectangle(800, 200, 900, 400);
 
-// Load the Image with defined crop region
+// Prepare the image with defined region
 using var imageInput = new OcrImageInput("Potter.tiff", ContentArea: scanRegion);
-
 // Execute OCR
 OcrResult ocrResult = ocrTesseract.Read(imageInput);
 
-// Print OCR results
+// Display the OCR results
 Console.WriteLine(ocrResult.Text);
 ```
 
-### Viewing OCR Results
+### OCR Result Display
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/ocr/how-to/input-images/read-specific-region.webp" alt="Read specific region" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/ocr/how-to/input-images/read-specific-region.webp" alt="OCR reading specific region" class="img-responsive add-shadow">
     </div>
 </div>

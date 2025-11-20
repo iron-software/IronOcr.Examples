@@ -5,13 +5,21 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
     {
         public static void Run()
         {
-            IronTesseract ocr = new IronTesseract();
-            using OcrInput input = new OcrInput();
-            input.Title = "Pdf Title";
-            var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames("example.tiff", pageindices);
-            OcrResult result = ocr.Read(input);
-            result.SaveAsSearchablePdf("searchable.pdf");
+            var ocr = new IronTesseract();
+            
+            using (var input = new OcrInput())
+            {
+                // Configure document properties
+                input.Title = "Scanned Archive Document";
+            
+                // Select pages to process
+                var pageIndices = new int[] { 1, 2 };
+                input.LoadImageFrames("example.tiff", pageIndices);
+            
+                // Create searchable PDF from TIFF
+                OcrResult result = ocr.Read(input);
+                result.SaveAsSearchablePdf("searchable.pdf");
+            }
         }
     }
 }

@@ -5,13 +5,8 @@ namespace IronOcr.Examples.HowTo.InputPdfs
     {
         public static void Run()
         {
-            // Instantiate IronTesseract
-            IronTesseract ocrTesseract = new IronTesseract();
-            
-            // Add PDF
-            using var pdfInput = new OcrPdfInput("Potter.pdf");
-            // Perform OCR
-            OcrResult ocrResult = ocrTesseract.Read(pdfInput);
+            :title=Try IronOCR PDF OCR in One Line
+            using var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrPdfInput("document.pdf", PdfContents.TextAndImages));
         }
     }
 }

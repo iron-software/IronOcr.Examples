@@ -16,9 +16,13 @@ namespace IronOcr.Examples.HowTo.ReadPassport
             // Perform OCR
             OcrPassportResult result = ocr.ReadPassport(inputPassport);
             
-            // Output Confidence level and raw extracted text
-            Console.WriteLine(result.Confidence);
-            Console.WriteLine(result.Text);
+            // Output passport information
+            Console.WriteLine(result.PassportInfo.GivenNames);
+            Console.WriteLine(result.PassportInfo.Country);
+            Console.WriteLine(result.PassportInfo.PassportNumber);
+            Console.WriteLine(result.PassportInfo.Surname);
+            Console.WriteLine(result.PassportInfo.DateOfBirth);
+            Console.WriteLine(result.PassportInfo.DateOfExpiry);
         }
     }
 }

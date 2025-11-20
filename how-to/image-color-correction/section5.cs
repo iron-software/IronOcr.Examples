@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.ImageColorCorrection
 {
@@ -11,17 +10,14 @@ namespace IronOcr.Examples.HowTo.ImageColorCorrection
             
             // Add image
             using var imageInput = new OcrImageInput("sample.jpg");
-            // Text color to focus on
-            IronSoftware.Drawing.Color focusColor = new IronSoftware.Drawing.Color("#DB645C");
+            IronSoftware.Drawing.Color currentColor = new IronSoftware.Drawing.Color("#DB645C");
+            IronSoftware.Drawing.Color newColor = IronSoftware.Drawing.Color.DarkCyan;
             
-            // Specify which text color to read
-            imageInput.SelectTextColor(focusColor, 60);
+            // Replace color
+            imageInput.ReplaceColor(currentColor, newColor, 80);
             
-            // Perform OCR
-            OcrResult ocrResult = ocrTesseract.Read(imageInput);
-            
-            // Output result to console
-            Console.WriteLine(ocrResult.Text);
+            // Export the modified image
+            imageInput.SaveAsImages("replaceColor");
         }
     }
 }

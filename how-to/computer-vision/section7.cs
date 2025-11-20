@@ -11,7 +11,7 @@ namespace IronOcr.Examples.HowTo.ComputerVision
             input.LoadImage("/path/file.png");
             
             var selectedPage = input.GetPages().ElementAt(pageIndex);
-            // List<Rectangle> regions = selectedPage.GetTextRegions();
+            List<OcrInputPage> textRegionsOnPage = selectedPage.FindMultipleTextRegions();
         }
     }
 }

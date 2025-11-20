@@ -5,8 +5,8 @@ namespace IronOcr.Examples.HowTo.ImageQualityCorrection
     {
         public static void Run()
         {
-            // Apply denoise filter
-            imageInput.DeNoise();
+            // Apply enhance resolution filter
+            imageInput.EnhanceResolution();
         }
     }
 }

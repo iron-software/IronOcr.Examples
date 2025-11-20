@@ -5,17 +5,27 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
     {
         public static void Run()
         {
+            // Multi-source document processing
+            using IronOcr;
+            
             IronTesseract ocr = new IronTesseract();
             
-            using OcrInput input = new OcrInput();
-            input.LoadImage("image1.jpeg");
-            input.LoadImage("image2.png");
-            var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames("image3.gif", pageindices);
+            using (OcrInput input = new OcrInput())
+            {
+                // Add various image formats
+                input.AddImage("image1.jpeg");
+                input.AddImage("image2.png");
             
-            OcrResult result = ocr.Read(input);
+                // Process specific frames from multi-frame images
+                int[] frameNumbers = { 1, 2 };
+                input.AddImageFrames("image3.gif", frameNumbers);
             
-            Console.WriteLine($"{result.Pages.Length} Pages"); // 3 Pages
+                // Process all sources together
+                OcrResult result = ocr.Read(input);
+            
+                // Verify page count
+                Console.WriteLine($"{result.Pages.Count} Pages processed.");
+            }
         }
     }
 }

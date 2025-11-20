@@ -5,17 +5,8 @@ namespace IronOcr.Examples.HowTo.ImageOrientationCorrection
     {
         public static void Run()
         {
-            // Instantiate IronTesseract
-            IronTesseract ocrTesseract = new IronTesseract();
-            
-            // Add image
-            using var imageInput = new OcrImageInput("paragraph_skewed.png");
-            
-            // Rotate the image 180 degrees clockwise
-            imageInput.Rotate(180);
-            
-            // Export the modified image
-            imageInput.SaveAsImages("rotate");
+            :title=Correct Image Orientation Fast with IronOCR
+            var result = new IronOcr.OcrInput().LoadImage("skewed.png").Rotate(90).Deskew(45).Scale(150).Let(input => new IronOcr.IronTesseract().Read(input));
         }
     }
 }

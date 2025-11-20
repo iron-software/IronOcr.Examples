@@ -1,5 +1,5 @@
 using IronOcr;
+using IronOcr.Examples.HowTo.OcrCustomFontTraining;
 
 
-// Add Your Own Code Here
-
+Section1.Run();

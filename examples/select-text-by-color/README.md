@@ -1,11 +1,11 @@
 ***Based on <https://ironsoftware.com/examples/select-text-by-color/>***
 
-Optical Character Recognition (OCR) operates most effectively and accurately when processing text of a single color against a uniform background color.
+Optical Character Recognition (OCR) achieves its best speed and accuracy when processing text of a single color against a uniform background color.
 
-The `SelectTextColor` feature converts the image into a binary format where all pixels of the specific text color are represented in black (considering different shades confidently) while converting all other pixels to white.
+The `SelectTextColor` functionality converts the image so that all pixels matching a specific text color (considering shading nuances with a degree of confidence) appear black, while all other pixels turn white.
 
-For instance, if our goal is to exclusively process text of a specific color or set of colors against any colored background, `SelectTextColor` and `SelectTextColors` will convert all text of the selected colors to black, while changing text and background of other colors to white. This operation has a level of flexibility where users can define a tolerance for the exact RGB values. This approach eliminates the need for complex preparation of images using tools like Photoshop or ImageMagick before performing OCR.
+Consider a scenario where you want to process texts of specified color(s) against any background color. The `SelectTextColor` and `SelectTextColors` methods modify all text in the chosen color(s) to black and convert text in other colors and the background (colors not selected) to white. These functions offer a degree of fuzziness, allowing users to define a color tolerance close to the exact RGB values. This capability eliminates the necessity for external photo editing tools like Photoshop or ImageMagick to pre-process images for OCR.
 
-When dealing with colors, `IronSoftare.Drawing.Color` adheres to HTML color codes.
+The `IronSoftware.Drawing.Color` conforms to the HTML color standards.
 
-For further details on HTML color codes, visit: [Color Hex Reference](https://www.color-hex.com)
+For more guidance on using HTML color conventions, please visit: [Color Hex](https://www.color-hex.com).

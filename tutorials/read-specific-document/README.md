@@ -1,104 +1,89 @@
-# How to Read Specific Documents
+# How to Read Specialized Documents
 
 ***Based on <https://ironsoftware.com/tutorials/read-specific-document/>***
 
 
-Successfully extracting text from various document types like text files, license plates, passports, and photographs can be challenging. This difficulty arises from each document type's unique formats, layouts, and content. Factors such as varying image quality, distortion, and specific types of content add to the complexity. Furthermore, maintaining both contextual understanding and a balance between performance and accuracy across different document types adds layers of complication.
+Reading specialized documents such as text, license plates, passports, and images effectively is challenging. These challenges arise from the varying formats, layouts, content, image quality, distortion, and specialized content these documents present. Additionally, understanding context and managing performance and efficiency increases in complexity with an increasing range of document types.
 
-IronOCR presents bespoke methods tailored for OCR on specific documents such as text files, license plates, passports, and images to ensure both high accuracy and enhanced performance.
+IronOCR introduces targeted methods to perform OCR on specific documents like text documents, license plates, passports, and photos to attain high accuracy and efficiency.
 
-### Begin with IronOCR
+## Quickstart: Extract Passport Information in a Single Line
 
----
-
-## Overview of the Package
-
-For specialized tasks like reading license plates, passports, photographs, and screenshots, IronOCR offers specific functions: `ReadLicensePlate`, `ReadPassport`, `ReadPhoto`, and `ReadScreenShot`. These functions are part of the extended capabilities provided by the [IronOcr.Extensions.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package, which is currently supported only on Windows.
-
-These methods benefit from configurable OCR engine settings including character blacklists and whitelists. They support multiple languages like Chinese, Japanese, Korean, and those using the Latin alphabet—with the exception of the `ReadPassport` function. It's important to note that each language setting requires an additional [IronOcr.Languages](https://www.nuget.org/packages?q=ironocr.languages&includeComputedFrameworks=true&prerel=true&sortby=relevance) package.
-
-To use advanced scanning on the .NET Framework, ensure your project is set to run on x64 architecture. Adjust your project configuration by unchecking the "Prefer 32-bit" option. More details can be found in the guide: "[Advanced Scan on .NET Framework](https://ironsoftware.com/csharp/ocr/troubleshooting/advanced-scan-on-net-framework/)."
-
-## Document Reading Example
-
-`ReadDocument` is a comprehensive method for processing scanned documents or images with dense text. Configuring **PageSegmentationMode** is critical for accurately reading texts across various layouts. For instance, **SingleBlock** is ideal for text blocks, while **SparseText** is suited for documents where text is dispersed.
+Leverage IronOCR’s `ReadPassport` method to extract critical details from passports in one simple step. Assuming IronOCR and AdvancedScan are installed, the code below will quickly extract data such as names, passport numbers, countries, and more:
 
 ```cs
+:title=Efficiently Read Various Document Types with IronOCR
+var response = new IronTesseract().ReadPassport(new OcrInput().LoadImage("passport.jpg"));
+```
+
+## About The Package
+
+IronOCR provides specialized methods including `ReadLicensePlate`, `ReadPassport`, `ReadPhoto`, and `ReadScreenShot`, which all extended from the main IronOCR package. These methods require the [IronOcr.Extensions.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package.
+
+These methods support multiple OCR engine configurations and languages such as Chinese, Japanese, Korean, and languages using the Latin alphabet (except for the `ReadPassport` method). For each additional language, a corresponding language package from [IronOcr.Languages](https://www.nuget.org/packages?q=ironocr.languages&includeComputedFrameworks=true&prerel=true&sortby=relevance) needs to be installed.
+
+Using advanced scan features on .NET Framework necessitates running the project in x64 architecture. You'll need to navigate to the project settings and disable "Prefer 32-bit" to enable this configuration. More details are available in the troubleshooting guide here: "[Optimizing Advanced Scan on .NET Framework](https://ironsoftware.com/csharp/ocr/troubleshooting/advanced-scan-on-net-framework/)."
+
+## Reading Document Example
+
+The `ReadDocument` method is tailored for OCR on scanned documents or photos containing extensive text. Configuring **PageSegmentationMode** is crucial to effectively process documents with different layouts, as seen below.
+
+```csharp
 using IronOcr;
 using System;
 
-// Initialize OCR engine
-var ocr = new IronTesseract();
+var ocrEngine = new IronTesseract();
+ocrEngine.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.SingleBlock;
 
-// Set OCR configuration for better text block recognition
-ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.SingleBlock;
+using var document = new OcrInput("Five.pdf");
 
-using var input = new OcrInput();
+OcrResult ocrResult = ocrEngine.ReadDocument(document);
 
-// Load document
-input.LoadPdf("Five.pdf");
-
-// Execute OCR
-OcrResult result = ocr.ReadDocument(input);
-
-// Display extracted text
-Console.WriteLine(result.Text);
+Console.WriteLine(ocrResult.Text);
 ```
 
-### Example: Reading License Plates
+## Reading License Plate Example
 
-`ReadLicensePlate` is designed to efficiently extract information from images of vehicle license plates. It provides details about both the license plate's text and its location within the image.
+The `ReadLicensePlate` method is particularly tuned to accurately read license plates in images and provide the license plate’s location.
 
-```cs
+```csharp
 using IronOcr;
 using IronSoftware.Drawing;
 using System;
 
-// Set up the OCR engine
-var ocr = new IronTesseract();
+var ocrEngine = new IronTesseract();
 
-using var inputLicensePlate = new OcrInput();
+using var licensePlateImage = new OcrInput("LicensePlate.jpeg");
 
-// Load image
-inputLicensePlate.LoadImage("LicensePlate.jpeg");
+OcrLicensePlateResult plateResult = ocrEngine.ReadLicensePlate(licensePlateImage);
 
-// Execute OCR to find license plate
-OcrLicensePlateResult result = ocr.ReadLicensePlate(inputLicensePlate);
-
-// Get license plate data
-Rectangle rectangle = result.Licenseplate;
-string output = result.Text;
+Rectangle plateLocation = plateResult.Licenseplate;
+string plateText = plateResult.Text;
 ```
 
-### Example: Reading Passports
+## Reading Passport Information
 
-`ReadPassport` excels in extracting vital information from passport images, focusing on the machine-readable zone (MRZ) which includes the bearer's key details.
+The `ReadPassport` method excels in extracting details from passport photos by targeting the machine-readable zone (MRZ) which includes critical data such as the holder's name and document number. Currently, this method supports only English.
 
-```cs
+```csharp
 using IronOcr;
 using System;
 
-// Initialize OCR engine
-var ocr = new IronTesseract();
+var passportOcr = new IronTesseract();
 
-using var inputPassport = new OcrInput();
+using var passportImage = new OcrInput("Passport.jpg");
 
-// Load passport image
-inputPassport.LoadImage("Passport.jpg");
+OcrPassportResult passportDetails = passportOcr.ReadPassport(passportImage);
 
-// Extract passport information
-OcrPassportResult result = ocr.ReadPassport(inputPassport);
-
-// Print passport details
-Console.WriteLine(result.PassportInfo.GivenNames);
-Console.WriteLine(result.PassportInfo.Country);
-Console.WriteLine(result.PassportInfo.PassportNumber);
-Console.WriteLine(result.PassportInfo.Surname);
-Console.WriteLine(result.PassportInfo.DateOfBirth);
-Console.WriteLine(result.PassportInfo.DateOfExpiry);
+Console.WriteLine(passportDetails.PassportInfo.GivenNames);
+Console.WriteLine(passportDetails.PassportInfo.Country);
+Console.WriteLine(passportDetails.PassportInfo.PassportNumber);
+Console.WriteLine(passportDetails.PassportInfo.Surname);
+Console.WriteLine(passportDetails.PassportInfo.DateOfBirth);
+Console.WriteLine(passportDetails.PassportInfo.DateOfExpiry);
 ```
 
-#### Result
+### Result
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
@@ -106,52 +91,32 @@ Console.WriteLine(result.PassportInfo.DateOfExpiry);
     </div>
 </div>
 
-Ensure that only the passport image is in the document to prevent misreads with any additional text like headers or footers.
+Ensure that the document image is only of the passport to prevent misreads caused by extraneous text.
 
-### Example: Reading Photographs
+## Reading Photo Text
 
-The `ReadPhoto` method is optimized for deciphering text from challenging images. It returns details about the text's location and content within the image.
+The `ReadPhoto` method is tailored for decoding text within images, especially in challenging conditions. It returns the **TextRegions** property with detailed information about the detected text positions.
 
-```cs
+```csharp
 using IronOcr;
 using IronSoftware.Drawing;
 
-// Create an OCR engine instance
-var ocr = new IronTesseract();
+var photoReader = new IronTesseract();
 
-using var inputPhoto = new OcrInput();
-inputPhoto.LoadImageFrame("photo.tif", 2);
+using var photo = new OcrInput();
+photo.LoadImageFrame("photo.tif", 2);
 
-// Perform OCR
-OcrPhotoResult result = ocr.ReadPhoto(inputPhoto);
+OcrPhotoResult photoText = photoReader.ReadPhoto(photo);
 
-// Gather text and region details
-int number = result.TextRegions[0].FrameNumber;
-string textInRegion = result.TextRegions[0].TextInRegion;
-Rectangle region = result.TextRegions[0].Region;
+int index = photoText.TextRegions[0].PageNumber;
+string regionText = photoText.TextRegions[0].TextInRegion;
+Rectangle textLocation = photoText.TextRegions[0].Region;
 ```
 
-### Example: Reading Screenshots
+## Reading Screenshot Text
 
-Similar to `ReadPhoto`, `ReadScreenShot` is tailored for extracting text from screenshots. This method also provides the text's specific locations within the image.
+The `ReadScreenShot` method, like the `ReadPhoto` method, optimizes for extracting text from screenshots, returning similar properties for text localization.
 
-```cs
-using IronOcr;
-using System;
-using System.Linq;
-
-// Initialize OCR engine
-var ocr = new IronTesseract();
-
-using var inputScreenshot = new OcrInput();
-inputScreenshot.LoadImage("screenshot.png");
-
-// Conduct OCR
-OcrPhotoResult result = ocr.ReadScreenShot(inputScreenshot);
-
-// Output screenshot text and details
-Console.WriteLine(result.Text);
-Console.WriteLine(result.TextRegions.First().Region.X);
-Console.WriteLine(result.TextRegions.Last().Region.Width);
-Console.WriteLine(result.Confidence);
+```csharp
+// THIS CODE SNIPPET IS NOT AVAILABLE!
 ```

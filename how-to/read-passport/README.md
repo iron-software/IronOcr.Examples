@@ -1,20 +1,28 @@
-# Extracting Passport Data Using IronOCR
+# How to Extract Passport Data with IronOCR
 
 ***Based on <https://ironsoftware.com/how-to/read-passport/>***
 
 
-In environments like airport check-ins and security immigration, where agents frequently handle numerous passports, it's vital to have a dependable and efficient system to swiftly extract and read critical data from these documents. IronOCR provides a seamless solution for these needs by simplifying the process of extracting passport data.
+For platforms like airport check-in and security, where agents handle numerous passports daily, having a system that can efficiently extract vital information from these passports is key. This ensures a smoother, faster process through immigration controls.
 
-IronOCR simplifies the extraction of passport data with the `ReadPassport` method, making the task virtually effortless. To utilize this capability, first, ensure the [IronOcr.Extension.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package is installed.
+## Quickstart: Extract Passport MRZ Info in One Line
 
-## Example: Extracting Data from a Passport
+Quickly begin extracting passport data: this guide demonstrates the simplicity of using `IronOcr.IronTesseract` to scan a passport image with `OcrInput`, employ the `ReadPassport()` method to fetch data, and easily access structured fields such as names, numbers, and dates via the `PassportInfo` object. Here's how to do it all in one concise line of code.
 
-Here’s a hands-on example of how to apply IronOCR to extract details from a passport. You start by loading the passport image with `OcrInput` and then use the `ReadPassport` method to fetch information. The data retrieved includes the traveler's given names, country, passport number, surname, date of birth, and expiration date, encapsulated within an `OcrPassportResult` object.
+```cs
+:title=Quickly Capture Passport Data with IronOCR
+var extractedPassportInfo = new IronOcr.IronTesseract().ReadPassport(new IronOcr.OcrInput("passport.jpg")).PassportInfo;
+```
 
-- Note: The current implementation supports only English-language passports.
-- Remember: This functionality requires the application to run on x64 systems when using the .NET Framework.
+## Detailed Example of Passport Data Extraction
 
-### Passport Image Input
+Let's delve into how to use a passport image to demonstrate IronOCR's capabilities. Begin by loading the image with `OcrInput`, then utilize the `ReadPassport` function to parse and extract data from the passport. This function provides an `OcrPassportResult` instance containing details such as `GivenNames`, `Country`, `PassportNumber`, `Surname`, `DateOfBirth`, and `DateOfExpiry`. Each of these fields in the `PassportInfo` object is a string type.
+
+- Note that this method is currently optimized for passports that use English.
+- Enhanced scanning requires the project to operate on a 64-bit architecture under the .NET Framework.
+- Mac users should ensure the MRZ is positioned at the bottom of the image for successful processing, as automatic rotation is not supported.
+
+### Passport Input Example
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
@@ -22,30 +30,30 @@ Here’s a hands-on example of how to apply IronOCR to extract details from a pa
     </div>
 </div>
 
-### Sample Code
+### Code Example
 
-```cs
+```csharp
 using IronOcr;
 using System;
 
+// Create an instance of the OCR engine
 var ocrEngine = new IronTesseract();
 
-using (var passportInput = new OcrInput("passport.jpg"))
-{
-    // Extract passport data
-    OcrPassportResult passportData = ocrEngine.ReadPassport(passportInput);
+using var passportImage = new OcrInput("passport.jpg");
 
-    // Display extracted information
-    Console.WriteLine("Given Names: " + passportData.PassportInfo.GivenNames);
-    Console.WriteLine("Country: " + passportData.PassportInfo.Country);
-    Console.WriteLine("Passport Number: " + passportData.PassportInfo.PassportNumber);
-    Console.WriteLine("Surname: " + passportData.PassportInfo.Surname);
-    Console.WriteLine("Date of Birth: " + passportData.PassportInfo.DateOfBirth);
-    Console.WriteLine("Date of Expiry: " + passportData.PassportInfo.DateOfExpiry);
-}
+// Execute OCR to read passport data
+OcrPassportResult passportData = ocrEngine.ReadPassport(passportImage);
+
+// Display extracted passport information
+Console.WriteLine(passportData.PassportInfo.GivenNames);
+Console.WriteLine(passportData.PassportInfo.Country);
+Console.WriteLine(passportData.PassportInfo.PassportNumber);
+Console.WriteLine(passportData.PassportInfo.Surname);
+Console.WriteLine(passportData.PassportInfo.DateOfBirth);
+Console.WriteLine(passportData.PassportInfo.DateOfExpiry);
 ```
 
-### Extraction Results Display
+### Expected Output
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
@@ -53,13 +61,11 @@ using (var passportInput = new OcrInput("passport.jpg"))
     </div>
 </div>
 
-The `PassportInfo` object provides each piece of extracted data as a string. For instance, `GivenNames` returns the names specified in the passport, and `Country` gives the full name of the issuing country, rather than an abbreviation.
+### Parsing the MRZ Data
 
-## Decoding MRZ Information
+IronOCR effectively extracts MRZ (Machine Readable Zone) data, which is located at the lowest two rows of a standard passport according to the International Civil Aviation Organization ([ICAO](https://www.icao.int/)). The MRZ comprises two lines, each containing essential data based on specific positions.
 
-MRZ, or Machine-Readable Zone, is present at the bottom two rows of standardized passports as per International Civil Aviation Organization (ICAO) guidelines. It includes critical information formatted according to [ICAO standards](https://www.icao.int/publications/Documents/9303_p4_cons_en.pdf).
-
-### MRZ Sample:
+#### Example MRZ Positioning
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
@@ -67,31 +73,39 @@ MRZ, or Machine-Readable Zone, is present at the bottom two rows of standardized
     </div>
 </div>
 
-Data from the MRZ section is split across two lines with specific sequences for different pieces of information, such as passport number, country code, date of birth, etc.
+The table below outlines the MRZ positions and their corresponding information:
 
-## Verifying OCR Results
+| Position | Field               | Description                                                      |
+|----------|---------------------|------------------------------------------------------------------|
+| 1        | Document Type       | Typically 'P' for passport                                       |
+| 2-3      | Issuing Country     | ISO 3166-1 alpha-3 three-letter country code                     |
+| 4-44     | Surname and Given Names | Surname followed by '<<' then given names    |
+| 1-9      | Passport Number     | Unique passport number                                           |
+| 10       | Check Digit (Passport Number) | Validating check digit                     |
+| 14-19    | Date of Birth       | Birth date in YYMMDD format                                      |
+| 22-27    | Date of Expiry      | Expiry date in YYMMDD format                                     |
+| 43       | Check Digit (Composite) | Composite check digit ensuring overall validity |
 
-To confirm the accuracy of the extracted data, you can examine the `Confidence` and `Text` properties from the `OcrPassportResult`.
+## Debugging Passport Data Extraction
 
-```cs
-var ocrTester = new IronTesseract();
+Verify the accuracy of the extracted passport information by checking the `Confidence` and `Text` outputs from IronOCR as shown in this example.
 
-using (var testInput = new OcrInput("passport.jpg"))
-{
-    OcrPassportResult testResult = ocrTester.ReadPassport(testInput);
+```csharp
+using IronOcr;
+using System;
 
-    // Display confidence level and raw text
-    Console.WriteLine("OCR Confidence Level: " + testResult.Confidence);
-    Console.WriteLine("Extracted Raw Text: " + testResult.Text);
-}
+var ocrEngine = new IronTesseract();
+
+using var inputImage = new OcrInput("passport.jpg");
+
+OcrPassportResult extractionResult = ocrEngine.ReadPassport(inputImage);
+
+// Display OCR confidence level and extracted text
+Console.WriteLine(extractionResult.Confidence);
+Console.WriteLine(extractionResult.Text);
 ```
 
-Results are displayed showing both the confidence level of the OCR process and the raw, unparsed text extracted from the passport image.
+![OCR Debug Output](https://ironsoftware.com/static-assets/ocr/how-to/read-passport/debug.webp)
 
-<div class="content-img-align-center">
-    <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/ocr/how-to/read-passport/debug.webp" alt="Debug" class="img-responsive add-shadow">
-    </div>
-</div>
-
-The `Confidence` property, a float value, indicates the statistical confidence level of the OCR accuracy per character. The `Text` property provides the unformatted text directly extracted from the image, which can be useful for debugging and verification in development scenarios.
+- **Confidence**: Indicates the average confidence level for each character recognized, with 1 being the highest.
+- **Text**: Displays the raw text extracted from the passport image, useful for validation in development and testing scenarios.

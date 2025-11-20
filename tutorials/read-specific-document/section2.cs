@@ -9,18 +9,17 @@ namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
             // Instantiate OCR engine
             var ocr = new IronTesseract();
             
-            using var inputLicensePlate = new OcrInput();
+            // Configure OCR engine
+            ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.SingleBlock;
             
-            inputLicensePlate.LoadImage("LicensePlate.jpeg");
+            using var input = new OcrInput();
+            
+            input.LoadPdf("Five.pdf");
             
             // Perform OCR
-            OcrLicensePlateResult result = ocr.ReadLicensePlate(inputLicensePlate);
+            OcrResult result = ocr.ReadDocument(input);
             
-            // Retrieve license plate coordinates
-            Rectangle rectangle = result.Licenseplate;
-            
-            // Retrieve license plate value
-            string output = result.Text;
+            Console.WriteLine(result.Text);
         }
     }
 }

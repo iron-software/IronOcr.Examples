@@ -1,12 +1,12 @@
 ***Based on <https://ironsoftware.com/examples/results-objects/>***
 
-IronOCR utilizes Tesseract 5 to deliver a comprehensive result object for every scanned page. The details provided include:
+IronOCR utilizes Tesseract 5 to generate a detailed result object for every page it processes. This detailed object comprises various elements such as **location data, images, text, statistical confidence, alternative symbol choices, font names, font sizes, decorations, font weights, and position**: 
 
-- **Positioning, images, text, statistical confidence, alternative symbol options, font names, sizes, styles, weights, and locations** for:
-  
-  - Entire Pages
-  - Paragraphs
-  - Text Lines
-  - Words
-  - Single Characters
-  - Barcodes
+- Page
+- Paragraph
+- Line of Text
+- Word
+- Individual Character
+- Barcode
+
+[Learn More about Interpretation of OCR Results with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-results/)

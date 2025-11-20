@@ -7,10 +7,14 @@ namespace IronOcr.Examples.Overview.Quickstart
         {
             IronTesseract ocr = new IronTesseract();
             using OcrInput input = new OcrInput();
+            input.Title = "Quarterly Report";
+            input.LoadImage("image1.jpeg");
+            input.LoadImage("image2.png");
             var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames("multi-frame.tiff", pageindices);
+            input.LoadImageFrames("image3.gif", pageindices);
+            
             OcrResult result = ocr.Read(input);
-            Console.WriteLine(result.Text);
+            result.SaveAsSearchablePdf("searchable.pdf");
         }
     }
 }

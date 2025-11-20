@@ -5,22 +5,33 @@ namespace IronOcr.Examples.Tutorial.CSharpTesseractOcr
     {
         public static void Run()
         {
-            var ocr = new IronTesseract();
-            ocr.Language = OcrLanguage.Arabic;
+            // Configure IronTesseract for Arabic text recognition
+            var ocr = new IronTesseract
+            {
+                // Set primary language to Arabic
+                // Automatically handles right-to-left text
+                Language = OcrLanguage.Arabic
+            };
             
+            // Load Arabic documents for processing
             using var input = new OcrInput();
-            var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames("img/arabic.gif", pageindices);
+            var pageIndices = new int[] { 1, 2 };
+            input.LoadImageFrames("img/arabic.gif", pageIndices);
             
-            // Add image filters if needed
-            // In this case, even thought input is very low quality
-            // IronTesseract can read what conventional Tesseract cannot.
+            // IronOCR includes specialized preprocessing for Arabic scripts
+            // Handles cursive text and diacritical marks automatically
             
+            // Perform OCR with language-specific optimizations
             var result = ocr.Read(input);
             
-            // Console can't print Arabic on Windows easily.
-            // Let's save to disk instead.
+            // Save results with proper Unicode encoding
+            // Preserves Arabic text formatting and direction
             result.SaveAsTextFile("arabic.txt");
+            
+            // Advanced Arabic features:
+            // - Mixed Arabic/English document support
+            // - Automatic number conversion (Eastern/Western Arabic)
+            // - Font-specific optimization for common Arabic typefaces
         }
     }
 }

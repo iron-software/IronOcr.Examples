@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.InputPdfs
 {
@@ -9,18 +9,13 @@ namespace IronOcr.Examples.HowTo.InputPdfs
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();
             
-            // Specify crop regions
-            Rectangle[] scanRegions = { new Rectangle(550, 100, 600, 300) };
+            // Create page indices list
+            List<int> pageIndices = new List<int>() { 0, 2 };
             
             // Add PDF
-            using (var pdfInput = new OcrPdfInput("Potter.pdf", ContentAreas: scanRegions))
-            {
-                // Perform OCR
-                OcrResult ocrResult = ocrTesseract.Read(pdfInput);
-            
-                // Output the result to console
-                Console.WriteLine(ocrResult.Text);
-            }
+            using var pdfInput = new OcrPdfInput("Potter.pdf", PageIndices: pageIndices);
+            // Perform OCR
+            OcrResult ocrResult = ocrTesseract.Read(pdfInput);
         }
     }
 }

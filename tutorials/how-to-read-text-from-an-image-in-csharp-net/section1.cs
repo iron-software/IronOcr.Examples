@@ -5,11 +5,8 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
     {
         public static void Run()
         {
-            // PM> Install-Package IronOcr
-            using IronOcr;
-            
-            OcrResult result = new IronTesseract().Read(@"img\Screenshot.png");
-            Console.WriteLine(result.Text);
+            :title=Start OCR in Seconds with IronOCR!
+            string text = new IronTesseract().Read("image.png").Text;
         }
     }
 }

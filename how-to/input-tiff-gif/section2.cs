@@ -8,8 +8,8 @@ namespace IronOcr.Examples.HowTo.InputTiffGif
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();
             
-            // Import GIF
-            using var imageInput = new OcrImageInput("Potter.gif");
+            // Import TIFF/TIF
+            using var imageInput = new OcrImageInput("Potter.tiff");
             // Perform OCR
             OcrResult ocrResult = ocrTesseract.Read(imageInput);
         }

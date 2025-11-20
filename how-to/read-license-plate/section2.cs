@@ -7,22 +7,16 @@ namespace IronOcr.Examples.HowTo.ReadLicensePlate
         public static void Run()
         {
             var ocr = new IronTesseract();
+            ocr.Configuration.WhiteListCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
+            
             using var inputLicensePlate = new OcrInput();
-            inputLicensePlate.LoadImage("car_license.jpg");
+            inputLicensePlate.LoadImage("plate.jpeg");
             
             // Read license plate
             OcrLicensePlateResult result = ocr.ReadLicensePlate(inputLicensePlate);
             
-            // Retrieve license plate coordinates
-            RectangleF rectangle = result.Licenseplate;
-            
-            // Write license plate value and coordinates in a string
-            string output = $"License Plate Number:\n{result.Text}\n\n"
-                          + $"License Plate Area_\n"
-                          + $"Starting X: {rectangle.X}\n"
-                          + $"Starting Y: {rectangle.Y}\n"
-                          + $"Width: {rectangle.Width}\n"
-                          + $"Height: {rectangle.Height}";
+            // Retrieve license plate number and confidence value
+            string output = $"{result.Text}\nResult Confidence: {result.Confidence}";
             
             Console.WriteLine(output);
         }

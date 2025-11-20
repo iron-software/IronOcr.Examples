@@ -5,8 +5,16 @@ namespace IronOcr.Examples.HowTo.ImageColorCorrection
     {
         public static void Run()
         {
-            // Apply grayscale affect
-            imageInput.ToGrayScale();
+            // Instantiate IronTesseract
+            IronTesseract ocrTesseract = new IronTesseract();
+            
+            // Add image
+            using var imageInput = new OcrImageInput("sample.jpg");
+            // Apply binarize affect
+            imageInput.Binarize();
+            
+            // Export the modified image
+            imageInput.SaveAsImages("binarize.jpg");
         }
     }
 }

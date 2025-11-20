@@ -1,7 +1,9 @@
 ***Based on <https://ironsoftware.com/examples/intl-languages/>***
 
-IronOCR offers support for 125 different international languages.
+### Multilingual Support in IronOCR
 
-Besides English, which is already included by default, additional language packs can be incorporated into your .NET project either through NuGet or by downloading them from our [Languages Page](https://ironsoftware.com/csharp/ocr/languages/).
+IronOCR provides robust support for 125 international languages. While English is the default language, you can easily enhance your .NET application with additional languages. To do this, you can either fetch language packs through NuGet or access them via our [Languages Page](https://ironsoftware.com/csharp/ocr/languages/).
 
-These languages are accessible in three qualities: Fast, Standard (which is recommended), and Best. While the Best quality option tends to be more precise, it is also the slowest.
+IronOCR accomodates most languages with three distinct quality tiers: Fast, Standard (recommended), and Best. Although the Best quality setting tends to yield the highest accuracy, it does require more processing time.
+
+[Discover how to implement OCR with multiple languages using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/ocr-multiple-languages/)

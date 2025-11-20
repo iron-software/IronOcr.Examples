@@ -1,46 +1,52 @@
-# How to Decode Barcodes and QR Codes
+# How to Read Barcodes and QR Codes
 
 ***Based on <https://ironsoftware.com/how-to/barcodes/>***
 
 
-Decoding barcodes and QR codes using OCR technology offers a major advantage when these elements need to be integrated and processed from both printed and digital documents. This approach automates data extraction across various media, offering a flexible tool for businesses and developers alike.
+Utilizing OCR technology to read barcodes and QR codes can significantly enhance automation and data handling, especially when these elements appear in printed or digital documents. This method simplifies data collection from various sources, providing a robust tool for developers and businesses.
 
-IronOcr simplifies the task of detecting barcodes and QR codes, requiring minimal configuration for activation.
+## Quickstart: Instantly Read Barcodes from a PDF
 
-<h3>Getting Started with IronOCR</h3>
-
---------------------------------------
-
-## Barcode Reading Example
-
-Initialize the `IronTesseract` class to start the decoding process. Activate barcode reading by setting the `ReadBarCodes` attribute to true. Load the PDF through the `OcrPdfInput` constructor. Subsequently, apply the `Read` method to execute OCR on the loaded PDF document.
-
-Consider the OCR operation on this PDF document:
-
-<iframe loading="lazy" src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/pdfWithBarcodes.pdf#view=fit" width="100%" height="400px">
-</iframe>
+Activate barcode recognition with a simple setting and read PDF documents effortlessly using IronOCR. Below is an example demonstrating how to enable barcode reading and process a PDF to extract decoded values efficiently.
 
 ```cs
+:title=Get Started with IronOCR's Barcode Reading Feature
+var ocrSetup = new IronOcr.IronTesseract() {
+    Configuration = new IronOcr.TesseractConfiguration { ReadBarCodes = true }
+};
+var barcodeResults = ocrSetup.Read(new IronOcr.OcrPdfInput("document.pdf"));
+foreach (var barcode in barcodeResults.Barcodes) Console.WriteLine(barcode.Value);
+```
+
+## Example of Reading a Barcode
+
+To begin, instantiate the `IronTesseract` object and enable the barcode reading feature by setting the **ReadBarCodes** attribute to true. Then, add your PDF file by utilizing the `OcrPdfInput` constructor. Execute the OCR process using the `Read` method on your PDF input.
+
+Let's conduct OCR on this specific PDF:
+
+<iframe loading="lazy" src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/pdfWithBarcodes.pdf#view=fit" width="100%" height="400px"></iframe>
+
+```csharp
 using IronOcr;
 using System;
 
 // Create an IronTesseract instance
-IronTesseract ocrEngine = new IronTesseract();
+IronTesseract ocrInstance = new IronTesseract();
 
-// Turn on barcode detection
-ocrEngine.Configuration.ReadBarCodes = true;
+// Activate barcode reading
+ocrInstance.Configuration.ReadBarCodes = true;
 
 // Load the PDF
-using var documentInput = new OcrPdfInput("pdfWithBarcodes.pdf");
+using var pdfInput = new OcrPdfInput("pdfWithBarcodes.pdf");
 
 // Execute OCR
-OcrResult result = ocrEngine.Read(documentInput);
+OcrResult readResult = ocrInstance.Read(pdfInput);
 
 // Display the results
-Console.WriteLine("Text extracted:");
-Console.WriteLine(result.Text);
+Console.WriteLine("Extracted text:");
+Console.WriteLine(readResult.Text);
 Console.WriteLine("Barcodes detected:");
-foreach (var barcode in result.Barcodes)
+foreach (var barcode in readResult.Barcodes)
 {
     Console.WriteLine(barcode.Value);
 }
@@ -48,42 +54,39 @@ foreach (var barcode in result.Barcodes)
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-        <img src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/read-barcodes.webp" alt="Reading result" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/read-barcodes.webp" alt="Reading result" class="img-responsive add-shadow">
     </div>
 </div>
 
-Multiple barcode values can be seen in the output alongside the text extracted from them.
+Notice the display of multiple barcode values extracted along with the text.
 
-## Example of QR Code Reading
+## Example of Reading a QR Code
 
-Set the `ReadBarCodes` to true, similar to barcode reading. The modification in the file path marks the only difference in the setup. Now, let's decode a PDF document embedded with QR codes:
+The process for reading QR codes is similar to that of barcodes. Simply ensure that you've enabled the `ReadBarCodes` setting. Let's now look at performing OCR on a PDF containing QR codes:
 
-<iframe loading="lazy" src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/pdfWithQrCodes.pdf#view=fit" width="100%" height="400px">
-</iframe>
+<iframe loading="lazy" src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/pdfWithQrCodes.pdf#view=fit" width="100%" height="400px"></iframe>
 
-```cs
+```csharp
 using IronOcr;
 using System;
 
-// Initialize IronTesseract
-IronTesseract ocrReader = new IronTesseract();
+// Set up IronTesseract for QR code reading
+IronTesseract qrReader = new IronTesseract();
+qrReader.Configuration.ReadBarCodes = true;
 
-// Activate barcode detection
-ocrReader.Configuration.ReadBarCodes = true;
-
-// Incorporate the PDF
-using var inputFile = new OcrPdfInput("pdfWithQrCodes.pdf");
+// Load QR code PDF
+using var qrInput = new OcrPdfInput("pdfWithQrCodes.pdf");
 
 // Execute OCR
-OcrResult decodedResult = ocrReader.Read(inputFile);
+OcrResult qrResult = qrReader.Read(qrInput);
 
-// Output results
-Console.WriteLine("Text decoded:");
-Console.WriteLine(decodedResult.Text);
-Console.WriteLine("Barcodes decoded:");
-foreach (var barcode in decodedResult.Barcodes)
+// Output the extracted information
+Console.WriteLine("Extracted text:");
+Console.WriteLine(qrResult.Text);
+Console.WriteLine("QR codes detected:");
+foreach (var qrCode in qrResult.Barcodes)
 {
-    Console.WriteLine(barcode.Value);
+    Console.WriteLine(qrCode.Value);
 }
 ```
 
@@ -92,5 +95,3 @@ foreach (var barcode in decodedResult.Barcodes)
          <img src="https://ironsoftware.com/static-assets/ocr/how-to/barcodes/read-qr-codes.webp" alt="Reading result" class="img-responsive add-shadow">
     </div>
 </div>
-
-These examples display the straightforward integration and robust capabilities of IronOCR for automating the extraction of information from barcodes and QR codes embedded in documents.

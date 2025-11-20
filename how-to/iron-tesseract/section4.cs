@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.IronTesseract
 {
@@ -6,19 +5,12 @@ namespace IronOcr.Examples.HowTo.IronTesseract
     {
         public static void Run()
         {
-            IronTesseract Ocr = new IronTesseract();
+            IronTesseract ocr = new IronTesseract();
             
-            Ocr.Language = OcrLanguage.English;
-            Ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.AutoOsd;
-            
-            // Configure Tesseract Engine
-            Ocr.Configuration.TesseractVariables["tessedit_parallelize"] = false;
-            
-            using var input = new OcrInput();
-            input.LoadImage("/path/file.png");
-            
-            OcrResult Result = Ocr.Read(input);
-            Console.WriteLine(Result.Text);
+            using OcrInput input = new OcrInput();
+            input.LoadImage("attachment.png");
+            OcrResult result = ocr.Read(input);
+            string text = result.Text;
         }
     }
 }

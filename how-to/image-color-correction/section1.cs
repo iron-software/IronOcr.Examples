@@ -5,16 +5,8 @@ namespace IronOcr.Examples.HowTo.ImageColorCorrection
     {
         public static void Run()
         {
-            // Instantiate IronTesseract
-            IronTesseract ocrTesseract = new IronTesseract();
-            
-            // Add image
-            using var imageInput = new OcrImageInput("sample.jpg");
-            // Apply binarize affect
-            imageInput.Binarize();
-            
-            // Export the modified image
-            imageInput.SaveAsImages("binarize");
+            :title=Fix Text Color Fast with IronOCR
+            new IronTesseract().Read(new IronOcr.OcrImageInput("sample.jpg").SelectTextColor(new IronSoftware.Drawing.Color("#DB645C"), 60));
         }
     }
 }

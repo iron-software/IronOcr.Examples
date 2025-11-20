@@ -1,4 +1,4 @@
-using System.Linq;
+using IronSoftware.Drawing;
 using IronOcr;
 namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
 {
@@ -9,17 +9,16 @@ namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
             // Instantiate OCR engine
             var ocr = new IronTesseract();
             
-            using var inputScreenshot = new OcrInput();
-            inputScreenshot.LoadImage("screenshot.png");
+            using var inputPhoto = new OcrInput();
+            inputPhoto.LoadImageFrame("photo.tif", 2);
             
             // Perform OCR
-            OcrPhotoResult result = ocr.ReadScreenShot(inputScreenshot);
+            OcrPhotoResult result = ocr.ReadPhoto(inputPhoto);
             
-            // Output screenshoot information
-            Console.WriteLine(result.Text);
-            Console.WriteLine(result.TextRegions.First().Region.X);
-            Console.WriteLine(result.TextRegions.Last().Region.Width);
-            Console.WriteLine(result.Confidence);
+            // index number refer to region order in the page
+            int number = result.TextRegions[0].PageNumber;
+            string textinregion = result.TextRegions[0].TextInRegion;
+            Rectangle region = result.TextRegions[0].Region;
         }
     }
 }

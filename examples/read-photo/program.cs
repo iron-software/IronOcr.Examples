@@ -12,7 +12,7 @@ inputPhoto.LoadImageFrame("ocr.tiff", 0);
 OcrPhotoResult result = ocr.ReadPhoto(inputPhoto);
 
 // Index number refer to region order in the page
-int number = result.TextRegions[0].FrameNumber;
+int number = result.TextRegions[0].PageNumber;
 
 // Extract the text in the first region
 string textinregion = result.TextRegions[0].TextInRegion;

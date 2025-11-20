@@ -7,8 +7,7 @@ namespace IronOcr.Examples.Overview.Quickstart
         {
             IronTesseract ocr = new IronTesseract();
             using OcrInput input = new OcrInput();
-            var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames(@"img\Potter.tiff", pageindices);
+            input.LoadImage("LowQuality.jpeg");
             
             // fixes digital noise and poor scanning
             input.DeNoise();

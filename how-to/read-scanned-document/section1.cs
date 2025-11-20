@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.ReadScannedDocument
 {
@@ -6,17 +5,8 @@ namespace IronOcr.Examples.HowTo.ReadScannedDocument
     {
         public static void Run()
         {
-            // Instantiate OCR engine
-            var ocr = new IronTesseract();
-            
-            // Configure OCR engine
-            using var input = new OcrInput();
-            input.LoadImage("potter.tiff");
-            
-            // Perform OCR
-            OcrResult result = ocr.ReadDocument(input);
-            
-            Console.WriteLine(result.Text);
+            :title=Quickly OCR Your Scanned Document
+            var text = new IronOcr.IronTesseract().ReadDocument(new IronOcr.OcrInput().LoadPdf("scanned.pdf")).Text;
         }
     }
 }

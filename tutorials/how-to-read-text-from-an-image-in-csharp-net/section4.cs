@@ -5,19 +5,35 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
     {
         public static void Run()
         {
-            IronTesseract ocr = new IronTesseract();
+            // Advanced Iron Tesseract C# example for low-quality images
+            using IronOcr;
+            using System;
             
-            // Configure for speed
-            ocr.Configuration.BlackListCharacters = "~`$#^*_}{][|\\";
-            ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.Auto;
-            ocr.Language = OcrLanguage.EnglishFast;
+            var ocr = new IronTesseract();
             
-            using OcrInput input = new OcrInput();
-            var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames(@"img\Potter.tiff", pageindices);
+            try
+            {
+                using (var input = new OcrInput())
+                {
+                    // Load specific pages from poor-quality TIFF
+                    var pageIndices = new int[] { 0, 1 };
+                    input.LoadImageFrames(@"img\Potter.LowQuality.tiff", pageIndices);
             
-            OcrResult result = ocr.Read(input);
-            Console.WriteLine(result.Text);
+                    // Apply deskew filter to correct rotation and perspective
+                    input.Deskew(); // Critical for improving accuracy on skewed scans
+            
+                    // Perform OCR with enhanced preprocessing
+                    OcrResult result = ocr.Read(input);
+            
+                    // Display results
+                    Console.WriteLine("Recognized Text:");
+                    Console.WriteLine(result.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during OCR: {ex.Message}");
+            }
         }
     }
 }

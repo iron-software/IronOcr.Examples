@@ -1,13 +1,9 @@
 ***Based on <https://ironsoftware.com/examples/fix-image-orientation/>***
 
-## `Image Rotation`
+The `OcrInput` class from IronOCR offers integrated functions to enhance image orientation, thereby improving OCR results:
 
-Rotate images by specifying the number of degrees. To rotate them clockwise, enter a positive value; for counterclockwise rotation, input a negative number.
+- **`Rotate(double degrees)`**: This function rotates the image clockwise by the specified degrees. For rotations in the opposite direction, use a negative value.
+- **`Deskew(int maxDeskewAngle = 45)`**: This method adjusts the image to correct any skew, handling angles up to the default maximum of 45°. It returns `true` if a correction was made.
+- **`Scale(int percent, bool scaleCrop = true)`**: This function changes the image size proportionally, for example, using `150` for a 150% increase.
 
-## `Correct Image Orientation`
-
-This operation adjusts the alignment of an image so that it is properly upright and aligned at right angles. This adjustment is especially crucial for OCR operations, as Tesseract can only handle image skewness of up to 5 degrees.
-
-## `Adjust Image Size`
-
-This function adjusts the size of `OcrInput` pages while maintaining their proportional dimensions.
+Explore further techniques for correcting image orientation in C# by visiting [Image Orientation Correction Techniques in C#](https://ironsoftware.com/csharp/ocr/how-to/image-orientation-correction/).

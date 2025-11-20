@@ -1,4 +1,3 @@
-using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.Async
 {
@@ -6,13 +5,8 @@ namespace IronOcr.Examples.HowTo.Async
     {
         public static void Run()
         {
-            var ocr = new IronTesseract();
-            
-            using (var input = new OcrPdfInput(@"example.pdf"))
-            {
-                var result = ocr.Read(input);
-                Console.WriteLine(result.Text);
-            };
+            :title=Start Async OCR in One Line
+            var result = await new IronOcr.IronTesseract().ReadAsync("image.png");
         }
     }
 }

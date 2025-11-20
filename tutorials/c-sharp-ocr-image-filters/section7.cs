@@ -6,15 +6,15 @@ namespace IronOcr.Examples.Tutorial.CSharpOcrImageFilters
     {
         public static void Run()
         {
-            var image = @"before-invert.png";
+            var image = @"no-binarize.jpg";
             var ocr = new IronTesseract();
             
             using var input = new OcrInput();
             // Load at least one image
             input.LoadImage(image);
             
-            // Apply Invert
-            input.Invert(true);
+            // Apply Binarize
+            input.Binarize();
             
             // Read image into variable: result
             var result = ocr.Read(input);

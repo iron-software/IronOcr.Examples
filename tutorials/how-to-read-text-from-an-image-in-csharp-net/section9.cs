@@ -7,14 +7,20 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         {
             IronTesseract ocr = new IronTesseract();
             
-            using OcrInput input = new OcrInput();
-            var pageindices = new int[] { 1, 2 };
-            input.LoadImageFrames("MultiFrame.Tiff", pageindices);
-            OcrResult result = ocr.Read(input);
+            using (OcrInput input = new OcrInput())
+            {
+                // Define pages to process (0-based indexing)
+                int[] pageIndices = new int[] { 0, 1 };
             
-            Console.WriteLine(result.Text);
-            Console.WriteLine($"{result.Pages.Length} Pages");
-            // 1 page for every frame (page) in the TIFF
+                // Load specific TIFF frames
+                input.LoadImageFrames("MultiFrame.Tiff", pageIndices);
+            
+                // Extract text from all frames
+                OcrResult result = ocr.Read(input);
+            
+                Console.WriteLine(result.Text);
+                Console.WriteLine($"{result.Pages.Count} Pages processed");
+            }
         }
     }
 }

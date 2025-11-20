@@ -1,45 +1,50 @@
-# Exporting OCR Results as hOCR in HTML
+# How to Output OCR Data as hOCR into HTML Format
 
 ***Based on <https://ironsoftware.com/how-to/html-hocr-export/>***
 
 
-hOCR stands for "HTML-based OCR," a file format ideal for representing the outcome of Optical Character Recognition (OCR). This format utilizes HTML to store recognized text, layout details, and each character's coordinates from the scanned documents or images.
+hOCR, which stands for "HTML-based OCR," characterizes a file format designed to document the outcomes of Optical Character Recognition (OCR). This format is embedded into HTML (Hypertext Markup Language) and effectively stores the recognized text, spatial arrangement, and precise coordinates of each detected character from images or documents.
 
-IronOCR, a robust library from Iron Software, facilitates the optical character recognition of documents and subsequently allows the export of these results as hOCR in an HTML format. This capability extends to both HTML files and strings.
+## Quick Guide: Generating an hOCR HTML File with IronOCR
 
-### Setting up Iron Software's IronOCR
-
-------
-
-## Example: Exporting OCR Results as hOCR
-
-To begin exporting OCR results as hOCR, you must first activate the `Configuration.RenderHocr` setting by switching it to `true`. Once the OCR operation has been completed using the `Read` method, proceed to export the OCR results by employing the `SaveAsHocrFile` method. This method generates an HTML file populated with the OCR data from the input image. Below is an example using the mentioned [sample TIFF image](https://ironsoftware.com/static-assets/ocr/how-to/html-export/Potter.tiff).
+For a swift initiation with IronOCR, here's how to convert OCR results into hOCR format and save them into an HTML file using a straightforward configuration and method call. This approach allows developers to quickly visualize OCR output as structured HTML content.
 
 ```cs
-using IronOcr;
-
-// Create an instance of IronTesseract
-IronTesseract ocr = new IronTesseract();
-
-// Configure to output as hOCR
-ocr.Configuration.RenderHocr = true;
-
-// Load the image file
-using var image = new OcrImageInput("Potter.tiff");
-image.Title = "Sample HTML Title";
-
-// Execute OCR process
-OcrResult result = ocr.Read(image);
-
-// Save the OCR result as HTML file
-result.SaveAsHocrFile("output.html");
+:title=IronOCR Quick Configuration for hOCR Output
+var hocr = new IronTesseract {
+    Configuration = { RenderHocr = true }
+}.Read(new OcrInput("image.png")).SaveAsHocrString();
 ```
 
-## Converting OCR Result to HTML String
+## Detailed Example: Saving OCR Results as hOCR HTML
 
-With the same TIFF image, you can convert the OCR results into an HTML string by using the `SaveAsHocrString` method. This functionality returns the OCR data as a string formatted in HTML.
+To save OCR results as an hOCR, you must enable the `Configuration.RenderHocr` property by setting it to true. Begin by extracting the OCR outcome using the `Read` method. Then employ the `SaveAsHocrFile` method to commit the result as an HTML file. This produced HTML file will encapsulate the text extracted from the input documents. The following code demonstrates this using a [sample TIFF file](https://ironsoftware.com/static-assets/ocr/how-to/html-export/Potter.tiff).
 
-```cs
-// Convert OCR results to HTML string format
-string hocrHtmlString = result.SaveAsHocrString();
+```csharp
+using IronOcr;
+
+// Create IronTesseract instance
+IronTesseract ocrTesseract = new IronTesseract();
+
+// Set hOCR rendering enabled
+ocrTesseract.Configuration.RenderHocr = true;
+
+// Load image
+using var imageInput = new OcrImageInput("Potter.tiff");
+imageInput.Title = "Html Title";
+
+// Execute OCR
+OcrResult ocrResult = ocrTesseract.Read(imageInput);
+
+// Save as HTML file
+ocrResult.SaveAsHocrFile("result.html");
+```
+
+## Outputting OCR Result as HTML String
+
+With IronOCR, exporting the OCR data to an HTML string is straightforward. The method `SaveAsHocrString` facilitates this, directly returning an HTML string generated from OCR data. Here's how you can accomplish this using the same sample TIFF image.
+
+```csharp
+// Generate HTML string from OCR results
+string hocr = ocrResult.SaveAsHocrString();
 ```

@@ -9,20 +9,18 @@ namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
             // Instantiate OCR engine
             var ocr = new IronTesseract();
             
-            using var inputPassport = new OcrInput();
+            using var inputLicensePlate = new OcrInput();
             
-            inputPassport.LoadImage("Passport.jpg");
+            inputLicensePlate.LoadImage("LicensePlate.jpeg");
             
             // Perform OCR
-            OcrPassportResult result = ocr.ReadPassport(inputPassport);
+            OcrLicensePlateResult result = ocr.ReadLicensePlate(inputLicensePlate);
             
-            // Output passport information
-            Console.WriteLine(result.PassportInfo.GivenNames);
-            Console.WriteLine(result.PassportInfo.Country);
-            Console.WriteLine(result.PassportInfo.PassportNumber);
-            Console.WriteLine(result.PassportInfo.Surname);
-            Console.WriteLine(result.PassportInfo.DateOfBirth);
-            Console.WriteLine(result.PassportInfo.DateOfExpiry);
+            // Retrieve license plate coordinates
+            Rectangle rectangle = result.Licenseplate;
+            
+            // Retrieve license plate value
+            string output = result.Text;
         }
     }
 }

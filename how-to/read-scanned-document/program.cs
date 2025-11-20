@@ -3,3 +3,4 @@ using IronOcr.Examples.HowTo.ReadScannedDocument;
 
 
 Section1.Run();
+// Section2.Run();

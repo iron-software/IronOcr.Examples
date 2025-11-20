@@ -1,13 +1,17 @@
 ***Based on <https://ironsoftware.com/examples/replace-color/>***
 
-OCR performance is enhanced when processing black text on a white background.
+OCR performance enhances significantly when analyzing black text against a white background.
 
-For instance, if dealing with blue text on a pink background, it's advantageous to change the blue to black and pink to white prior to performing OCR.
+Conversely, more complex backgrounds, such as blue text on a pink backdrop, may require color adjustments—specifically changing blue to black and pink to white—prior to OCR processing.
 
-Using `System.Drawing` for this task can be labor-intensive and slow, however, IronOCR automates this process seamlessly.
+While such tasks could be laborious and slow with `System.Drawing`, they're efficiently handled by IronOCR.
 
-The method `OcrInput.ReplaceColor` provides us the capability to substitute one color for another within a document.
+Using the `OcrInput.ReplaceColor` method, it's possible to substitute one color for another within a document. This method is versatile, facilitating the adjustment of colors within a specified tolerance percentage of an exact RGB value, thus negating the necessity for utilizing tools like Photoshop or ImageMagick to prep images for OCR.
 
-This function is approximate, allowing users to set a percentage tolerance for RGB exactness.
+**`ReplaceColor` Method Parameters**
 
-This eliminates the necessity for employing tools like Photoshop or ImageMagick to prep images for OCR.
+- The first parameter determines the color to replace.
+- The second parameter is the new color that will replace the original.
+- An optional third parameter determines the tolerance level required for color matching, accommodating variations within the defined percentage.
+
+[Learn More About Image Color Correction in OCR](https://ironsoftware.com/csharp/ocr/how-to/image-color-correction/)

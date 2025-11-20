@@ -5,8 +5,8 @@ namespace IronOcr.Examples.HowTo.ImageOrientationCorrection
     {
         public static void Run()
         {
-            // Apply scale
-            imageInput.Scale(70);
+            // Apply deskew
+            imageInput.Deskew();
         }
     }
 }

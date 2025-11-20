@@ -1,4 +1,4 @@
-using IronSoftware.Drawing;
+using System;
 using IronOcr;
 namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
 {
@@ -9,16 +9,20 @@ namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
             // Instantiate OCR engine
             var ocr = new IronTesseract();
             
-            using var inputPhoto = new OcrInput();
-            inputPhoto.LoadImageFrame("photo.tif", 2);
+            using var inputPassport = new OcrInput();
+            
+            inputPassport.LoadImage("Passport.jpg");
             
             // Perform OCR
-            OcrPhotoResult result = ocr.ReadPhoto(inputPhoto);
+            OcrPassportResult result = ocr.ReadPassport(inputPassport);
             
-            // index number refer to region order in the page
-            int number = result.TextRegions[0].FrameNumber;
-            string textinregion = result.TextRegions[0].TextInRegion;
-            Rectangle region = result.TextRegions[0].Region;
+            // Output passport information
+            Console.WriteLine(result.PassportInfo.GivenNames);
+            Console.WriteLine(result.PassportInfo.Country);
+            Console.WriteLine(result.PassportInfo.PassportNumber);
+            Console.WriteLine(result.PassportInfo.Surname);
+            Console.WriteLine(result.PassportInfo.DateOfBirth);
+            Console.WriteLine(result.PassportInfo.DateOfExpiry);
         }
     }
 }

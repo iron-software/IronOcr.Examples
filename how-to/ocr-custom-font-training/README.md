@@ -1,23 +1,31 @@
-# C# Custom Font Training for Tesseract 5 (For Windows Users)
+# C# Custom Font Training for Tesseract 5 (Windows Users Edition)
 
 ***Based on <https://ironsoftware.com/how-to/ocr-custom-font-training/>***
 
 
-Enhance the precision of your OCR engine using custom font training with Tesseract 5. This is particularly useful for fonts or styles not typically well-supported. The technique requires feeding Tesseract with samples of fonts and their respective texts, allowing it to recognize and adapt to these unique features.
+Enhance the precision and recognition performance of the OCR engine using custom font training with Tesseract 5. This is especially useful for unique or complex font styles that are typically not well-supported by default.
 
-### Getting Started with IronOCR
+This training allows Tesseract to learn from your font samples and their corresponding text data to identify specific traits and patterns of your custom fonts.
 
+## Quickstart: Integrating Your Custom .traineddata Font File with IronOCR in C#
+To swiftly integrate your custom-trained Tesseract font file with IronOCR and enhance OCR accuracy for unique fonts, you can follow these simple steps:
+```cs
+// Example: Loading a Custom Trained Font in C#
+var ocrEngine = new IronOcr.IronTesseract();
+ocrEngine.UseCustomTesseractLanguageFile("path/to/YourCustomFont.traineddata");
+string extractedText = ocrEngine.Read(new IronOcr.OcrInput("image-containing-unique-font.png")).Text;
+```
 ---
 
-## Step 1: Obtain the Latest IronOCR Release
+## Step 1: Acquire the Latest IronOCR Release
 
-### Install via DLL
+### Direct DLL Installation
 
-Secure a copy of the [IronOcr DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip) straight to your local system.
+Acquire the [IronOcr DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip) and add it to your project manually.
 
-### Install via NuGet
+### Installation via NuGet
 
-You can also choose to install it through [NuGet](https://www.nuget.org/packages/IronOcr/).
+Alternatively, use the following NuGet command for installation:
 
 ```shell
 Install-Package IronOcr
@@ -25,138 +33,142 @@ Install-Package IronOcr
 
 ---
 
-## Step 2: Configure WSL2 and Ubuntu
+## Step 2: Setting Up WSL2 and Ubuntu
 
-Follow this [guide to set up WSL2 and Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10).
-**Note:** Custom font training is only feasible on Linux environments.
+Follow this guide to [set up WSL2 and Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10).
 
-## Step 3: Install Tesseract 5 in Ubuntu
+It is important to note that custom font training is only supported on Linux systems.
+
+## Step 3: Deploy Tesseract 5 in Ubuntu
+
+Execute these commands in Ubuntu to install Tesseract 5:
 
 ```bash
 sudo apt install tesseract-ocr
 sudo apt install libtesseract-dev
 ```
 
-## Step 4: Select and Download Your Font
+## Step 4: Obtain the Desired Font for Training
 
-For this tutorial, we have chosen the AMGDT font. Font files can be either .ttf or .otf.
+For this guide, we'll use the AMGDT font. Your font file must be in .ttf or .otf format. ![Downloaded AMGDT font example](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/example_of_downloaded_font_file.png)
 
-![Example of downloaded font file](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/example_of_downloaded_font_file.png)
+## Step 5: Configure Your Working Space on the D: Drive
 
-## Step 5: Prepare the Disk Drive for Training
-
-Mount your `D:` drive as the working directory with these commands:
+Execute the following commands to set up your workspace:
 
 ```bash
 cd /
 cd /mnt/d
 ```
 
-## Step 6: Transfer the Font File to the Ubuntu Font Directory
+## Step 6: Transfer the Font File to Ubuntu’s Font Directories
 
-Access Ubuntu’s font directories here: `Ubuntu/usr/share/fonts` and `Ubuntu/usr/local/share/fonts`.
+Paste the font file to the Ubuntu directories `/usr/share/fonts` and `/usr/local/share/fonts`.
 
-**Hint:** Use `\\\wsl$` to explore Ubuntu files from Windows.
+To browse Ubuntu files on Windows, enter `\\wsl$` in Windows File Explorer’s address bar.
 
-![Ubuntu folder directory](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/ubutu_folder_directory.png)
+![Ubuntu directory for fonts](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/ubutu_folder_directory.png)
 
-### Troubleshooting: Access Denied to Destination Folder
+### Troubleshooting: Access Denied in Destination Folder
 
-![Access Denied Error](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/destination_folder_access_denied.png)
-
-Resolve this by using command-line operations:
+Resolve folder access issues like this:
 
 ```bash
 cd /
 su root
-cd c/Users/Admin/Downloads/’AMGDT Regular’
-cp ‘AMGDT Regular.ttf’ /usr/share/fonts
-cp ‘AMGDT Regular.ttf’ /usr/local/share/fonts
-su username
+cd /c/Users/Admin/Downloads/'AMGDT Regular'
+cp 'AMGDT Regular.ttf' /usr/share/fonts
+cp 'AMGDT Regular.ttf /usr/local/share/fonts
+exit
 ```
 
-## Step 7: Download Repositories from GitHub
+## Step 7: Clone `tesseract_tutorial` Repository
 
-Clone `tesseract_tutorial` with this command:
+Retrieve the `tesseract_tutorial` repo using:
 
 ```bash
 git clone https://github.com/astutejoe/tesseract_tutorial.git
 ```
 
-## Step 8: Additional GitHub Clones
+## Step 8: Clone Development Repositories
 
-Inside the `tesseract_tutorial` directory, clone the additional necessary repositories:
+From the local `tesseract_tutorial` directory, clone the `tesstrain` and `tesseract` GitHub repositories:
 
 ```bash
 git clone https://github.com/tesseract-ocr/tesstrain
 git clone https://github.com/tesseract-ocr/tesseract
 ```
+These repositories contain necessary files like the ‘Makefile’ and ‘tessdata’ directory which are crucial during the font training session.
 
-## Step 9: Organize Output Data
+## Step 9: Prepare Output Storage
 
-Create a `data` directory in `tesseract_tutorial/tesstrain` to store output files.
+Establish a directory for output files by creating a ‘data’ folder inside `tesseract_tutorial/tesstrain`.
 
-## Step 10: Execute Training Script
+## Step 10: Execute `split_training_text.py`
 
-Navigate back to the `tesseract_tutorial` and run:
+Navigate back to the root tutorial directory and run the script with Python:
 
-```bash
+```shell
 python split_training_text.py
 ```
+This script will output `.box` and `.tif` files to the ‘data’ folder.
 
-This script generates `.box` and `.tif` files in the `data` directory.
+### Addressing Fontconfig Errors
 
-### Troubleshooting: Fontconfig Warning
+![Font configuration error](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/fontconfig_warning.png)
+If prompted with a font configuration warning, edit and adjust your `tesseract_tutorial/fonts.conf`:
 
-![Fontconfig issue](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/fontconfig_warning.png)
-
-Fix missing font directories with configuration changes:
-
-![Solution for font directory](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/fontconfig_dir.png.png)
+```xml
+<dir>/usr/share/fonts</dir>
+<dir>/usr/local/share/fonts</dir>
+<dir prefix="xdg">fonts</dir>
+<dir>~/.fonts</dir>
+```
+Then, update the file location with:
 
 ```bash
 cp fonts.conf /etc/fonts
 ```
+Modify `split_training_text.py` accordingly:
 
-Add directory paths in `split_training_text.py`:
-
+```python
+fontconf_dir = '/etc/fonts'
 ```
-fontconf_dir = '/etc/fonts`
-```
 
-## Step 11: Obtain Updated Language Data
+### Note on Training Files Count
 
-Download the enhanced `eng.traineddata` from [here](https://github.com/tesseract-ocr/tessdata_best) and place it in `tesseract_tutorial/tesseract/tessdata`.
+Modify the number of training iterations directly in the `split_training_text.py`.
+
+![Training file settings](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/number_of_trainfile.png)
+
+## Step 11: Obtain `eng.traineddata`
+
+Fetch `eng.traineddata` from [this repository](https://github.com/tesseract-ocr/tessdata_best) and place it in `tesseract_tutorial/tesseract/tessdata`.
 
 ## Step 12: Generate Your Custom Font `.traineddata`
 
-Execute the training process with these commands in the `tesstrain` directory:
+Navigate to the `tesstrain` directory and start the training process with:
 
-```
+```bash
 TESSDATA_PREFIX=../tesseract/tessdata make training MODEL_NAME=AMGDT START_MODEL=eng TESSDATA=../tesseract/tessdata MAX_ITERATIONS=100
 ```
+This process allows for customizing parameters such as model name and iteration count.
 
-### Error Handling in the Training Process
+### Problem-Solving During Training
 
-Before and after corrections related to Makefile configurations:
+Here’s how to fix common issues concerning data loading or script configurations inside the Makefile:
 
-![Before correction](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/makefile_sol_before.png)
-
-![After correction](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/makefile_sol_after.png)
-
-Ensure `Latin.unicharset` is present in `tesstrain/data/langdata` directory:
-
-```
-make - Makefile
+```makefile
 WORDLIST_FILE := $(OUTPUT_DIR2)/$(MODEL_NAME).lstm-word-dawg
 NUMBERS_FILE := $(OUTPUT_DIR2)/$(MODEL_NAME).lstm-number-dawg
 PUNC_FILE := $(OUTPUT_DIR2)/$(MODEL_NAME).lstm-punc-dawg
 ```
+Ensure the `Latin.unicharset` is placed in the `tesstrain/data/langdata`.
 
-## Step 13: Evaluate Your `.traineddata` Accuracy
+## Step 13: Validate Your `.traineddata`
 
-After processing 1000 `.box` and `.tif` files through 3000 iterations, the final `.traineddata` (AMGDT.traineddata) exhibits a minimal error rate (BCER) of about 5.77%.
+Validate your freshly created `.traineddata` with a minimal error rate after extensive training.
 
-![Trained Data Accuracy](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/traineddata_accuracy.png)
+![Accuracy of trained data](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-font-training/traineddata_accuracy.png)
 
-For more information and resources, see this helpful [video tutorial](https://www.youtube.com/watch?v=KE4xEzFGSU8ustom).
+For more detailed information and tips, refer to this step-by-step video: [YouTube Training Guide](https://www.youtube.com/watch?v=KE4xEzFGSU8)

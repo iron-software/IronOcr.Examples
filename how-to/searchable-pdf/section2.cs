@@ -5,11 +5,19 @@ namespace IronOcr.Examples.HowTo.SearchablePdf
     {
         public static void Run()
         {
-            // Export searchable PDF byte
-            byte[] pdfByte = ocrResult.SaveAsSearchablePdfBytes();
+            // Instantiate IronTesseract
+            IronTesseract ocrTesseract = new IronTesseract();
             
-            // Export searchable PDF stream
-            Stream pdfStream = ocrResult.SaveAsSearchablePdfStream();
+            // Enable render as searchable PDF
+            ocrTesseract.Configuration.RenderSearchablePdf = true;
+            
+            // Add image
+            using var imageInput = new OcrImageInput("Potter.tiff");
+            // Perform OCR
+            OcrResult ocrResult = ocrTesseract.Read(imageInput);
+            
+            // Export as searchable PDF
+            ocrResult.SaveAsSearchablePdf("searchablePdf.pdf");
         }
     }
 }

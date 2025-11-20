@@ -5,8 +5,16 @@ namespace IronOcr.Examples.HowTo.ImageQualityCorrection
     {
         public static void Run()
         {
-            // Apply enhance resolution filter
-            imageInput.EnhanceResolution();
+            // Instantiate IronTesseract
+            IronTesseract ocrTesseract = new IronTesseract();
+            
+            // Add image
+            using var imageInput = new OcrImageInput("sample.jpg");
+            // Apply sharpen filter
+            imageInput.Sharpen();
+            
+            // Export filtered image
+            imageInput.SaveAsImages("sharpen.jpg");
         }
     }
 }
