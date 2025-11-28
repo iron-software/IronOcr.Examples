@@ -91,6 +91,9 @@
     <Content Include="Inputs\Potter.tiff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Outputs\.gitignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\IronOcr.Languages.Arabic.2020.11.2\build\IronOcr.Languages.Arabic.targets" Condition="Exists('..\packages\IronOcr.Languages.Arabic.2020.11.2\build\IronOcr.Languages.Arabic.targets')" />
