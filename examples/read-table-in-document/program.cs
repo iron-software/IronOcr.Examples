@@ -1,4 +1,6 @@
 ﻿using IronOcr;
+using IronOcr;
+using IronOcr.Extension.AdvancedScan;
 using System.Linq;
 
 // Instantiate OCR engine

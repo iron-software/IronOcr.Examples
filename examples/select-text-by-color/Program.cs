@@ -1,4 +1,6 @@
 ﻿using IronOcr;
+using IronOcr;
+using IronSoftware.Drawing;
 using System;
 
 var ironTesseract = new IronTesseract();

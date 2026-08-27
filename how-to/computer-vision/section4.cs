@@ -1,3 +1,4 @@
+using IronSoftware.Drawing;
 using System.Linq;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.ComputerVision

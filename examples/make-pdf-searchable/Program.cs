@@ -1,3 +1,4 @@
+using IronOcr;
 ﻿using IronOcr;
 
 var ocrTesseract = new IronTesseract();

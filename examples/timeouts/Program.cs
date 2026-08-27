@@ -1,3 +1,4 @@
+using IronOcr;
 ﻿using IronOcr;
 
 int cancel_time = 1000;

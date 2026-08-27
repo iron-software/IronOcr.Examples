@@ -1,3 +1,4 @@
+using IronSoftware.Drawing;
 using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.InputStreams

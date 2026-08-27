@@ -1,3 +1,4 @@
+using IronSoftware.Drawing;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.ImageColorCorrection
 {

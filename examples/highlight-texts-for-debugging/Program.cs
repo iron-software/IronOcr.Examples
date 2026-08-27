@@ -1,3 +1,4 @@
+using IronOcr;
 ﻿using IronOcr;
 
 IronTesseract ocrTesseract = new IronTesseract();

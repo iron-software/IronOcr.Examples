@@ -1,3 +1,4 @@
+using IronOcr.Extension.AdvancedScan;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.ReadTableInDocument
 {

@@ -1,11 +1,11 @@
-using IronOcr;
+using IronOcr;
+using Image = System.Drawing.Image;
 namespace IronOcr.Examples.HowTo.InputSystemDrawing
 {
     public static class Section3
     {
         public static void Run()
         {
-            using Image = System.Drawing.Image;
             
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();

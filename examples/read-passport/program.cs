@@ -1,4 +1,5 @@
 ﻿using IronOcr;
+using IronOcr;
 using System;
 
 // Instantiate OCR engine

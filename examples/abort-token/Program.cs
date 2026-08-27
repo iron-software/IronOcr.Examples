@@ -1,4 +1,5 @@
 ﻿using IronOcr;
+using IronOcr;
 using System.Threading;
 
 // Opens a Large PDF which may need to be cancelled early
