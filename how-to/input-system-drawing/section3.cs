@@ -1,4 +1,4 @@
-using IronOcr;
+using IronOcr;
 using Image = System.Drawing.Image;
 namespace IronOcr.Examples.HowTo.InputSystemDrawing
 {
