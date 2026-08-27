@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/read-table-in-document/>***
+> Full guide: [Read table in document](https://ironsoftware.com/csharp/ocr/examples/read-table-in-document/)
 
 This coding tutorial illustrates the application of the IronTesseract OCR library to recognize and parse both text and tables from a PDF file.
 

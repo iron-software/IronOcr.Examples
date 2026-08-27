@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-for-pdf-stream/>***
+> Full guide: [OCR for PDF stream](https://ironsoftware.com/csharp/ocr/examples/ocr-for-pdf-stream/)
 
 IronOCR is compatible with Stream input.
 

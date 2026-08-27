@@ -1,6 +1,6 @@
 # Utilizing Computer Vision to Identify Text with IronOCR
 
-***Based on <https://ironsoftware.com/how-to/computer-vision/>***
+> Full guide: [Utilizing Computer Vision to Identify Text with IronOCR](https://ironsoftware.com/how-to/computer-vision/)
 
 
 IronOCR integrates OpenCV to leverage Computer Vision, which is instrumental in locating text within images. This is particularly beneficial for images with substantial background noise, multiple text locations, or distorted text. IronOCR uses this technology to pinpoint text regions, which are then processed by Tesseract for text extraction.
@@ -10,7 +10,6 @@ IronOCR integrates OpenCV to leverage Computer Vision, which is instrumental in 
 Getting started is straightforward: simply load your image and use IronOCR’s Computer Vision to automatically identify the primary text area with `FindTextRegion()`, followed by `Read(...)` to extract the text. Here’s how you do it in one easy step:
 
 ```cs
-:title=Implement OCR with Computer Vision in a Single Step
 using var result = new IronTesseract().Read(new OcrInput().LoadImage("image.png").FindTextRegion());
 ```
 

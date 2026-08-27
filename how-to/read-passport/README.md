@@ -1,6 +1,6 @@
 # How to Extract Passport Data with IronOCR
 
-***Based on <https://ironsoftware.com/how-to/read-passport/>***
+> Full guide: [How to Extract Passport Data with IronOCR](https://ironsoftware.com/how-to/read-passport/)
 
 
 For platforms like airport check-in and security, where agents handle numerous passports daily, having a system that can efficiently extract vital information from these passports is key. This ensures a smoother, faster process through immigration controls.
@@ -10,7 +10,6 @@ For platforms like airport check-in and security, where agents handle numerous p
 Quickly begin extracting passport data: this guide demonstrates the simplicity of using `IronOcr.IronTesseract` to scan a passport image with `OcrInput`, employ the `ReadPassport()` method to fetch data, and easily access structured fields such as names, numbers, and dates via the `PassportInfo` object. Here's how to do it all in one concise line of code.
 
 ```cs
-:title=Quickly Capture Passport Data with IronOCR
 var extractedPassportInfo = new IronOcr.IronTesseract().ReadPassport(new IronOcr.OcrInput("passport.jpg")).PassportInfo;
 ```
 

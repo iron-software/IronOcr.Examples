@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/results-objects/>***
+> Full guide: [Results objects](https://ironsoftware.com/csharp/ocr/examples/results-objects/)
 
 IronOCR utilizes Tesseract 5 to generate a detailed result object for every page it processes. This detailed object comprises various elements such as **location data, images, text, statistical confidence, alternative symbol choices, font names, font sizes, decorations, font weights, and position**: 
 

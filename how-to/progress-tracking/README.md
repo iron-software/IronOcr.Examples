@@ -1,6 +1,6 @@
 # Utilizing Progress Tracking with IronOCR
 
-***Based on <https://ironsoftware.com/how-to/progress-tracking/>***
+> Full guide: [Utilizing Progress Tracking with IronOCR](https://ironsoftware.com/how-to/progress-tracking/)
 
 
 IronOCR includes a feature where you can subscribe to an event to monitor the progress of the OCR (Optical Character Recognition) operations. These capabilities provide key insights into the OCR process's progress, total duration, and completion status, allowing for effective monitoring and reporting.
@@ -10,7 +10,6 @@ IronOCR includes a feature where you can subscribe to an event to monitor the pr
 This straightforward example illustrates how to track the OCR progress using IronOCR. By subscribing to the `OcrProgress` event, you receive real-time updates on the OCR progress, detailing the percentage of completion, pages processed, and total pages in a PDF document.
 
 ```cs
-:title=Quick Setup for OCR Progress Monitoring
 var ocrEngine = new IronOcr.IronTesseract();
 ocrEngine.OcrProgress += (sender, eventArgs) => Console.WriteLine($"{eventArgs.ProgressPercent}% Complete ({eventArgs.PagesComplete}/{eventArgs.TotalPages})");
 var readResults = ocrEngine.Read(new IronOcr.OcrInput().LoadPdf("path/to/file.pdf"));

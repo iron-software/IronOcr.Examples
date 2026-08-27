@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/intl-languages/>***
+> Full guide: [Intl languages](https://ironsoftware.com/csharp/ocr/examples/intl-languages/)
 
 ### Multilingual Support in IronOCR
 

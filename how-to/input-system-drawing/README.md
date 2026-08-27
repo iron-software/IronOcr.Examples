@@ -1,6 +1,6 @@
 # How to Work with System.Drawing Objects
 
-***Based on <https://ironsoftware.com/how-to/input-system-drawing/>***
+> Full guide: [How to Work with System.Drawing Objects](https://ironsoftware.com/how-to/input-system-drawing/)
 
 
 The `.NET Framework` provides the `System.Drawing.Bitmap` class, which is an essential tool for handling bitmap images. It offers features for creating, manipulating, and displaying bitmaps.
@@ -14,7 +14,6 @@ The `IronSoftware.Drawing.AnyBitmap` extends the capabilities originally found i
 You can easily extract text from a bitmap image using just a single line of code. Below is how you can utilize `IronTesseract` with `OcrImageInput` to convert image data into text swiftly.
 
 ```cs
-:title=Text Extraction Simplified
 var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrImageInput(new System.Drawing.Bitmap("image.png")));
 ```
 

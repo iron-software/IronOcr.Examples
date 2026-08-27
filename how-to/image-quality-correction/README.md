@@ -1,6 +1,6 @@
 # Enhancing Image Quality Using Correction Filters for OCR
 
-***Based on <https://ironsoftware.com/how-to/image-quality-correction/>***
+> Full guide: [Enhancing Image Quality Using Correction Filters for OCR](https://ironsoftware.com/how-to/image-quality-correction/)
 
 
 Digital image correction techniques are essential for enhancing the quality of images, particularly when preparing them for text extraction via Optical Character Recognition (OCR). IronOcr includes several effective image correction filters such as sharpening, resolution enhancement, noise reduction, dilation, and erosion.

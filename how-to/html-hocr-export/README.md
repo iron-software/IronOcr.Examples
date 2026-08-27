@@ -1,6 +1,6 @@
 # How to Output OCR Data as hOCR into HTML Format
 
-***Based on <https://ironsoftware.com/how-to/html-hocr-export/>***
+> Full guide: [How to Output OCR Data as hOCR into HTML Format](https://ironsoftware.com/how-to/html-hocr-export/)
 
 
 hOCR, which stands for "HTML-based OCR," characterizes a file format designed to document the outcomes of Optical Character Recognition (OCR). This format is embedded into HTML (Hypertext Markup Language) and effectively stores the recognized text, spatial arrangement, and precise coordinates of each detected character from images or documents.
@@ -10,7 +10,6 @@ hOCR, which stands for "HTML-based OCR," characterizes a file format designed to
 For a swift initiation with IronOCR, here's how to convert OCR results into hOCR format and save them into an HTML file using a straightforward configuration and method call. This approach allows developers to quickly visualize OCR output as structured HTML content.
 
 ```cs
-:title=IronOCR Quick Configuration for hOCR Output
 var hocr = new IronTesseract {
     Configuration = { RenderHocr = true }
 }.Read(new OcrInput("image.png")).SaveAsHocrString();

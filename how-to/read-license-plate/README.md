@@ -1,6 +1,6 @@
 # How to Perform License Plate Recognition with IronOCR
 
-***Based on <https://ironsoftware.com/how-to/read-license-plate/>***
+> Full guide: [How to Perform License Plate Recognition with IronOCR](https://ironsoftware.com/how-to/read-license-plate/)
 
 
 Automating the extraction of license plate numbers from vehicle images is a critical efficiency boost, especially when dealing with high volumes. IronOCR offers a powerful solution with its `ReadLicensePlate` method, which extracts license plate numbers programmatically. This not only saves time but also enhances data precision.

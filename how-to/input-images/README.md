@@ -1,6 +1,6 @@
 # How to Read Images
 
-***Based on <https://ironsoftware.com/how-to/input-images/>***
+> Full guide: [How to Read Images](https://ironsoftware.com/how-to/input-images/)
 
 
 Optical Character Recognition, or OCR, is a technology that is used to recognize text within images. This technology is particularly beneficial for converting printed documents into a digital format, allowing for the extraction and manipulation of text from scanned documents, photographs, or other image types.
@@ -12,7 +12,6 @@ IronOCR supports various image formats, including JPG, PNG, GIF, TIFF, and BMP. 
 You can begin extracting text from an image with a single line of code by using the `Read` method on the `IronTesseract` class. Below, we demonstrate a simple example that illustrates how to quickly load an image and read its text using IronOCR.
 
 ```cs
-:title=Effortless Text Extraction with IronOCR
 var result = new IronTesseract().Read(new OcrImageInput("Potter.png"));
 ```
 

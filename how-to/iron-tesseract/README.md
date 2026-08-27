@@ -1,7 +1,6 @@
 # Utilizing Iron Tesseract with IronOCR
 
-***Based on <https://ironsoftware.com/how-to/iron-tesseract/>***
-
+> Full guide: [Utilizing Iron Tesseract with IronOCR](https://ironsoftware.com/how-to/iron-tesseract/)
 
 IronOCR offers a straightforward API that leverages the enhanced capabilities of Tesseract 5, also known as Iron Tesseract. By integrating IronOCR alongside IronTesseract, users can efficiently transform text from images and scanned documents into editable text and searchable PDF formats.
 
@@ -9,10 +8,7 @@ IronOCR offers a straightforward API that leverages the enhanced capabilities of
 
 Kickstart your IronTesseract implementation quickly with this guide. Below is a simple demonstration outlining how to activate the engine, adjust the necessary settings, and execute OCR with minimal effort - just a single image and a single function call, no extra setup required.
 
-Here's the paraphrased section of the article:
-
 ```cs
-:title=Quick IronTesseract Configuration!
 var ocrResult = new IronOcr.IronTesseract 
 {
     Language = IronOcr.OcrLanguage.English,
@@ -43,8 +39,6 @@ IronTesseract tesseractOcr = new IronTesseract();
 ```
 
 You can tailor the functionality of IronTesseract to suit your specific needs by selecting from various languages, enabling barcode recognition, and managing character recognition through whitelisting or blacklisting specific characters.
-
-Here is the paraphrased section of the article:
 
 ```csharp
 IronTesseract tesseractInstance = new IronTesseract

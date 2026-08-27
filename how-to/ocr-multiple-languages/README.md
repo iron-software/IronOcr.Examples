@@ -1,16 +1,15 @@
 # Utilizing Multiple Languages with Tesseract
 
-***Based on <https://ironsoftware.com/how-to/ocr-multiple-languages/>***
+> Full guide: [Utilizing Multiple Languages with Tesseract](https://ironsoftware.com/how-to/ocr-multiple-languages/)
 
 
-IronOCR stands as a notable solution in the Optical Character Recognition (OCR) field, employing the Tesseract Engine to adeptly pull text from a multitude of languages and scripts. This guide delves into how IronOCR leverages Tesseract's capabilities to manage text in several languages effectively. Tailored for both seasoned developers seeking a robust multilingual OCR tool and those intrigued by its mechanics, this exploration illuminates the robust features of IronOCR and the Tesseract engine.
+IronOCR runs on the Tesseract Engine and extracts text across a wide range of languages and scripts. This guide covers how it handles text in several languages at once.
 
 ## Quickstart: Deploying IronOCR for Multilingual Text Recognition
 
-IronOCR enables setting up multilingual text extraction in a remarkably straightforward manner. With minimal coding, developers can quickly configure IronOCR to recognize texts in multiple languages, streamlining the initiation process for multilingual OCR projects.
+Configuring IronOCR to recognize several languages takes very little code.
 
 ```cs
-:title=Quick Setup for Multilingual OCR
 string extractedText = new IronTesseract { Language = OcrLanguage.Spanish }.AddSecondaryLanguage(OcrLanguage.French).Read("path_to_document_or_image").Text;
 ```
 

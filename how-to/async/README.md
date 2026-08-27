@@ -1,23 +1,22 @@
 # Utilizing Async and Multithreading in OCR
 
-***Based on <https://ironsoftware.com/how-to/async/>***
+> Full guide: [Utilizing Async and Multithreading in OCR](https://ironsoftware.com/how-to/async/)
 
 
-In the dynamic field of software development, managing vast amounts of textual data efficiently stands as a crucial challenge. This guide sheds light on combining Async Support with Multithreading for IronOCR and Tesseract. Asynchronous programming offers a non-blocking approach, keeping our applications quick and responsive during OCR operations. We also explore the advantages of multithreading, highlighting how it can enhance text recognition performance through parallel processing. Let’s unravel how to integrate these techniques effectively, empowering you to boost the efficiency of applications powered by OCR.
+This guide combines async support with multithreading in IronOCR and Tesseract. Asynchronous calls keep an application responsive during OCR, and multithreading runs recognition in parallel. Let’s look at how to combine the two.
 
-## Quick Guide: Effortless Async OCR with ReadAsync
+## Quick Guide: Async OCR with ReadAsync
 
 Getting started with asynchronous OCR is straightforward using the `ReadAsync` method from IronTesseract. This method is ideal for adding quick, non-blocking OCR functionality to your software.
 
 ```cs
-:title=Initiate Async OCR Effortlessly
 var result = await new IronOcr.IronTesseract().ReadAsync("image.png");
 ```
 
 
 ## Harnessing Multithreading in IronOCR
 
-IronOCR enhances the process of image analysis and OCR with built-in multithreading, which removes the necessity for developers to manage threads explicitly. IronTesseract is designed to maximize all available CPU threads, optimizing resource utilization for rapid and efficient OCR processes. This seamless integration of multithreading not only eases development but also significantly enhances execution speed, demonstrating advanced parallel processing within OCR workflows.
+IronOCR multithreads image analysis internally, so there are no threads to manage in application code. IronTesseract uses every available CPU thread, which is where most of the speed comes from.
 
 Here’s an example of implementing a multithreaded OCR operation in C#:
 
@@ -106,4 +105,4 @@ static void DoOtherTasks()
 
 ## Conclusion
 
-To conclude, the integration of multithreading in IronOCR is pivotal for enhancing OCR operations. IronOCR’s inherent multithreading capabilities along with user-friendly asynchronous methods like `ReadAsync()`, simplify management of large text datasets. This powerful combination ensures your applications are efficient and responsive, making IronOCR an exceptional choice for developing robust software solutions with advanced text recognition features.
+Multithreading is where IronOCR gets most of its OCR throughput. IronOCR’s internal multithreading and asynchronous methods such as `ReadAsync()` together keep an application responsive while it works through a large batch of documents.

@@ -1,6 +1,6 @@
 # IronOCR Installation Instructions for macOS
 
-***Based on <https://ironsoftware.com/get-started/mac/>***
+> Full guide: [IronOCR Installation Instructions for macOS](https://ironsoftware.com/csharp/ocr/get-started/mac/)
 
 
 IronOCR is fully compatible with macOS and supports both Intel and Apple Silicon architectures. Whether you are coding on a new MacBook Pro equipped with an M3 chip or an iMac that uses Intel processors, IronOCR provides specific versions to cater to these diverse hardware needs.

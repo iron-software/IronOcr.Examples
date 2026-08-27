@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/fix-image-orientation/>***
+> Full guide: [Fix image orientation](https://ironsoftware.com/csharp/ocr/examples/fix-image-orientation/)
 
 The `OcrInput` class from IronOCR offers integrated functions to enhance image orientation, thereby improving OCR results:
 

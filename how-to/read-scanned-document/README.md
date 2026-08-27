@@ -1,6 +1,6 @@
 # Guide to Reading Scanned Documents with IronOCR
 
-***Based on <https://ironsoftware.com/how-to/read-scanned-document/>***
+> Full guide: [Guide to Reading Scanned Documents with IronOCR](https://ironsoftware.com/how-to/read-scanned-document/)
 
 
 IronOCR excels at transforming the non-searchable, image-based text commonly found in many PDFs into fully searchable content. This facilitates easier information retrieval and increases document accessibility, benefiting those with visual impairments significantly.

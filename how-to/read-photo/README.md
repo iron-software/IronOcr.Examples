@@ -1,6 +1,6 @@
 # How to Utilize IronOCR to Read Images
 
-***Based on <https://ironsoftware.com/how-to/read-photo/>***
+> Full guide: [How to Utilize IronOCR to Read Images](https://ironsoftware.com/how-to/read-photo/)
 
 
 Optical Character Recognition (OCR), especially in the context of processing large quantities of image documents like TIFF files, provides a powerful tool to convert image-based text into editable and searchable digital formats efficiently and accurately. OCR technology excels in decoding complex images, such as scanned documents or photos, into actionable text data. This capability not only accelerates the handling of documents but also significantly enhances the accuracy of the data extracted when compared to manual techniques.
@@ -16,7 +16,6 @@ Incorporate the [IronOcr.Extensions.AdvancedScan](https://www.nuget.org/packages
 Begin swiftly by invoking IronOCR’s `ReadPhoto` on an `OcrInput` instance loaded with your target image frame. This method is specifically optimized for handling formats rich in images like TIFFs and GIFs, offering a seamless OCR process.
 
 ```cs
-:title=Efficiently Extract Text Using ReadPhoto
 var result = new IronTesseract().ReadPhoto(new OcrInput().LoadImageFrame("photo.tiff", 0));
 ```
 

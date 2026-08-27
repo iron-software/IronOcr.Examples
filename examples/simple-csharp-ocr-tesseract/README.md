@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/simple-csharp-ocr-tesseract/>***
+> Full guide: [Simple C# OCR tesseract](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/)
 
 IronOCR excels in reading and recognizing text from imperfectly scanned documents and images using its `IronTesseract` class, which offers a noteworthily simple API interface.
 

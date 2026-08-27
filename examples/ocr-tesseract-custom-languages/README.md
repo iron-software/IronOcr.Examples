@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-tesseract-custom-languages/>***
+> Full guide: [OCR tesseract custom languages](https://ironsoftware.com/csharp/ocr/examples/ocr-tesseract-custom-languages/)
 
 Iron Tesseract OCR fully supports custom or downloaded languages and fonts, compatible with the Tesseract `.traineddata` file format (version 4 or higher). You can usually find these files on [Github.com]().
 

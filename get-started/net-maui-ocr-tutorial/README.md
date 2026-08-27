@@ -1,6 +1,6 @@
 # OCR Processing in .NET MAUI with IronOCR
 
-***Based on <https://ironsoftware.com/get-started/net-maui-ocr-tutorial/>***
+> Full guide: [OCR Processing in .NET MAUI with IronOCR](https://ironsoftware.com/csharp/ocr/get-started/net-maui-ocr-tutorial/)
 
 
 ## Overview

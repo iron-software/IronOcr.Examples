@@ -1,6 +1,6 @@
 # How to Read Barcodes and QR Codes
 
-***Based on <https://ironsoftware.com/how-to/barcodes/>***
+> Full guide: [How to Read Barcodes and QR Codes](https://ironsoftware.com/how-to/barcodes/)
 
 
 Utilizing OCR technology to read barcodes and QR codes can significantly enhance automation and data handling, especially when these elements appear in printed or digital documents. This method simplifies data collection from various sources, providing a robust tool for developers and businesses.
@@ -10,7 +10,6 @@ Utilizing OCR technology to read barcodes and QR codes can significantly enhance
 Activate barcode recognition with a simple setting and read PDF documents effortlessly using IronOCR. Below is an example demonstrating how to enable barcode reading and process a PDF to extract decoded values efficiently.
 
 ```cs
-:title=Get Started with IronOCR's Barcode Reading Feature
 var ocrSetup = new IronOcr.IronTesseract() {
     Configuration = new IronOcr.TesseractConfiguration { ReadBarCodes = true }
 };

@@ -1,6 +1,6 @@
 # Assessing Document Page Rotation
 
-***Based on <https://ironsoftware.com/how-to/detect-page-rotation/>***
+> Full guide: [Assessing Document Page Rotation](https://ironsoftware.com/how-to/detect-page-rotation/)
 
 
 Identifying the rotational angle of a page within a document is essential for ensuring it is displayed or printed correctly. This detection process checks if the page has been rotated by 0, 90, 180, or 270 degrees, either clockwise or counterclockwise. It is a vital step for accurately handling documents.
@@ -10,7 +10,6 @@ Identifying the rotational angle of a page within a document is essential for en
 In this concise example, developers can leverage IronOCR’s `DetectPageOrientation` method on a PDF to ascertain and immediately correct the page orientation. This approach enables a rapid detection and correction of page rotation with minimal coding.
 
 ```cs
-:title=Swift Detection and Correction of Page Rotation
 var rotationResults = new IronOcr.OcrInput().LoadPdf("doc.pdf").DetectPageOrientation();
 Console.WriteLine("Rotation Angle: " + rotationResults.First().RotationAngle);
 ```

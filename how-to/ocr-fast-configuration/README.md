@@ -1,6 +1,6 @@
 # Optimizing OCR Performance in C# with IronOCR's Fast Configuration
 
-***Based on <https://ironsoftware.com/how-to/ocr-fast-configuration/>***
+> Full guide: [Optimizing OCR Performance in C# with IronOCR's Fast Configuration](https://ironsoftware.com/how-to/ocr-fast-configuration/)
 
 
 IronOCR is a robust tool that allows developers to integrate efficient OCR capabilities effortlessly. Offering a fast configuration option, IronOCR understands the need for speed in certain applications, trading off slight accuracy to deliver faster scanning speeds. This piece explores how to utilize this configuration for enhanced performance.

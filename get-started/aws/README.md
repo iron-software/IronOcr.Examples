@@ -1,6 +1,6 @@
 # Optical Character Recognition (OCR) on AWS Lambda Using IronOCR
 
-***Based on <https://ironsoftware.com/get-started/aws/>***
+> Full guide: [Optical Character Recognition (OCR) on AWS Lambda Using IronOCR](https://ironsoftware.com/csharp/ocr/get-started/aws/)
 
 
 <div class="container-fluid">
@@ -46,15 +46,11 @@ FROM public.ecr.aws/lambda/dotnet:8
 
 # Update all system packages
 
-***Based on <https://ironsoftware.com/get-started/aws/>***
-
 RUN dnf update -y
 
 WORKDIR /var/task
 
 # Transfer build artifacts from your local environment to the Docker container
-
-***Based on <https://ironsoftware.com/get-started/aws/>***
 
 COPY "bin/Release/lambda-publish" .
 ```

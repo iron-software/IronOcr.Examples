@@ -1,6 +1,6 @@
 # Start Using OCR with C# and VB.NET
 
-***Based on <https://ironsoftware.com/docs/docs/>***
+> Docs: [IronOCR documentation](https://ironsoftware.com/csharp/ocr/docs/)
 
 
 IronOCR is an advanced C# library designed for .NET developers to extract text from images and PDFs. It employs the highly acclaimed Tesseract engine, making it a top choice for OCR tasks on the .NET platform.

@@ -1,8 +1,8 @@
-***Based on <https://ironsoftware.com/examples/read-micr-cheque/>***
+> Full guide: [Read MICR cheque](https://ironsoftware.com/csharp/ocr/examples/read-micr-cheque/)
 
-Cheques continue to be a reliable medium for executing large financial transactions. Leveraging IronOCR, one can seamlessly digitize the process of E-13B MICR cheque processing to expedite bank deposits and streamline other financial processes. This advanced technology ensures high precision when capturing essential data such as routing, account, and cheque numbers.
+Cheques continue to be a reliable medium for executing large financial transactions. IronOCR digitizes E-13B MICR cheque processing, reading routing, account, and cheque numbers off the line.
 
-Here’s a simplified code snippet to help you extract data from a MICR cheque effortlessly.
+Here’s a short snippet that extracts data from a MICR cheque.
 
 <div class="hsg-featured-snippet examples__featured-snippet">
     <h2>Step-by-Step Guide to Decode MICR Cheques</h2>

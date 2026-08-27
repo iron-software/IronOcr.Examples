@@ -1,20 +1,19 @@
-# Leveraging the Filter Wizard
+# Using the Filter Wizard
 
-***Based on <https://ironsoftware.com/how-to/filter-wizard/>***
+> Full guide: [Using the Filter Wizard](https://ironsoftware.com/how-to/filter-wizard/)
 
 
 Navigating the realm of image preprocessing for Optical Character Recognition (OCR) can indeed be complex. Testing various combinations of filters on images to ascertain the most effective arrangement often demands substantial time as it involves trial and error. Each image presents its unique challenges, so there is no one-size-fits-all approach.
 
 Fortunately, IronOCR simplifies this process with its `OcrInputFilterWizard`. This tool is designed to automatically determine the optimal combination of preprocessing filters to enhance OCR accuracy. By executing a comprehensive scan, it identifies and returns the best filter combination through a code snippet, making it easier for developers to replicate the results efficiently.
 
-In this guide, we’ll explore how to use the Filter Wizard to effortlessly find the best filter chain for your images, along with examples of the code snippets and parameters involved.
+In this guide, we’ll use the Filter Wizard to find the best filter chain for a set of images, with the code and parameters involved.
 
 ## Getting Started: Simplify Image Filter Selection
 
-Employ the Filter Wizard from IronOCR to effortlessly test all possible preprocessing filter combinations. This tool provides you with the top-performing code snippet instantly, eliminating any guesswork. Here's how you can acquire both the highest confidence score and the requisite C# filter chain for your images:
+The Filter Wizard tests every preprocessing filter combination and returns the best-performing one as a code snippet. Here is how to get both the highest confidence score and the C# filter chain that produced it:
 
 ```cs
-:title=Instantly Acquire Top OCR Filters
 string code = OcrInputFilterWizard.Run("image.png", out double confidence, new IronTesseract());
 ```
 

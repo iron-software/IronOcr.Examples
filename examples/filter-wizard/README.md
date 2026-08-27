@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/filter-wizard/>***
+> Full guide: [Filter wizard](https://ironsoftware.com/csharp/ocr/examples/filter-wizard/)
 
 IronOCR introduces the `OcrInputFilterWizard` class, a powerful tool designed to automatically determine the best combination of preprocessing filters to improve OCR accuracy. This feature is particularly useful when it's unclear which filters work best for your needs. The `OcrInputFilterWizard.Run(...)` method simplifies the process by conducting a comprehensive scan to identify ideal settings and even supplies the optimal filter combination or the necessary code to replicate the results.
 

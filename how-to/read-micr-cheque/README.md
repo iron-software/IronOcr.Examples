@@ -1,6 +1,6 @@
 # Automating Check Processing with IronOCR's MICR Technology
 
-***Based on <https://ironsoftware.com/how-to/read-micr-cheque/>***
+> Full guide: [Automating Check Processing with IronOCR's MICR Technology](https://ironsoftware.com/how-to/read-micr-cheque/)
 
 
 Processing checks manually tends to be slow and prone to mistakes. Leveraging IronOCR's MICR technology, you can automate this routine by precisely capturing the MICR (Magnetic Ink Character Recognition) code, swiftly extracting essential transaction data such as routing numbers and account numbers.

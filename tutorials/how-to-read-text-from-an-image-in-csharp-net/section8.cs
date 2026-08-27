@@ -6,7 +6,6 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         public static void Run()
         {
             // Multi-source document processing
-            using IronOcr;
             
             IronTesseract ocr = new IronTesseract();
             

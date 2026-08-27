@@ -1,6 +1,6 @@
 # How to Extract Read Results
 
-***Based on <https://ironsoftware.com/how-to/read-results/>***
+> Full guide: [How to Extract Read Results](https://ironsoftware.com/how-to/read-results/)
 
 
 The OCR or read results contain detailed information about the recognized paragraphs, lines, words, and individual characters from the scanned document. Each of these components includes detailed specifics.

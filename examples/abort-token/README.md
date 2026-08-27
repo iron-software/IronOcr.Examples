@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/abort-token/>***
+> Full guide: [Abort token](https://ironsoftware.com/csharp/ocr/examples/abort-token/)
 
 This capability enables the suspension of the active thread for a designated duration, measured in milliseconds.
 

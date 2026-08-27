@@ -1,9 +1,9 @@
 # Developing an Azure OCR Service with IronOCR
 
-***Based on <https://ironsoftware.com/get-started/azure/>***
+> Full guide: [Developing an Azure OCR Service with IronOCR](https://ironsoftware.com/csharp/ocr/get-started/azure/)
 
 
-Iron Software has pioneered an OCR (Optical Character Recognition) library, IronOCR, which simplifies the integration process with Azure OCR, overcoming common interoperability challenges. Historically, OCR libraries were difficult to manage on Azure, and IronOCR is a game-changer in this domain.
+IronOCR is Iron Software's Optical Character Recognition library. OCR libraries have historically been awkward to run on Azure; IronOCR deploys there without special handling.
 
 ## Key IronOCR Features for Microsoft Azure
 Here’s what you can achieve with IronOCR when deploying on Microsoft Azure:
@@ -15,7 +15,7 @@ Here’s what you can achieve with IronOCR when deploying on Microsoft Azure:
 * Operates locally without the dependency on SaaS platforms, which are hosted on clouds like Microsoft Azure and provide access to applications remotely.
 * Offers remarkable processing speed.
 
-Discover how IronOCR can streamline the extraction of text from any document on Azure below.
+The steps below extract text from a document on Azure.
 
 ## Starting with the Azure OCR Service
 To begin, IronOCR needs to be installed first:
@@ -72,7 +72,7 @@ using (var input = new OcrInput())
 }
 ```
 
-7. If your project involves Microsoft Azure, IronOCR integrates seamlessly as a function in Azure's microservices architecture.
+7. On Microsoft Azure, IronOCR runs as a function within Azure's microservices architecture.
 
 Here’s a quick look at a Microsoft Azure Function template for IronOCR:
 
@@ -97,7 +97,7 @@ public static class OCRFunction
 }
 ```
 
-Microsoft Azure Microservices follow an architecture where each function is independent, promoting robust and quickly adaptive applications.
+In Azure Microservices each function is independent, which keeps an application adaptable.
 
 ## Enhancing OCR with IronOCR in .NET on Microsoft Azure
 
@@ -150,4 +150,4 @@ IronOCR offers three [licensing tiers available for purchase](https://ironsoftwa
 - Access [API References](https://ironsoftware.com/csharp/ocr/object-reference/api/) for developer support.
 - Get [Support for IronOCR products](#live-chat-support) or [reach out to Iron Software](https://ironsoftware.com/contact-us/).
 
-IronOCR's feature portfolio for .NET applications on Azure and other systems is extensive, supporting 125 languages and versatile application environments, proving to be a vital tool for developers in a wide array of projects.
+IronOCR supports 125 languages across .NET applications on Azure and elsewhere.

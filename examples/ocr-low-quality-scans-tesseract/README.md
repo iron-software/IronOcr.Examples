@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-low-quality-scans-tesseract/>***
+> Full guide: [OCR low quality scans tesseract](https://ironsoftware.com/csharp/ocr/examples/ocr-low-quality-scans-tesseract/)
 
 The `IronTesseract` OCR Class offers C# and .NET developers precise control to integrate OCR (image and PDF to text conversion) capabilities into their software, while also allowing for customization to optimize performance according to specific needs.
 

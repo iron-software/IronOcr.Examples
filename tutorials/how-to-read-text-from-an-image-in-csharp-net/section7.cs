@@ -6,7 +6,6 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         public static void Run()
         {
             // Multi-language OCR configuration
-            using IronOcr;
             
             var ocr = new IronTesseract();
             

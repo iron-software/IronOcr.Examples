@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-drawing/>***
+> Full guide: [OCR drawing](https://ironsoftware.com/csharp/ocr/examples/ocr-drawing/)
 
 `IronSoftware.Drawing` is a freely available library created by Iron Software aimed at assisting C# Software Engineers in substituting **System.Drawing** in .NET frameworks across Windows, macOS, and Linux.
 

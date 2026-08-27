@@ -1,6 +1,6 @@
 # How to Implement OCR on Android Using .NET MAUI
 
-***Based on <https://ironsoftware.com/get-started/android/>***
+> Full guide: [How to Implement OCR on Android Using .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/android/)
 
 
 <div class="container-fluid">

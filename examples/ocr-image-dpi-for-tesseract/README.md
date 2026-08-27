@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-image-dpi-for-tesseract/>***
+> Full guide: [OCR image DPI for tesseract](https://ironsoftware.com/csharp/ocr/examples/ocr-image-dpi-for-tesseract/)
 
 The `OcrInput` class from Iron Software is programmed to adjust lower-resolution images for use with `IronTesseract`.
 

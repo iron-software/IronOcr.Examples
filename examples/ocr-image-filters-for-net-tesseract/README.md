@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-image-filters-for-net-tesseract/>***
+> Full guide: [OCR image filters for .NET tesseract](https://ironsoftware.com/csharp/ocr/examples/ocr-image-filters-for-net-tesseract/)
 
 The `OcrInput` class is designed to provide C# and .NET developers with advanced control over preprocessing images for enhanced speed and accuracy in OCR operations. This capability eliminates the need for traditional methods like Photoshop Batch Scripts or ImageMagick to prepare images for OCR.
 

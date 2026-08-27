@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/csharp-pdf-ocr/>***
+> Full guide: [C# PDF OCR](https://ironsoftware.com/csharp/ocr/examples/csharp-pdf-ocr/)
 
 Iron Tesseract is capable of interpreting a variety of image formats along with PDF documents, an advantage not commonly found in standard free Tesseract engines.
 

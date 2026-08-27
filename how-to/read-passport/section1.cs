@@ -5,7 +5,6 @@ namespace IronOcr.Examples.HowTo.ReadPassport
     {
         public static void Run()
         {
-            :title=Grab Passport Data Instantly with IronOCR
             var passportInfo = new IronOcr.IronTesseract().ReadPassport(new IronOcr.OcrInput("passport.jpg")).PassportInfo;
         }
     }

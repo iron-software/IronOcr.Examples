@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/read-screenshot/>***
+> Full guide: [Read screenshot](https://ironsoftware.com/csharp/ocr/examples/read-screenshot/)
 
 This tutorial illustrates the application of the IronTesseract OCR library to retrieve text content from a screenshot image.
 

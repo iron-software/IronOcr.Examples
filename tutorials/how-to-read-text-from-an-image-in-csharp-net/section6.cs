@@ -6,7 +6,6 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         public static void Run()
         {
             // Install-Package IronOcr.Languages.Arabic
-            using IronOcr;
             
             // Configure for Arabic language OCR
             var ocr = new IronTesseract();

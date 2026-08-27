@@ -1,3 +1,4 @@
+using System;
 using IronOcr;
 namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
 {
@@ -6,8 +7,6 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         public static void Run()
         {
             // Advanced Iron Tesseract C# example for low-quality images
-            using IronOcr;
-            using System;
             
             var ocr = new IronTesseract();
             

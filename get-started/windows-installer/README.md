@@ -1,6 +1,6 @@
 # How to Install IronOCR on Windows Using the Installer
 
-***Based on <https://ironsoftware.com/get-started/windows-installer/>***
+> Full guide: [How to Install IronOCR on Windows Using the Installer](https://ironsoftware.com/csharp/ocr/get-started/windows-installer/)
 
 
 IronOCR is a robust .NET library designed for Optical Character Recognition (OCR). It empowers .NET developers to harvest text from images and scanned PDFs within their C# or VB.NET applications. Although NuGet is commonly used for installing IronOCR, an alternative is available through the Windows Installer for those preferring offline or GUI-based installations.

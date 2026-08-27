@@ -5,7 +5,6 @@ namespace IronOcr.Examples.HowTo.InputPdfs
     {
         public static void Run()
         {
-            :title=Try IronOCR PDF OCR in One Line
             using var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrPdfInput("document.pdf", PdfContents.TextAndImages));
         }
     }

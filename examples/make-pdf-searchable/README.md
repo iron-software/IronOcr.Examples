@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/make-pdf-searchable/>***
+> Full guide: [Make PDF searchable](https://ironsoftware.com/csharp/ocr/examples/make-pdf-searchable/)
 
 IronOCR provides the functionality to integrate recognized text into PDFs from scanned documents, making them searchable and selectable. This feature is essential for OCR operations and for creating indexed archives.
 

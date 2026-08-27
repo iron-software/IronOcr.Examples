@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/replace-color/>***
+> Full guide: [Replace color](https://ironsoftware.com/csharp/ocr/examples/replace-color/)
 
 OCR performance enhances significantly when analyzing black text against a white background.
 

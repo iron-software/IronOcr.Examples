@@ -1,21 +1,21 @@
 # IronOCR Linux Compatibility & Setup Guide
 
-***Based on <https://ironsoftware.com/get-started/linux/>***
+> Full guide: [IronOCR Linux Compatibility & Setup Guide](https://ironsoftware.com/csharp/ocr/get-started/linux/)
 
 
 IronOCR is compatible with Linux for **.NET Core** and **.NET 5** applications, including environments like [Docker](https://ironsoftware.com/csharp/ocr/get-started/docker/), Azure, macOS, and of course, Windows.
 
 ![Linux](https://img.icons8.com/color/96/000000/linux--v1.png) ![Docker](https://img.icons8.com/color/96/000000/docker.png) ![Azure](https://img.icons8.com/fluency/96/000000/azure-1.png) ![AWS](https://img.icons8.com/color/96/000000/amazon-web-services.png) ![Ubuntu](https://img.icons8.com/color/96/000000/ubuntu--v1.png) ![Debian](https://img.icons8.com/color/96/000000/debian--v1.png)
 
-For optimal performance and support, we advise using .NET Core 3.1 or other runtimes labeled as [LTS by Microsoft](https://dotnet.microsoft.com/platform/support/policy) due to their reliable long-term support and robust testing on Linux platforms.
+Use .NET Core 3.1 or another runtime marked [LTS by Microsoft](https://dotnet.microsoft.com/platform/support/policy); those receive the longest support and the most testing on Linux.
 
-IronOCR typically requires no modifications to run on Linux, seamlessly integrating thanks to extensive testing and configuration by our dedicated development team.
+IronOCR generally runs on Linux with no code changes, following extensive testing and configuration work.
 
 Linux platforms are a backbone for many cloud services like Azure Web Apps, Azure Functions, AWS EC2, AWS Lambda, and Azure DevOps Docker, making Linux support crucial. At Iron Software, we extensively use these technologies, recognizing their importance for our Enterprise and SAAS clientele.
 
 ## Officially Supported Linux Distros
 
-IronOCR **officially supports** and advises using the latest **64-bit** Linux distributions listed below for effortless "zero configuration" installation:
+IronOCR **officially supports** the **64-bit** Linux distributions listed below, which need no configuration:
 
 - Ubuntu 20
 - Ubuntu 18
@@ -32,7 +32,7 @@ Install-Package IronOcr
 
 ## Ubuntu Compatibility
 
-Ubuntu is extensively tested more than any other Linux OS due to its heavy use within the Azure cloud services that are part of our ongoing testing and deployment. Ubuntu also enjoys robust support from Microsoft for .NET and official Docker Images.
+Ubuntu is extensively tested more than any other Linux OS due to its heavy use within the Azure cloud services that are part of our ongoing testing and deployment. Ubuntu also carries Microsoft's .NET support and official Docker images.
 
 ### Ubuntu 20
 
@@ -43,13 +43,9 @@ Ubuntu is extensively tested more than any other Linux OS due to its heavy use w
 ```sh
 # Update the package list
 
-***Based on <https://ironsoftware.com/get-started/linux/>***
-
 sudo apt update
 
 # Install required dependencies
-
-***Based on <https://ironsoftware.com/get-started/linux/>***
 
 sudo apt install -y apt-utils libgdiplus libc6-dev
 ```
@@ -71,13 +67,9 @@ The fundamental requirements for IronOCR installation remain consistent across d
 ```sh
 # Update the package list
 
-***Based on <https://ironsoftware.com/get-started/linux/>***
-
 sudo apt update
 
 # Install essential packages along with Tesseract OCR
-
-***Based on <https://ironsoftware.com/get-started/linux/>***
 
 sudo apt install -y apt-utils libgdiplus libc6-dev tesseract-ocr libtesseract-dev
 ```

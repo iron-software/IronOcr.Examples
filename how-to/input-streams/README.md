@@ -1,6 +1,6 @@
 # How to Read from Streams
 
-***Based on <https://ironsoftware.com/how-to/input-streams/>***
+> Full guide: [How to Read from Streams](https://ironsoftware.com/how-to/input-streams/)
 
 
 In programming, stream data represents an ongoing flow of binary data that can be incrementally read or written. This technique is vital for handling large datasets that cannot be stored entirely in memory, allowing parts of the data to be processed individually.
@@ -12,7 +12,6 @@ IronOCR supports importing image data directly from streams. To utilize this fun
 Here's a quick guide on initializing OCR processing by directly using a `System.IO.Stream` with IronOCR. This approach bypasses the need for file paths, enabling direct access to recognized text efficiently.
 
 ```cs
-:title=Stream-based OCR Setup in C#
 using var input = new IronOcr.OcrInput(stream);
 var result = new IronOcr.IronTesseract().Read(input);
 ```

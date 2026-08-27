@@ -1,6 +1,6 @@
 # Correcting Image Orientation for Text Recognition
 
-***Based on <https://ironsoftware.com/how-to/image-orientation-correction/>***
+> Full guide: [Correcting Image Orientation for Text Recognition](https://ironsoftware.com/how-to/image-orientation-correction/)
 
 
 Adjusting the orientation of an image is a key step in image processing, particularly for applications like text recognition. IronOcr, a library by Iron Software, excels in refining image orientation, which includes tasks like rotating, deskewing, and scaling the image.
@@ -12,7 +12,6 @@ These adjustments are crucial in ensuring that the text in images is aligned cor
 Efficiently prepare your image for OCR by chaining rotation, deskewing, and scaling operations in a single line with IronOCR’s `OcrInput`. This approach helps you get started with minimal setup, readying your image for precise OCR processing swiftly.
 
 ```cs
-:title=Optimize Image Orientation Quickly Using IronOCR
 var result = new IronOcr.OcrInput().LoadImage("skewed-image.png").Rotate(90).Deskew(45).Scale(150).Let(input => new IronOcr.IronTesseract().Read(input));
 ```
 

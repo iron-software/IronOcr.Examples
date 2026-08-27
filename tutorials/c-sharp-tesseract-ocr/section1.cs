@@ -5,7 +5,6 @@ namespace IronOcr.Examples.Tutorial.CSharpTesseractOcr
     {
         public static void Run()
         {
-            :title=Start OCR with IronOCR Now
             string text = new IronTesseract().Read(new OcrInput("image.png")).Text;
         }
     }

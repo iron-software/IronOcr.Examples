@@ -1,6 +1,6 @@
 # How to Enhance Image Colors for Optimal Reading
 
-***Based on <https://ironsoftware.com/how-to/image-color-correction/>***
+> Full guide: [How to Enhance Image Colors for Optimal Reading](https://ironsoftware.com/how-to/image-color-correction/)
 
 
 Improving the clarity and readability of images is crucial, especially when extracting text using OCR (Optical Character Recognition). IronOcr provides powerful tools like binarization, grayscale transformation, color inversion, and color replacement to optimize the visibility and aesthetics of text within images. You can even isolate and read text based on specific colors.
@@ -10,7 +10,6 @@ Improving the clarity and readability of images is crucial, especially when extr
 IronOCR simplifies the process of focusing on specific text colors during OCR. With the `SelectTextColor` method, it's straightforward to load an image, set the desired text color and tolerance, and exclusively extract the text in that color for precise OCR acknowledgment.
 
 ```cs
-:title=Optimize Text Color Recognition with IronOCR
 new IronTesseract().Read(new IronOcr.OcrImageInput("sample.jpg").SelectTextColor(new IronSoftware.Drawing.Color("#DB645C"), 60));
 ```
 

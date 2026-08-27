@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/select-text-by-color/>***
+> Docs: [IronOCR documentation](https://ironsoftware.com/csharp/ocr/docs/)
 
 Optical Character Recognition (OCR) achieves its best speed and accuracy when processing text of a single color against a uniform background color.
 

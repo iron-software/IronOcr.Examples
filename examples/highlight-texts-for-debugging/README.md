@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/highlight-texts-for-debugging/>***
+> Full guide: [Highlight texts for debugging](https://ironsoftware.com/csharp/ocr/examples/highlight-texts-for-debugging/)
 
 IronOCR incorporates built-in functionalities that allow for the visual marking of OCR-detected elements such as characters, words, lines, or paragraphs on images or document pages, offering the capability to export these as PNG images for troubleshooting purposes.
 

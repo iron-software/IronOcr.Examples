@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/csharp-ocr-input-for-iron-tesseract/>***
+> Full guide: [C# OCR input for iron tesseract](https://ironsoftware.com/csharp/ocr/examples/csharp-ocr-input-for-iron-tesseract/)
 
 Introducing the `OcrInput` code framework, enhancing developer authority over OCR function manipulation.
 

@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/read-passport/>***
+> Full guide: [Read passport](https://ironsoftware.com/csharp/ocr/examples/read-passport/)
 
 The following example illustrates how to employ the IronTesseract OCR engine to analyze and obtain information from a passport image.
 

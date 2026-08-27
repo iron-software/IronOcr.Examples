@@ -1,3 +1,4 @@
+using System;
 using IronOcr;
 namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
 {
@@ -8,8 +9,6 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
             // Basic C# OCR image to text conversion using IronOCR
             // This example shows how to extract text from images without complex setup
             
-            using IronOcr;
-            using System;
             
             try
             {

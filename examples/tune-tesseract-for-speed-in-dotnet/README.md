@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/tune-tesseract-for-speed-in-dotnet/>***
+> Full guide: [Tune tesseract for speed in dotnet](https://ironsoftware.com/csharp/ocr/examples/tune-tesseract-for-speed-in-dotnet/)
 
 The example highlights a notable enhancement in processing speed—over 35% faster—while only sacrificing a minimal 0.2% in accuracy.
 

@@ -1,6 +1,6 @@
 # IronOCR Advanced Installation Guide
 
-***Based on <https://ironsoftware.com/get-started/advanced-installation-nuget/>***
+> Full guide: [IronOCR Advanced Installation Guide](https://ironsoftware.com/get-started/advanced-installation-nuget/)
 
 
 Experience the power of Optical Character Recognition (OCR) with IronOcr! Our comprehensive toolkit, crafted especially for developers, facilitates superior performance on multiple platforms and programming languages.

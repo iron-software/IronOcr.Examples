@@ -1,6 +1,6 @@
 # How to Read Specialized Documents
 
-***Based on <https://ironsoftware.com/tutorials/read-specific-document/>***
+> Full guide: [How to Read Specialized Documents](https://ironsoftware.com/tutorials/read-specific-document/)
 
 
 Reading specialized documents such as text, license plates, passports, and images effectively is challenging. These challenges arise from the varying formats, layouts, content, image quality, distortion, and specialized content these documents present. Additionally, understanding context and managing performance and efficiency increases in complexity with an increasing range of document types.
@@ -12,7 +12,6 @@ IronOCR introduces targeted methods to perform OCR on specific documents like te
 Leverage IronOCR’s `ReadPassport` method to extract critical details from passports in one simple step. Assuming IronOCR and AdvancedScan are installed, the code below will quickly extract data such as names, passport numbers, countries, and more:
 
 ```cs
-:title=Efficiently Read Various Document Types with IronOCR
 var response = new IronTesseract().ReadPassport(new OcrInput().LoadImage("passport.jpg"));
 ```
 

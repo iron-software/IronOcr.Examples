@@ -5,7 +5,6 @@ namespace IronOcr.Examples.HowTo.ReadResults
     {
         public static void Run()
         {
-            :title=Read OCR Results Instantly
             string wordText = new IronTesseract().Read("file.jpg").Words[0].Text;
         }
     }

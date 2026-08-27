@@ -1,6 +1,6 @@
 # Performing OCR on iOS using .NET MAUI
 
-***Based on <https://ironsoftware.com/get-started/ios/>***
+> Full guide: [Performing OCR on iOS using .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/ios/)
 
 
 <div class="container-fluid">

@@ -1,6 +1,6 @@
 # Understanding OCR Read Confidence
 
-***Based on <https://ironsoftware.com/how-to/tesseract-result-confidence/>***
+> Full guide: [Understanding OCR Read Confidence](https://ironsoftware.com/how-to/tesseract-result-confidence/)
 
 
 OCR (Optical Character Recognition) read confidence pertains to the degree of certainty that an OCR system has regarding the precision of the text it has deciphered from an image or document. Essentially, it gauges how assured the OCR technology is about the correctness of the interpreted text.
@@ -12,7 +12,6 @@ A higher confidence score signals a strong conviction that the detected text is 
 To quickly ascertain the OCR confidence level using IronTesseract, simply use the `Read` method with the path of an image file. Afterward, you can inspect the `Confidence` property on the resultant `OcrResult` to gauge IronOCR's certainty regarding its text recognition accuracy.
 
 ```cs
-:title=Instant OCR Confidence Check
 double confidence = new IronOcr.IronTesseract().Read("your-image.png").Confidence;
 ```
 

@@ -1,6 +1,6 @@
 # Utilizing IronOCR License Keys
 
-***Based on <https://ironsoftware.com/get-started/license-keys/>***
+> Full guide: [Utilizing IronOCR License Keys](https://ironsoftware.com/get-started/license-keys/)
 
 
 ## Acquiring a License Key
@@ -25,8 +25,6 @@ Install IronOCR by using NuGet, which is an alternative installation method:
 
 ```shell
 # To install IronOcr through NuGet, execute the following command in your terminal
-
-***Based on <https://ironsoftware.com/get-started/license-keys/>***
 
 nuget install IronOcr
 ```

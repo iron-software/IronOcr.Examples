@@ -1,6 +1,6 @@
 # Text Highlighting as Images
 
-***Based on <https://ironsoftware.com/how-to/highlight-texts-as-images/>***
+> Full guide: [Text Highlighting as Images](https://ironsoftware.com/how-to/highlight-texts-as-images/)
 
 
 When working with OCR technology, it's often useful to visually demonstrate the results by marking the detected text elements directly on the image. This involves drawing boxes around characters, words, lines, or paragraphs, effectively mapping out where the text was recognized within the image. 
@@ -14,7 +14,6 @@ In this guide, we'll explore how IronOCR assists developers in easily pinpointin
 The example below exemplifies the simplicity of using IronOCR to process a PDF document. By loading the PDF and highlighting each word, then saving these as images, developers can quickly monitor and confirm the accuracy of OCR results.
 
 ```cs
-:title=Effortlessly Highlight PDF Text
 // Load a PDF and highlight words, saving them as separate images
 new IronOcr.OcrInput().LoadPdf("document.pdf").HighlightTextAndSaveAsImages(new IronOcr.IronTesseract(), "highlight_page_", IronOcr.ResultHighlightType.Word);
 ```

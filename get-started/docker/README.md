@@ -1,6 +1,6 @@
 # Implementing IronOCR within Docker Environments
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
+> Full guide: [Implementing IronOCR within Docker Environments](https://ironsoftware.com/csharp/ocr/get-started/docker/)
 
 
 Want to [perform OCR on images or PDF files using C#](https://ironsoftware.com/csharp/ocr/)?
@@ -51,34 +51,24 @@ Install-Package IronOcr
 ```dockerfile
 # Starting with the Ubuntu 20 base image with .NET runtime
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM mcr.microsoft.com/dotnet/runtime:5.0-focal AS base
 WORKDIR /app
 
 # Installing necessary libraries
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
 
 # Setting up the development environment with the .NET SDK
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-focal AS build
 WORKDIR /src
 
 # Restoring NuGet packages required by the project
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 COPY ["Example/Example.csproj", "Example/"]
 RUN dotnet restore "Example/Example.csproj"
 
 # Building the application
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 COPY . .
 WORKDIR "/src/Example"
@@ -86,14 +76,10 @@ RUN dotnet build "Example.csproj" -c Release -o /app/build
 
 # Publishing the application
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM build AS publish
 RUN dotnet publish "Example.csproj" -c Release -o /app/publish
 
 # Final stage to run the application
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM base AS final
 WORKDIR /app
@@ -106,7 +92,6 @@ ENTRYPOINT ["dotnet", "Example.dll"]
 ```dockerfile
 # Initialize with the base runtime image for Ubuntu 20 equipped with .NET 3.1
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM mcr.microsoft.com/dotnet/runtime:3.1-focal AS base
 WORK ...
+```

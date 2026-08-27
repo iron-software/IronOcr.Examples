@@ -1,8 +1,4 @@
-***Based on <https://ironsoftware.com/examples/read-scanned-document/>***
-
-Here's a paraphrased version of the provided content, with the URL path fixed to point directly to the Iron Software domain:
-
----
+> Full guide: [Read scanned document](https://ironsoftware.com/csharp/ocr/examples/read-scanned-document/)
 
 This sample showcases how to utilize the IronTesseract OCR (Optical Character Recognition) tool for text extraction from images.
 

@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/csharp-configure-setup-tesseract/>***
+> Full guide: [C# configure setup tesseract](https://ironsoftware.com/csharp/ocr/examples/csharp-configure-setup-tesseract/)
 
 Optical Character Recognition (OCR) presents various challenges and opportunities. To optimize text extraction from documents and ensure efficient application performance, developers need both flexibility and precise control over OCR methods and performance.
 

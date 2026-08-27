@@ -6,7 +6,6 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
         public static void Run()
         {
             // Enable combined text and barcode recognition
-            using IronOcr;
             
             var ocr = new IronTesseract();
             

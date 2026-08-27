@@ -1,6 +1,6 @@
 # Adjusting OCR DPI Settings
 
-***Based on <https://ironsoftware.com/how-to/dpi-setting/>***
+> Full guide: [Adjusting OCR DPI Settings](https://ironsoftware.com/how-to/dpi-setting/)
 
 
 Dots Per Inch (DPI) serves as a critical indicator of image quality, reflecting the granularity of detail in both scanned documents and digital photographs. Commonly, scanning processes aimed at digitizing hardcopy materials quickly often generate images of subpar resolution due to default or expedited settings. This results in blurred or pixelated text, which hampers effective data extraction.
@@ -14,7 +14,6 @@ IronOCR, however, is designed to excel even under these constraints. It boasts i
 With IronOCR, improving text clarity and accuracy from low-res images is straightforward through a clean, user-friendly API. Here's how you can enhance resolution with a single line of code:
 
 ```cs
-:title=Enhancing OCR Clarity via TargetDPI in IronOCR
 var ocrOperation = new IronOcr.IronTesseract(); 
 ocrOperation.Read(new IronOcr.OcrInput { TargetDPI = 300 }.LoadImage("low-res.png"));
 ```

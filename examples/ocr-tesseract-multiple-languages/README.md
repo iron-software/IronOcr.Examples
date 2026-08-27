@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/ocr-tesseract-multiple-languages/>***
+> Full guide: [OCR tesseract multiple languages](https://ironsoftware.com/csharp/ocr/examples/ocr-tesseract-multiple-languages/)
 
 IronOCR is compatible with 125 international languages.
 

@@ -1,6 +1,6 @@
 # C# Custom Font Training for Tesseract 5 (Windows Users Edition)
 
-***Based on <https://ironsoftware.com/how-to/ocr-custom-font-training/>***
+> Full guide: [C# Custom Font Training for Tesseract 5 (Windows Users Edition)](https://ironsoftware.com/how-to/ocr-custom-font-training/)
 
 
 Enhance the precision and recognition performance of the OCR engine using custom font training with Tesseract 5. This is especially useful for unique or complex font styles that are typically not well-supported by default.

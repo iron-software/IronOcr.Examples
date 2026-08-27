@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/csharp-tesseract-5/>***
+> Full guide: [C# tesseract 5](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/)
 
 In today's digital landscape, where electronic documents are prevalent in global enterprises, possessing an OCR tool capable of recognizing and extracting text from documents in multiple languages is crucial.
 

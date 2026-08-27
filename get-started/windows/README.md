@@ -1,6 +1,6 @@
 # Getting Started with IronOCR on Windows
 
-***Based on <https://ironsoftware.com/get-started/windows/>***
+> Full guide: [Getting Started with IronOCR on Windows](https://ironsoftware.com/csharp/ocr/get-started/windows/)
 
 
 IronOCR is an effective .NET OCR library that enables developers to extract text from images, scanned documents, PDFs, and more. It is compatible with various languages and fits effortlessly into Windows development using .NET Framework as well as .NET 6, 7, and 8.

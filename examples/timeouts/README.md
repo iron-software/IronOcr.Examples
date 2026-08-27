@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/timeouts/>***
+> Full guide: [Timeouts](https://ironsoftware.com/csharp/ocr/examples/timeouts/)
 
 The `TimeoutMs` property sets a cap on the time, in milliseconds, allocated for the OCR operation before it terminates.
 

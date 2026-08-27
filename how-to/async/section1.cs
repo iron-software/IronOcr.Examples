@@ -5,7 +5,6 @@ namespace IronOcr.Examples.HowTo.Async
     {
         public static void Run()
         {
-            :title=Start Async OCR in One Line
             var result = await new IronOcr.IronTesseract().ReadAsync("image.png");
         }
     }
