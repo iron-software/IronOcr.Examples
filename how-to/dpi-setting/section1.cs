@@ -5,7 +5,10 @@ namespace IronOcr.Examples.HowTo.DpiSetting
     {
         public static void Run()
         {
-            var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrInput { TargetDPI = 300 }.LoadImage("low-res.png"));
+            using var input = new IronOcr.OcrInput { TargetDPI = 300 };
+            input.LoadImage("low-res.png");
+
+            var result = new IronOcr.IronTesseract().Read(input);
         }
     }
 }

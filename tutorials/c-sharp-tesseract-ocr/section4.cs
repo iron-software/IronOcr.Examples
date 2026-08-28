@@ -14,7 +14,7 @@ namespace IronOcr.Examples.Tutorial.CSharpTesseractOcr
             
             // Load password-protected PDFs seamlessly
             // IronOCR handles PDF rendering internally
-            input.LoadPdf("example.pdf", "password");
+            input.LoadPdf("example.pdf", Password: "password");
             
             // Process specific pages from multi-page TIFFs
             // Perfect for batch document processing

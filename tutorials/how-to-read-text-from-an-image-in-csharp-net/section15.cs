@@ -24,7 +24,7 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
                 foreach (var barcode in result.Barcodes)
                 {
                     Console.WriteLine($"Barcode Value: {barcode.Value}");
-                    Console.WriteLine($"Type: {barcode.Type}, Location: {barcode.Location}");
+                    Console.WriteLine($"Format: {barcode.Format}, Location: {barcode.Location}");
                 }
             }
         }

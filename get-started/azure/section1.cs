@@ -10,7 +10,7 @@ namespace IronOcr.Examples.GettingStarted.Azure
             {
                 input.Title = "Divine Comedy - Purgatory"; // Give title to input document 
                 // Supply optional password and name of document
-                input.AddPdf("..\\Documents\\Purgatorio.pdf", "dante");
+                input.LoadPdf("..\\Documents\\Purgatorio.pdf", Password: "dante");
                 var result = OCR.Read(input); // Read the input file
                             
                 result.SaveAsSearchablePdf("SearchablePDFDocument.pdf"); 

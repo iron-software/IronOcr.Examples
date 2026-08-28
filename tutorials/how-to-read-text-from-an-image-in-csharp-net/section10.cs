@@ -12,7 +12,7 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
                 try
                 {
                     // Load password-protected PDF if needed
-                    input.LoadPdf("example.pdf", "password");
+                    input.LoadPdf("example.pdf", Password: "password");
             
                     // Process entire document
                     OcrResult result = ocr.Read(input);

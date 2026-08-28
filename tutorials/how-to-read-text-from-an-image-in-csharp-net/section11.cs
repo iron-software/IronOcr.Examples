@@ -18,7 +18,7 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
             
                 // Add specific frames from animated images
                 int[] gifFrames = new int[] { 1, 2 };
-                input.AddImageFrames("image3.gif", gifFrames);
+                input.LoadImageFrames("image3.gif", gifFrames);
             
                 // Create searchable PDF
                 OcrResult result = ocr.Read(input);

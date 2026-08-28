@@ -1,3 +1,4 @@
+using static IronOcr.OcrResult;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.TesseractResultConfidence
 {
@@ -5,7 +6,6 @@ namespace IronOcr.Examples.HowTo.TesseractResultConfidence
     {
         public static void Run()
         {
-            using static IronOcr.OcrResult;
             
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();

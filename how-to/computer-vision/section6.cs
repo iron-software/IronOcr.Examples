@@ -9,7 +9,7 @@ namespace IronOcr.Examples.HowTo.ComputerVision
             using var input = new OcrInput();
             input.LoadImage("/path/file.png");
             
-            input.FindMultipleTextRegions(Scale: 2.0, DilationAmount: -1, Binarize: true, Invert: false);
+            input.FindMultipleTextRegions();
             OcrResult result = ocr.Read(input);
             string resultText = result.Text;
         }

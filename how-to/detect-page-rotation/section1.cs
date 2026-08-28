@@ -7,8 +7,7 @@ namespace IronOcr.Examples.HowTo.DetectPageRotation
         {
             using var input = new OcrInput();
             input.LoadPdf("doc.pdf");
-            input.DetectPageOrientation();
-                        var rotationResults = input;
+            var rotationResults = input.DetectPageOrientation();
             Console.WriteLine(rotationResults.First().RotationAngle);
         }
     }

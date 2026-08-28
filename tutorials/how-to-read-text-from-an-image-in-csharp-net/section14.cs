@@ -13,12 +13,12 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
                 input.Title = "Document Archive";
             
                 // Process multiple document types
-                input.AddImage("image2.jpeg");
-                input.AddPdf("example.pdf", "password");
+                input.LoadImage("image2.jpeg");
+                input.LoadPdf("example.pdf", Password: "password");
             
                 // Add TIFF pages
                 var pageIndices = new int[] { 1, 2 };
-                input.AddTiff("example.tiff", pageIndices);
+                input.LoadImageFrames("example.tiff", pageIndices);
             
                 // Export as HOCR with position data
                 OcrResult result = ocr.Read(input);

@@ -5,7 +5,7 @@ namespace IronOcr.Examples.HowTo.InputPdfs
     {
         public static void Run()
         {
-            using var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrPdfInput("document.pdf", PdfContents.TextAndImages));
+            var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrPdfInput("document.pdf", OcrContent: PdfContents.TextAndImages));
         }
     }
 }

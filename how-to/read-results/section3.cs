@@ -1,3 +1,4 @@
+using static IronOcr.OcrResult;
 using System;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.ReadResults
@@ -6,7 +7,6 @@ namespace IronOcr.Examples.HowTo.ReadResults
     {
         public static void Run()
         {
-            using static IronOcr.OcrResult;
             
             // Instantiate IronTesseract
             IronTesseract ocrTesseract = new IronTesseract();

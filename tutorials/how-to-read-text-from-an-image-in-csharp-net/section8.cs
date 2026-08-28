@@ -17,7 +17,7 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
             
                 // Process specific frames from multi-frame images
                 int[] frameNumbers = { 1, 2 };
-                input.AddImageFrames("image3.gif", frameNumbers);
+                input.LoadImageFrames("image3.gif", frameNumbers);
             
                 // Process all sources together
                 OcrResult result = ocr.Read(input);

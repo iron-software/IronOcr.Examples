@@ -8,7 +8,6 @@ namespace IronOcr.Examples.HowTo.HighlightTextsAsImages
             using var input = new OcrInput();
             input.LoadPdf("document.pdf");
             input.HighlightTextAndSaveAsImages(new IronOcr.IronTesseract(), "highlight_page_", IronOcr.ResultHighlightType.Word);
-            input;
         }
     }
 }

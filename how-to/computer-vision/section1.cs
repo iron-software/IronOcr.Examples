@@ -8,7 +8,7 @@ namespace IronOcr.Examples.HowTo.ComputerVision
             using var input = new OcrInput();
             input.LoadImage("image.png");
             input.FindTextRegion();
-            using var result = new IronTesseract().Read(input);
+            var result = new IronTesseract().Read(input);
         }
     }
 }

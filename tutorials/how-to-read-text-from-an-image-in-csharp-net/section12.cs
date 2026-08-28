@@ -13,7 +13,7 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
                 input.Title = "Annual Report 2024";
             
                 // Process existing PDF
-                input.LoadPdf("example.pdf", "password");
+                input.LoadPdf("example.pdf", Password: "password");
             
                 // Generate searchable version
                 var result = ocr.Read(input);

@@ -6,6 +6,7 @@ namespace IronOcr.Examples.HowTo.ImageOrientationCorrection
         public static void Run()
         {
             // Apply deskew
+            using var imageInput = new IronOcr.OcrImageInput("sample.jpg");
             imageInput.Deskew();
         }
     }

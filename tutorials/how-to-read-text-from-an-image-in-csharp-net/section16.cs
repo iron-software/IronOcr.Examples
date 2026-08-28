@@ -30,7 +30,8 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
             
                 // Extract page elements
                 OcrResult.Barcode[] barcodes = page.Barcodes;
-                AnyBitmap pageImage = page.ToBitmap();
+                // ToBitmap needs the input the page was read from
+                AnyBitmap pageImage = page.ToBitmap(input);
                 double pageWidth = page.Width;
                 double pageHeight = page.Height;
             

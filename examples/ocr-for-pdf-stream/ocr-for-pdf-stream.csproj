@@ -7,5 +7,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="IronOcr" Version="*" />
+		<!-- the example renders a PDF with IronPDF, then OCRs it -->
+		<PackageReference Include="IronPdf" Version="*" />
 	</ItemGroup>
 </Project>

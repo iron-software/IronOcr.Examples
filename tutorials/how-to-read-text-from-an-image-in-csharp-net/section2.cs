@@ -28,7 +28,7 @@ namespace IronOcr.Examples.Tutorial.HowToReadTextFromAnImageInCsharpNet
                     Console.WriteLine(result.Text);
                 }
             }
-            catch (OcrException ex)
+            catch (IronOcr.Exceptions.IronOcrInputException ex)
             {
                 // Handle OCR-specific errors
                 Console.WriteLine($"OCR Error: {ex.Message}");

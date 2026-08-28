@@ -1,3 +1,4 @@
+using static IronOcr.OcrResult;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.TesseractResultConfidence
 {
@@ -6,6 +7,9 @@ namespace IronOcr.Examples.HowTo.TesseractResultConfidence
         public static void Run()
         {
             // Get page confidence level
+            using var input = new IronOcr.OcrInput("image.png");
+            var ocrResult = new IronOcr.IronTesseract().Read(input);
+
             double pageConfidence = ocrResult.Pages[0].Confidence;
             
             // Get paragraph confidence level

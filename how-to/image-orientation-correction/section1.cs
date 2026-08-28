@@ -10,8 +10,7 @@ namespace IronOcr.Examples.HowTo.ImageOrientationCorrection
             input.Rotate(90);
             input.Deskew(45);
             input.Scale(150);
-            input.Let(input => new IronOcr.IronTesseract().Read(input));
-            var result = input;
+            var result = new IronOcr.IronTesseract().Read(input);
         }
     }
 }

@@ -6,6 +6,7 @@ namespace IronOcr.Examples.HowTo.ImageColorCorrection
         public static void Run()
         {
             // Apply invert affect
+            using var imageInput = new IronOcr.OcrImageInput("sample.jpg");
             imageInput.Invert();
         }
     }

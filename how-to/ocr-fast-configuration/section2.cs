@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.IO;
 using IronOcr;
 namespace IronOcr.Examples.HowTo.OcrFastConfiguration
