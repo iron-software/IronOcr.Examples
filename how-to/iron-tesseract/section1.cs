@@ -5,7 +5,7 @@ namespace IronOcr.Examples.HowTo.IronTesseract
     {
         public static void Run()
         {
-            var result = new IronOcr.IronTesseract { Language = IronOcr.OcrLanguage.English, Configuration = new IronOcr.TesseractConfiguration { ReadBarCodes = false, RenderSearchablePdf = true, WhiteListCharacters = "ABCabc123" } }.Read(new IronOcr.OcrInput("image.png"));
+            var result = new global::IronOcr.IronTesseract { Language = global::IronOcr.OcrLanguage.English, Configuration = new global::IronOcr.TesseractConfiguration { ReadBarCodes = false, RenderSearchablePdf = true, WhiteListCharacters = "ABCabc123" } }.Read(new global::IronOcr.OcrInput("image.png"));
         }
     }
 }

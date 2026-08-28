@@ -5,7 +5,10 @@ namespace IronOcr.Examples.HowTo.HighlightTextsAsImages
     {
         public static void Run()
         {
-            new IronOcr.OcrInput().LoadPdf("document.pdf").HighlightTextAndSaveAsImages(new IronOcr.IronTesseract(), "highlight_page_", IronOcr.ResultHighlightType.Word);
+            using var input = new OcrInput();
+            input.LoadPdf("document.pdf");
+            input.HighlightTextAndSaveAsImages(new IronOcr.IronTesseract(), "highlight_page_", IronOcr.ResultHighlightType.Word);
+            input;
         }
     }
 }

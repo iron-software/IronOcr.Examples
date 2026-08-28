@@ -5,7 +5,9 @@ namespace IronOcr.Examples.HowTo.ReadScannedDocument
     {
         public static void Run()
         {
-            var text = new IronOcr.IronTesseract().ReadDocument(new IronOcr.OcrInput().LoadPdf("scanned.pdf")).Text;
+            using var input = new OcrInput();
+            input.LoadPdf("scanned.pdf");
+            var text = new IronOcr.IronTesseract().ReadDocument(input).Text;
         }
     }
 }

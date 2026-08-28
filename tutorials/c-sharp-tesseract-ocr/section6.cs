@@ -8,9 +8,9 @@ namespace IronOcr.Examples.Tutorial.CSharpTesseractOcr
             // Configure IronTesseract for Arabic text recognition
             var ocr = new IronTesseract
             {
-                // Set primary language to Arabic
-                // Automatically handles right-to-left text
-                Language = OcrLanguage.Arabic
+            // Set primary language to Arabic
+            // Automatically handles right-to-left text
+            Language = OcrLanguage.Arabic
             };
             
             // Load Arabic documents for processing

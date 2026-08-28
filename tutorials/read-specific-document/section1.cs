@@ -5,7 +5,9 @@ namespace IronOcr.Examples.Tutorial.ReadSpecificDocument
     {
         public static void Run()
         {
-            var result = new IronTesseract().ReadPassport(new OcrInput().LoadImage("passport.jpg"));
+            using var input = new OcrInput();
+            input.LoadImage("passport.jpg");
+            var result = new IronTesseract().ReadPassport(input);
         }
     }
 }

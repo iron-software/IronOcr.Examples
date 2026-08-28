@@ -5,7 +5,7 @@ namespace IronOcr.Examples.HowTo.IronTesseract
     {
         public static void Run()
         {
-            IronTesseract ocr = new IronTesseract();
+            global::IronOcr.IronTesseract ocr = new global::IronOcr.IronTesseract();
             
             using OcrInput input = new OcrInput();
             input.LoadImage("attachment.png");

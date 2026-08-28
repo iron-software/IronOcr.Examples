@@ -6,7 +6,9 @@ namespace IronOcr.Examples.HowTo.ReadTableInDocument
     {
         public static void Run()
         {
-            var cells = new IronTesseract().ReadDocumentAdvanced(new OcrInput().LoadPdf("invoiceTable.pdf")).Tables.First().CellInfos;
+            using var input = new OcrInput();
+            input.LoadPdf("invoiceTable.pdf");
+            var cells = new IronTesseract().ReadDocumentAdvanced(input).Tables.First().CellInfos;
         }
     }
 }

@@ -17,9 +17,9 @@ namespace IronOcr.Examples.HowTo.DetectPageRotation
             // Ouput result
             foreach(var result in results)
             {
-                Console.WriteLine(result.PageNumber);
-                Console.WriteLine(result.HighConfidence);
-                Console.WriteLine(result.RotationAngle);
+            Console.WriteLine(result.PageNumber);
+            Console.WriteLine(result.HighConfidence);
+            Console.WriteLine(result.RotationAngle);
             }
         }
     }

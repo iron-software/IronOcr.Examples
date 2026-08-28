@@ -5,7 +5,9 @@ namespace IronOcr.Examples.HowTo.ReadMicrCheque
     {
         public static void Run()
         {
-            string micrText = new IronOcr.IronTesseract { Language = IronOcr.OcrLanguage.MICR }.Read(new IronOcr.OcrInput().LoadImage("micr.png", new System.Drawing.Rectangle(125, 240, 310, 15))).Text;
+            using var input = new OcrInput();
+            input.LoadImage("micr.png", new System.Drawing.Rectangle(125, 240, 310, 15));
+            string micrText = new IronOcr.IronTesseract { Language = IronOcr.OcrLanguage.MICR }.Read(input).Text;
         }
     }
 }

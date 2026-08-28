@@ -11,12 +11,12 @@ namespace IronOcr.Examples.HowTo.ProgressTracking
             // Subscribe to OcrProgress event
             ocrTesseract.OcrProgress += (_, ocrProgressEventsArgs) =>
             {
-                Console.WriteLine("Start time: " + ocrProgressEventsArgs.StartTimeUTC.ToString());
-                Console.WriteLine("Total pages number: " + ocrProgressEventsArgs.TotalPages);
-                Console.WriteLine("Progress(%) | Duration");
-                Console.WriteLine("    " + ocrProgressEventsArgs.ProgressPercent + "%     | " + ocrProgressEventsArgs.Duration.TotalSeconds + "s");
-                Console.WriteLine("End time: " + ocrProgressEventsArgs.EndTimeUTC.ToString());
-                Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("Start time: " + ocrProgressEventsArgs.StartTimeUTC.ToString());
+            Console.WriteLine("Total pages number: " + ocrProgressEventsArgs.TotalPages);
+            Console.WriteLine("Progress(%) | Duration");
+            Console.WriteLine("    " + ocrProgressEventsArgs.ProgressPercent + "%     | " + ocrProgressEventsArgs.Duration.TotalSeconds + "s");
+            Console.WriteLine("End time: " + ocrProgressEventsArgs.EndTimeUTC.ToString());
+            Console.WriteLine("----------------------------------------------");
             };
             
             using var input = new OcrInput();

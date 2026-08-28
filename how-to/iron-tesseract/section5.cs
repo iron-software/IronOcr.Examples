@@ -6,7 +6,7 @@ namespace IronOcr.Examples.HowTo.IronTesseract
     {
         public static void Run()
         {
-            IronTesseract Ocr = new IronTesseract();
+            global::IronOcr.IronTesseract Ocr = new global::IronOcr.IronTesseract();
             
             Ocr.Language = OcrLanguage.English;
             Ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.AutoOsd;

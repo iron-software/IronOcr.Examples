@@ -9,8 +9,8 @@ namespace IronOcr.Examples.Tutorial.CSharpTesseractOcr
             // Initialize IronTesseract for performing OCR (Optical Character Recognition)
             var ocr = new IronTesseract
             {
-                // Set the language for the OCR process to English
-                Language = OcrLanguage.English
+            // Set the language for the OCR process to English
+            Language = OcrLanguage.English
             };
             
             // Create a new OCR input that can hold the images to be processed

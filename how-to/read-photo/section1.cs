@@ -5,7 +5,9 @@ namespace IronOcr.Examples.HowTo.ReadPhoto
     {
         public static void Run()
         {
-            var result = new IronTesseract().ReadPhoto(new OcrInput().LoadImageFrame("photo.tiff", 0));
+            using var input = new OcrInput();
+            input.LoadImageFrame("photo.tiff", 0);
+            var result = new IronTesseract().ReadPhoto(input);
         }
     }
 }

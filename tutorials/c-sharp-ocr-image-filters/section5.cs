@@ -16,13 +16,13 @@ namespace IronOcr.Examples.Tutorial.CSharpOcrImageFilters
             bool didDeskew = input.Deskew(15);
             if (didDeskew)
             {
-                // Read image into variable: result
-                var result = ocr.Read(input);
-                Console.WriteLine(result.Text);
+            // Read image into variable: result
+            var result = ocr.Read(input);
+            Console.WriteLine(result.Text);
             }
             else
             {
-                Console.WriteLine("Deskew not applied because Image Orientation could not be determined.");
+            Console.WriteLine("Deskew not applied because Image Orientation could not be determined.");
             }
         }
     }

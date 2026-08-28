@@ -5,7 +5,9 @@ namespace IronOcr.Examples.HowTo.ReadScreenshot
     {
         public static void Run()
         {
-            OcrPhotoResult result = new IronTesseract().ReadScreenShot(new OcrInput().LoadImage("screenshot.png"));
+            using var input = new OcrInput();
+            input.LoadImage("screenshot.png");
+            OcrPhotoResult result = new IronTesseract().ReadScreenShot(input);
         }
     }
 }

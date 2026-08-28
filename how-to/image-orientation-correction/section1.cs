@@ -5,7 +5,13 @@ namespace IronOcr.Examples.HowTo.ImageOrientationCorrection
     {
         public static void Run()
         {
-            var result = new IronOcr.OcrInput().LoadImage("skewed.png").Rotate(90).Deskew(45).Scale(150).Let(input => new IronOcr.IronTesseract().Read(input));
+            using var input = new OcrInput();
+            input.LoadImage("skewed.png");
+            input.Rotate(90);
+            input.Deskew(45);
+            input.Scale(150);
+            input.Let(input => new IronOcr.IronTesseract().Read(input));
+            var result = input;
         }
     }
 }

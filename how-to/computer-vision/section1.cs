@@ -5,7 +5,10 @@ namespace IronOcr.Examples.HowTo.ComputerVision
     {
         public static void Run()
         {
-            using var result = new IronTesseract().Read(new OcrInput().LoadImage("image.png").FindTextRegion());
+            using var input = new OcrInput();
+            input.LoadImage("image.png");
+            input.FindTextRegion();
+            using var result = new IronTesseract().Read(input);
         }
     }
 }
