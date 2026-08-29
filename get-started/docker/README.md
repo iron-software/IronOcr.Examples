@@ -21,7 +21,7 @@ Additionally, it's highly beneficial to explore our [IronOCR Linux Setup and Com
 
 ### Recommended Linux Docker Distributions for IronOCR
 
-For an effortless setup of IronOCR on Linux, we advocate for the following 64-bit distributions:
+For a setup of IronOCR on Linux, we advocate for the following 64-bit distributions:
 
 - Ubuntu 20
 - Ubuntu 18

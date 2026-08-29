@@ -1,6 +1,6 @@
 > Full guide: [.NET tesseract content area rectangle crop](https://ironsoftware.com/csharp/ocr/examples/net-tesseract-content-area-rectangle-crop/)
 
-The following guide displays how leveraging cropping to select a specific region within an image for Optical Character Recognition (OCR) in .NET can increase processing speed by 41%. The terms `ContentAreas` or `CropAreas` are used to describe these selectively targeted areas.
+The following guide displays how using cropping to select a specific region within an image for Optical Character Recognition (OCR) in .NET can increase processing speed by 41%. The terms `ContentAreas` or `CropAreas` are used to describe these selectively targeted areas.
 
 ### How to Crop Specified Image Areas in C#
 

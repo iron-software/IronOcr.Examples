@@ -9,7 +9,7 @@ These filters are indispensable for pre-processing steps in OCR, as they enhance
 
 ### Quickstart: Using the Sharpen Filter for Enhanced Text Clarity
 
-With IronOCR's `OcrImageInput`, you can quickly sharpen a blurred image using just one line of code, streamlining your preparation for high-accuracy OCR with minimal effort.
+With IronOCR's `OcrImageInput`, you can quickly sharpen a blurred image using just one line of code, simplifying your preparation for high-accuracy OCR with minimal effort.
 
 ```cs
 // Quickly fix a blurry image

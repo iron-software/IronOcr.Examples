@@ -9,7 +9,7 @@ IronOCR introduces targeted methods to perform OCR on specific documents like te
 
 ## Quickstart: Extract Passport Information in a Single Line
 
-Leverage IronOCR’s `ReadPassport` method to extract critical details from passports in one simple step. Assuming IronOCR and AdvancedScan are installed, the code below will quickly extract data such as names, passport numbers, countries, and more:
+Use IronOCR’s `ReadPassport` method to extract critical details from passports in one simple step. Assuming IronOCR and AdvancedScan are installed, the code below will quickly extract data such as names, passport numbers, countries, and more:
 
 ```cs
 var response = new IronTesseract().ReadPassport(new OcrInput().LoadImage("passport.jpg"));

@@ -7,7 +7,7 @@ IronOCR is fully compatible with macOS and supports both Intel and Apple Silicon
 
 ## Compatibility with macOS
 
-IronOCR can be seamlessly integrated with:
+IronOCR can be integrated with:
 
 - macOS versions including Monterey, Ventura, and Sonoma, covering both Intel and Apple Silicon chips.
 - Versions .NET 6, 7, 8, and 9.

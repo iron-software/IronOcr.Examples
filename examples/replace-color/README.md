@@ -6,7 +6,7 @@ Conversely, more complex backgrounds, such as blue text on a pink backdrop, may 
 
 While such tasks could be laborious and slow with `System.Drawing`, they're efficiently handled by IronOCR.
 
-Using the `OcrInput.ReplaceColor` method, it's possible to substitute one color for another within a document. This method is versatile, facilitating the adjustment of colors within a specified tolerance percentage of an exact RGB value, thus negating the necessity for utilizing tools like Photoshop or ImageMagick to prep images for OCR.
+Using the `OcrInput.ReplaceColor` method, it's possible to substitute one color for another within a document. It matches colours within a tolerance percentage of an exact RGB value, thus negating the necessity for utilizing tools like Photoshop or ImageMagick to prep images for OCR.
 
 **`ReplaceColor` Method Parameters**
 

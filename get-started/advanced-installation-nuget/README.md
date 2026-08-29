@@ -7,7 +7,7 @@ Experience the power of Optical Character Recognition (OCR) with IronOcr! Our co
 
 Explore specialized requirements with our advanced options! Whether you need to process passports, images, or other distinct document types, we provide the perfect solution tailored to your specific platform.
 
-IronOCR supports over 125 languages, making it the ideal choice for any OCR task. Are you ready to discover the perfect solution for your project? Join us as we delve into the possibilities!
+IronOCR supports over 125 languages, making it the ideal choice for any OCR task. Are you ready to discover the perfect solution for your project? Join us as we look at the possibilities!
 
 ## IronOcr NuGet Package
 
@@ -31,7 +31,7 @@ IronOCR supports over 125 languages, making it the ideal choice for any OCR task
 <img src="https://ironsoftware.com/img/icons8.com/fluency/72/000000/azure-1.png" style="display:inline" />
 <img src="https://ironsoftware.com/img/icons8.com/color/72/000000/amazon-web-services.png" style="display:inline" />
 
-Ideal for [setting up IronOCR on Linux platforms](https://ironsoftware.com/csharp/ocr/get-started/linux/), this solution integrates smoothly with cloud services and operates seamlessly with AWS & Lambda, Azure Functions, and Linux Web Apps.
+Ideal for [setting up IronOCR on Linux platforms](https://ironsoftware.com/csharp/ocr/get-started/linux/), this solution integrates smoothly with cloud services and operates with AWS & Lambda, Azure Functions, and Linux Web Apps.
 
 [**PM > Install-Package IronOcr.Linux**](https://www.nuget.org/packages/IronOcr.Linux)
 - Optimized for Linux environments, especially Ubuntu and Debian

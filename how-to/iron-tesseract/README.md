@@ -2,7 +2,7 @@
 
 > Full guide: [Utilizing Iron Tesseract with IronOCR](https://ironsoftware.com/how-to/iron-tesseract/)
 
-IronOCR offers a straightforward API that leverages the enhanced capabilities of Tesseract 5, also known as Iron Tesseract. By integrating IronOCR alongside IronTesseract, users can efficiently transform text from images and scanned documents into editable text and searchable PDF formats.
+IronOCR offers a straightforward API that uses the enhanced capabilities of Tesseract 5, also known as Iron Tesseract. By integrating IronOCR alongside IronTesseract, users can efficiently transform text from images and scanned documents into editable text and searchable PDF formats.
 
 ## Quick Setup: Configuring IronTesseract with C#
 

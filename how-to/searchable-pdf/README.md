@@ -5,7 +5,7 @@
 
 A searchable PDF is essentially a document that integrates both image data and text which is readable by machines. This kind of PDF is generated via Optical Character Recognition (OCR), which converts photographed or scanned documents into text while preserving the original image, allowing the text to be searched and selected.
 
-IronOCR offers a streamlined approach to implement OCR on documents to produce searchable PDFs. The library supports various output formats such as files, bytes, and streams for the resulting PDFs.
+IronOCR offers a simplified approach to implement OCR on documents to produce searchable PDFs. The library supports various output formats such as files, bytes, and streams for the resulting PDFs.
 
 ### Concise Guide: Quick Export of a Searchable PDF Using IronOCR
 

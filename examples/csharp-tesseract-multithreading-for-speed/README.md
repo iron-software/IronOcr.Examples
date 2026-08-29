@@ -4,7 +4,7 @@ In the 2021 version of `IronTesseract`, there was a method known as `ReadMultith
 
 Fast forward to 2022, this approach has undergone significant improvement. The latest iteration of IronOCR has been optimized to automatically employ multithreading across all image processing and OCR tasks without necessitating a separate API from developers.
 
-`IronTesseract` now adeptly leverages all available threads across every processor core, maintaining smooth operation and responsiveness, particularly on the main or GUI thread, ensuring a seamless user experience.
+`IronTesseract` now adeptly uses all available threads across every processor core, maintaining smooth operation and responsiveness, particularly on the main or GUI thread, ensuring an user experience.
 
 <div class="hsg-featured-snippet examples__featured-snippet">
     <h2>Implementing Tesseract's Multi-threading Capabilities</h2>

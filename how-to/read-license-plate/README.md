@@ -5,7 +5,7 @@
 
 Automating the extraction of license plate numbers from vehicle images is a critical efficiency boost, especially when dealing with high volumes. IronOCR offers a powerful solution with its `ReadLicensePlate` method, which extracts license plate numbers programmatically. This not only saves time but also enhances data precision.
 
-This tutorial explores how to utilize IronOCR for accurate license plate recognition. Through step-by-step examples and configurable options, you'll learn how to streamline automated license plate detection for uses like parking systems, toll operations, and security monitoring.
+This tutorial explores how to utilize IronOCR for accurate license plate recognition. Through step-by-step examples and configurable options, you'll learn how to simplify automated license plate detection for uses like parking systems, toll operations, and security monitoring.
 
 Before beginning, ensure you have the [`IronOcr.Extension.AdvancedScan`](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package installed.
 

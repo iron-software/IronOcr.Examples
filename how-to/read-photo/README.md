@@ -13,7 +13,7 @@ Incorporate the [IronOcr.Extensions.AdvancedScan](https://www.nuget.org/packages
 
 ## Quickstart: Employ ReadPhoto for Text Extraction from Complex Images
 
-Begin swiftly by invoking IronOCR’s `ReadPhoto` on an `OcrInput` instance loaded with your target image frame. This method is specifically optimized for handling formats rich in images like TIFFs and GIFs, offering a seamless OCR process.
+Begin swiftly by invoking IronOCR’s `ReadPhoto` on an `OcrInput` instance loaded with your target image frame. This method is specifically optimized for handling formats rich in images like TIFFs and GIFs, offering an OCR process.
 
 ```cs
 var result = new IronTesseract().ReadPhoto(new OcrInput().LoadImageFrame("photo.tiff", 0));

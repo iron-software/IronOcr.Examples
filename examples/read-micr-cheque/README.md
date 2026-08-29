@@ -23,4 +23,4 @@ Next, a specific region is framed by a rectangle to target the MICR section on t
 
 The `LoadImage` function then prepares the cheque image with the specified content area. Following this, the `Read` method is employed to scan the cheque and the resulting text is printed from the OCR process.
 
-Discover the capabilities of MICR cheque recognition in C# by visiting our in-depth tutorial at [Unlock the Power of MICR Cheque Recognition with Our Comprehensive C# Guide!](https://ironsoftware.com/csharp/ocr/how-to/read-micr-cheque/)
+Discover MICR cheque recognition in C# by visiting our in-depth tutorial at [Reading MICR cheque codes in C#](https://ironsoftware.com/csharp/ocr/how-to/read-micr-cheque/)

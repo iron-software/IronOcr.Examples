@@ -11,7 +11,7 @@
     </div>
 </div>
 
-.NET Multi-platform App UI (MAUI) is the successor to Xamarin.Forms, providing a framework for building cross-platform applications for Android, iOS, macOS, and Windows using .NET. Its purpose is to streamline the development of native user interfaces across various platforms.
+.NET Multi-platform App UI (MAUI) is the successor to Xamarin.Forms, providing a framework for building cross-platform applications for Android, iOS, macOS, and Windows using .NET. Its purpose is to simplify the development of native user interfaces across various platforms.
 
 The **IronOcr.iOS package** offers Optical Character Recognition (OCR) capabilities for iOS applications.
 

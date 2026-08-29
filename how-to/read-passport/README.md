@@ -15,7 +15,7 @@ var extractedPassportInfo = new IronOcr.IronTesseract().ReadPassport(new IronOcr
 
 ## Detailed Example of Passport Data Extraction
 
-Let's delve into how to use a passport image to demonstrate IronOCR's capabilities. Begin by loading the image with `OcrInput`, then utilize the `ReadPassport` function to parse and extract data from the passport. This function provides an `OcrPassportResult` instance containing details such as `GivenNames`, `Country`, `PassportNumber`, `Surname`, `DateOfBirth`, and `DateOfExpiry`. Each of these fields in the `PassportInfo` object is a string type.
+Let's look at how to use a passport image to demonstrate IronOCR's capabilities. Begin by loading the image with `OcrInput`, then utilize the `ReadPassport` function to parse and extract data from the passport. This function provides an `OcrPassportResult` instance containing details such as `GivenNames`, `Country`, `PassportNumber`, `Surname`, `DateOfBirth`, and `DateOfExpiry`. Each of these fields in the `PassportInfo` object is a string type.
 
 - Note that this method is currently optimized for passports that use English.
 - Enhanced scanning requires the project to operate on a 64-bit architecture under the .NET Framework.

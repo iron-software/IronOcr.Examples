@@ -7,7 +7,7 @@ Identifying the rotational angle of a page within a document is essential for en
 
 ## Quick Overview: Utilizing DetectPageOrientation for Rotation Detection
 
-In this concise example, developers can leverage IronOCR’s `DetectPageOrientation` method on a PDF to ascertain and immediately correct the page orientation. This approach enables a rapid detection and correction of page rotation with minimal coding.
+In this concise example, developers can use IronOCR’s `DetectPageOrientation` method on a PDF to ascertain and immediately correct the page orientation. This approach enables a rapid detection and correction of page rotation with minimal coding.
 
 ```cs
 var rotationResults = new IronOcr.OcrInput().LoadPdf("doc.pdf").DetectPageOrientation();

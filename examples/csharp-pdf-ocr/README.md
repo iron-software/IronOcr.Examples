@@ -51,13 +51,13 @@ The Iron Software OCR tool is engineered to be adaptive and performance-oriented
 
 Moreover, choosing image or scanned text formats like PNG or TIFF generally results in faster and more efficient results than lower-quality formats like JPEG.
 
-## Effortless Installation of IronOCR
+## Installation of IronOCR
 
 Iron Software’s suite is straightforward to set up across widely used platforms, boasting extensive compatibility including Windows, Linux, macOS, Azure, AWS, and Docker. This makes C# the preferred programming language for developers working with the Tesseract OCR engine.
 
 ## Support for Over 125 International Languages
 
-IronOCR’s versatility is further showcased with its support for 125 international languages, available through language packs that are delivered as DLL files. These can be effortlessly integrated by downloading them from our website or the NuGet Package Manager within Visual Studio.
+IronOCR supports 125 languages through language packs that are delivered as DLL files. These can be integrated by downloading them from our website or the NuGet Package Manager within Visual Studio.
 
 ### How To Install OCR Language Packs
 

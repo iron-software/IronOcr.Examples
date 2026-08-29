@@ -1,6 +1,6 @@
 > Full guide: [C# tesseract 5](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/)
 
-In today's digital landscape, where electronic documents are prevalent in global enterprises, possessing an OCR tool capable of recognizing and extracting text from documents in multiple languages is crucial.
+Most business documents now arrive as files rather than paper, and many of them are not in English, so an OCR tool has to read more than one language.
 
 Tesseract 5 stands out as the most sophisticated OCR library currently available across all languages. That said, it is not without challenges; the software has a steep learning curve and can be difficult to implement effectively.
 

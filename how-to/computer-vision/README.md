@@ -3,7 +3,7 @@
 > Full guide: [Utilizing Computer Vision to Identify Text with IronOCR](https://ironsoftware.com/how-to/computer-vision/)
 
 
-IronOCR integrates OpenCV to leverage Computer Vision, which is instrumental in locating text within images. This is particularly beneficial for images with substantial background noise, multiple text locations, or distorted text. IronOCR uses this technology to pinpoint text regions, which are then processed by Tesseract for text extraction.
+IronOCR integrates OpenCV to use Computer Vision, which is instrumental in locating text within images. This is particularly beneficial for images with substantial background noise, multiple text locations, or distorted text. IronOCR uses this technology to pinpoint text regions, which are then processed by Tesseract for text extraction.
 
 ## Quickstart: Detect and Extract Text from Key Areas
 

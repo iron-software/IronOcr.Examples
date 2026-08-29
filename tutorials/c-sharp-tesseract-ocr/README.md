@@ -417,7 +417,7 @@ OcrResult ocrResult = ironTesseract.Read(ocrInput);
 // Output the accurately extracted text, keeping the layout intact
 Console.WriteLine(ocrResult.Text);
 
-// Leverage IronOCR's advanced capabilities for:
+// IronOCR also handles:
 // - Extracting detailed content from specific pages within a PDF
 // - Targeting OCR to particular areas within images
 // - Ensuring the correct sequence in documents combining multiple formats
@@ -464,7 +464,7 @@ using var input = new OcrInput();
 var pageIndices = new int[] { 1, 2 };
 input.LoadImageFrames(@"img\Potter.tiff", pageIndices);
 
-// Leverage multi-threading to utilize all CPU cores
+// Use every CPU core
 // Scale automatically according to system capabilities
 var result = ocr.Read(input);
 
@@ -556,7 +556,7 @@ using var ocrInput = new OcrInput();
 var pagesToProcess = new int[] { 1, 2 };
 ocrInput.LoadImageFrames(@"img\Potter.tiff", pagesToProcess);
 
-// Leveraging multi-threading to make full use of CPU resources and scale performance
+// Read on every CPU core so the work scales with the machine
 var scanResult = ironTesseract.Read(ocrInput);
 
 // Output the extracted text

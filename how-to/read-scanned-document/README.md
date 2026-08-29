@@ -7,9 +7,9 @@ IronOCR excels at transforming the non-searchable, image-based text commonly fou
 
 By automating the extraction of text and images, IronOCR bypasses the need for manual transcription, enhancing both accuracy and productivity. This functionality proves invaluable in fields like research, legal affairs, and content production where repurposing specific segments of PDFs is frequent.
 
-Companies can leverage IronOCR to pull essential data from PDFs for further analysis or system integration, optimizing their business processes. Similarly, designers and marketers can extract images for modification and incorporation into diverse projects.
+Companies can use IronOCR to pull essential data from PDFs for further analysis or system integration, optimizing their business processes. Similarly, designers and marketers can extract images for modification and incorporation into diverse projects.
 
-Throughout this guide, we illuminate the usage of `OcrPdfInput` methods, detailing the assorted settings and parameters to illustrate how IronOCR streamlines the process of extracting text and images from PDFs across various use cases.
+Throughout this guide, we illuminate the usage of `OcrPdfInput` methods, detailing the assorted settings and parameters to illustrate how IronOCR simplifies the process of extracting text and images from PDFs across various use cases.
 
 Before beginning, ensure to install the [`IronOcr.Extensions.AdvancedScan`](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) package.
 

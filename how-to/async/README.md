@@ -14,7 +14,7 @@ var result = await new IronOcr.IronTesseract().ReadAsync("image.png");
 ```
 
 
-## Harnessing Multithreading in IronOCR
+## Using Multithreading in IronOCR
 
 IronOCR multithreads image analysis internally, so there are no threads to manage in application code. IronTesseract uses every available CPU thread, which is where most of the speed comes from.
 

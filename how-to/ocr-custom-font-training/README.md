@@ -37,7 +37,7 @@ Install-Package IronOcr
 
 Follow this guide to [set up WSL2 and Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10).
 
-It is important to note that custom font training is only supported on Linux systems.
+Custom font training runs only on Linux.
 
 ## Step 3: Deploy Tesseract 5 in Ubuntu
 

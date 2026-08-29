@@ -3,11 +3,11 @@
 > Full guide: [How to Read PDFs](https://ironsoftware.com/how-to/input-pdfs/)
 
 
-PDF, an acronym for "Portable Document Format," was devised by Adobe as a method to maintain the originality of documents, making them look consistent irrespective of the tools employed to develop them. PDFs are commonly utilized for the effortless distribution and viewing of documents, maintaining the same visual format across different platforms and devices. IronOcr is proficient at managing various types of PDF documents seamlessly.
+PDF, an acronym for "Portable Document Format," was devised by Adobe as a method to maintain the originality of documents, making them look consistent irrespective of the tools employed to develop them. PDFs are commonly utilized for the distribution and viewing of documents, maintaining the same visual format across different platforms and devices. IronOcr is proficient at managing various types of PDF documents.
 
 ## Quickstart: OCR a PDF File in Seconds
 
-Get started with IronOCR effortlessly by creating an `OcrPdfInput` pointing towards your PDF file and invoking the `Read` method. Here’s a straightforward example that demonstrates how simple it is to extract text from a PDF file with IronOCR.
+Get started with IronOCR by creating an `OcrPdfInput` pointing towards your PDF file and invoking the `Read` method. Here’s a straightforward example that demonstrates how simple it is to extract text from a PDF file with IronOCR.
 
 ```cs
 using var result = new IronOcr.IronTesseract().Read(new IronOcr.OcrPdfInput("your-document.pdf", PdfContents.TextAndImages));

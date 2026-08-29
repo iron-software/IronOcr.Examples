@@ -9,11 +9,11 @@
 
 This guide will focus on how to develop an OCR application using IronOCR within the .NET MAUI framework.
 
-## IronOCR: Robust .NET OCR Library
+## IronOCR: .NET OCR Library
 
-[IronOCR](https://ironsoftware.com/csharp/ocr/) provides a powerful .NET OCR NuGet package that empowers developers to integrate Optical Character Recognition capabilities into their software solutions seamlessly. The library enables the scanning of PDF files to extract searchable and editable text without compromising data integrity. This functionality is particularly valuable for users needing to locate and modify content within PDF documents easily.
+[IronOCR](https://ironsoftware.com/csharp/ocr/) provides a powerful .NET OCR NuGet package that lets developers integrate Optical Character Recognition capabilities into their software solutions. The library enables the scanning of PDF files to extract searchable and editable text without compromising data integrity. This functionality is particularly valuable for users needing to locate and modify content within PDF documents easily.
 
-Leveraging the latest Tesseract binaries, IronOCR delivers enhanced performance and accuracy. It comes with built-in support for Tesseract versions ranging from 3 to 5, simplifying installation. The library supports 125 international languages by default, with English pre-installed and additional languages easily added via NuGet or manually with DLLs.
+Using the latest Tesseract binaries, IronOCR delivers enhanced performance and accuracy. It comes with built-in support for Tesseract versions ranging from 3 to 5, simplifying installation. The library supports 125 international languages by default, with English pre-installed and additional languages easily added via NuGet or manually with DLLs.
 
 ## Comparing IronOCR with Tesseract
 

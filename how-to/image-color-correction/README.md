@@ -34,7 +34,7 @@ imageInput.Binarize();
 imageInput.SaveAsImages("binarize.jpg");
 ```
 
-You can effortlessly save your processed images with the `SaveAsImages` function. Here’s a side-by-side before and after comparison of binarization.
+You can save your processed images with the `SaveAsImages` function. Here’s a side-by-side before and after comparison of binarization.
 
 <div class="competitors-section__wrapper-even-1">
     <div class="competitors__card" style="width: 48%;">

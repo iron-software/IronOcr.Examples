@@ -357,7 +357,7 @@ ocrOptimized.Configuration.BlackListCharacters = "~`$#^*_{[]}|\\";
 // Set up the page segmentation mode to automatic
 ocrOptimized.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.Auto;
 
-// Leverage the fast English language pack for quicker results
+// The fast English pack trades a little accuracy for speed
 ocrOptimized.Language = OcrLanguage.EnglishFast;
 
 using (OcrInput optimizedInput = new OcrInput())

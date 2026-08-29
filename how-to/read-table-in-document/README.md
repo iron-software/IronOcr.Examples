@@ -3,13 +3,13 @@
 > Full guide: [Introduction to Table Extraction from Documents](https://ironsoftware.com/how-to/read-table-in-document/)
 
 
-Diving into the world of document parsing, specifically table extraction can be quite a maze if you're using basic tools like vanilla Tesseract due to text being confined within cells and spread unevenly across documents. Fear not, as our library leverages a fine-tuned machine learning model tailored for precise detection and extraction of table data from various document formats.
+Diving into the world of document parsing, specifically table extraction can be quite a maze if you're using basic tools like vanilla Tesseract due to text being confined within cells and spread unevenly across documents. Fear not, as our library uses a fine-tuned machine learning model tailored for precise detection and extraction of table data from various document formats.
 
 For straightforward scenarios, direct table detection suffices; however, complex layouts necessitate the use of our `ReadDocumentAdvanced` method for nuanced analysis and data extraction.
 
 ### Quickstart: Extracting Detailed Cell Data from Complex Tables Efficiently
 
-Kickstart your table extraction projects with this quick example. Employing `ReadDocumentAdvanced` from IronOCR effortlessly pulls out cell data from intricate documents. This demonstrates not only the capability of handling complex tables but also simplifies the process starting from loading the PDF to extracting the table cells directly:
+Kickstart your table extraction projects with this quick example. Employing `ReadDocumentAdvanced` from IronOCR pulls out cell data from intricate documents. This demonstrates not only the capability of handling complex tables but also simplifies the process starting from loading the PDF to extracting the table cells directly:
 
 ```cs
 var tableCells = new IronTesseract().ReadDocumentAdvanced(new OcrInput().LoadPdf("invoiceTable.pdf")).Tables.First().CellInfos;

@@ -10,7 +10,7 @@
     </div>
 </div>
 
-In this tutorial, we will guide you through configuring and running an AWS Lambda function that leverages IronOCR to read documents from an S3 bucket.
+In this tutorial, we will guide you through configuring and running an AWS Lambda function that uses IronOCR to read documents from an S3 bucket.
 
 ## Prerequisites
 

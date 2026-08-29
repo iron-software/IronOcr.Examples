@@ -11,7 +11,7 @@
     </div>
 </div>
 
-.NET MAUI (Multi-platform App UI), which extends Xamarin.Forms, facilitates the development of cross-platform applications for Android, iOS, macOS, and Windows using the .NET framework. It streamlines the creation of native interfaces across various platforms.
+.NET MAUI (Multi-platform App UI), which extends Xamarin.Forms, facilitates the development of cross-platform applications for Android, iOS, macOS, and Windows using the .NET framework. It simplifies the creation of native interfaces across various platforms.
 
 The **IronOcr.Android package** introduces OCR capabilities specifically for Android applications!
 

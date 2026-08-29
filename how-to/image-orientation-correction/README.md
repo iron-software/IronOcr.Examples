@@ -7,7 +7,7 @@ Adjusting the orientation of an image is a key step in image processing, particu
 
 These adjustments are crucial in ensuring that the text in images is aligned correctly, rightly oriented, and scaled suitably for effective extraction.
 
-## Quickstart: Streamlined Image Adjustment
+## Quickstart: Simplified Image Adjustment
 
 Efficiently prepare your image for OCR by chaining rotation, deskewing, and scaling operations in a single line with IronOCR’s `OcrInput`. This approach helps you get started with minimal setup, readying your image for precise OCR processing swiftly.
 

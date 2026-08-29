@@ -2,9 +2,9 @@
 
 > Full guide: [Implementing Tesseract Custom Language in C#](https://ironsoftware.com/how-to/ocr-custom-language/)
 
-In the realm of optical character recognition (OCR), there are scenarios where one must handle non-standard languages, unique scripts, or codes. For the Tesseract engine to process an image containing such specialized content, it needs to be furnished with appropriate training data for that custom language, which is encapsulated in a `.traineddata` file.
+In optical character recognition (OCR), there are scenarios where one must handle non-standard languages, unique scripts, or codes. For the Tesseract engine to process an image containing such specialized content, it needs to be furnished with appropriate training data for that custom language, which is encapsulated in a `.traineddata` file.
 
-Although the creation (or training) of these files is handled via Tesseract's tools, IronOCR provides seamless integration for utilizing these custom-trained models. This tutorial will guide you through the steps to employ a custom `.traineddata` file with IronOCR.
+Although the creation (or training) of these files is handled via Tesseract's tools, IronOCR provides integration for utilizing these custom-trained models. This tutorial will guide you through the steps to employ a custom `.traineddata` file with IronOCR.
 
 <h3>Setting Up IronOCR</h3>
 
