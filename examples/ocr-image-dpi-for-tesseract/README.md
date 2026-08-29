@@ -9,7 +9,7 @@ High DPI values can reduce speed whereas very low DPI values might decrease accu
 <div class="hsg-featured-snippet examples__featured-snippet">
     <h2>Enhancing Low-Quality DPI Images in Tesseract</h2>
     <ol>
-        <li><a class="js-modal-open" data-modal-id="trial-license-after-download" href="https://ironsoftware.com/csharp/ocr/packages/IronOcr/?utm_source=github">Install the OCR library explicitly designed to enhance poor-quality DPI images.</a></li>
+        <li><a class="js-modal-open" data-modal-id="trial-license-after-download" href="https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github">Install the OCR library explicitly designed to enhance poor-quality DPI images.</a></li>
         <li>Create an instance of <code>IronTesseract</code>.</li>
         <li>Set up an <code>OcrInput</code> with your image's file path.</li>
         <li>Select the desired DPI figure.</li>

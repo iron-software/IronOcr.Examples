@@ -17,7 +17,7 @@ Docker provides developers the ability to package, distribute, and run applicati
 
 For those new to Docker and .NET, we suggest reviewing this informative article on [configuring Docker for debugging and integration with Visual Studio](https://docs.microsoft.com/en-us/visualstudio/containers/edit-and-refresh?view=vs-2019).
 
-Additionally, it's highly beneficial to explore our [IronOCR Linux Setup and Compatibility Guide](https://ironsoftware.com/csharp/ocr/how-to/tesseract-ocr-setup-linux-ubuntu-debian/?utm_source=github).
+Additionally, it's highly beneficial to explore our [IronOCR Linux Setup and Compatibility Guide](https://ironsoftware.com/csharp/ocr/get-started/linux/?utm_source=github).
 
 ### Recommended Linux Docker Distributions for IronOCR
 
@@ -28,7 +28,7 @@ For a setup of IronOCR on Linux, we advocate for the following 64-bit distributi
 - Debian 11
 - Debian 10 _[Currently the default distribution on Microsoft Azure]_
 
-We suggest utilizing Microsoft's [Official Docker Images](https://hub.docker.com/_/microsoft-dotnet-runtime/). While other distributions are partially supported, they might need manual setup using `apt-get`. For more details, refer to our "[Linux Manual Setup](https://ironsoftware.com/csharp/ocr/how-to/tesseract-ocr-setup-linux-ubuntu-debian/?utm_source=github)" guide.
+We suggest utilizing Microsoft's [Official Docker Images](https://hub.docker.com/_/microsoft-dotnet-runtime/). While other distributions are partially supported, they might need manual setup using `apt-get`. For more details, refer to our "[Linux Manual Setup](https://ironsoftware.com/csharp/ocr/get-started/linux/?utm_source=github)" guide.
 
 Included below are the Dockerfiles for Ubuntu and Debian setups:
 

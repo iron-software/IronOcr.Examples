@@ -167,4 +167,4 @@ The complete code for this guide is available as a zipped file, ready for openin
 
 Similar to MAUI, setting up IronOcr.iOS in Avalonia requires the latest .NET SDK and specifically [.NET SDK 8.0.101](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) to work properly. The setup process is identical to that described above.
 
-For OCR capabilities on Android, refer to the article on "[How to Perform OCR on Android in .NET MAUI](https://ironsoftware.com/csharp/ocr/how-to/setup-android/?utm_source=github)".
+For OCR capabilities on Android, refer to the article on "[How to Perform OCR on Android in .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/android/?utm_source=github)".

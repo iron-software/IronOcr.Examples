@@ -15,6 +15,6 @@ Additionally, for those looking to focus OCR on specific image areas, consider v
     </ol>
 </div>
 
-IronOCR is available for download on NuGet or directly as a [DLL file](https://ironsoftware.com/csharp/ocr/downloads/tesseract-ocr-speed.zip?utm_source=github).
+IronOCR is available for download on NuGet or directly as a [DLL file](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github).
 
 For further exploration of IronTesseract and to enhance your .NET OCR capabilities, visit [Explore IronTesseract for Enhanced OCR in .NET](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/?utm_source=github).

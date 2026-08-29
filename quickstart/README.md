@@ -101,4 +101,4 @@ For more detailed scenarios like reading barcodes and specifying OCR regions, fu
 
 IronOCR offers built-in image enhancement filters to improve OCR accuracy and supports 125 international languages.
 
-To learn more about using OCR technology in C#, VB, or other .NET languages, explore our [community tutorials](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github) and the [full API reference](https://ironsoftware.com/csharp/ocr/object-reference/?utm_source=github).
+To learn more about using OCR technology in C#, VB, or other .NET languages, explore our [community tutorials](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github) and the [full API reference](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github).

@@ -917,7 +917,7 @@ To further enhance your proficiency with IronOCR:
 
 - Examine [useful C# code samples](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/?utm_source=github).
 
-- Consult the [extensive API documentation](https://ironsoftware.com/csharp/ocr/object-reference/?utm_source=github).
+- Consult the [extensive API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github).
 
 ### Download the Source Code
 
@@ -925,5 +925,5 @@ To further enhance your proficiency with IronOCR:
 
 - [Download the Complete Source Code](https://ironsoftware.com/downloads/assets/tutorials/how-to-read-text-from-an-image-in-csharp-net/CSharp-Image-to-Text.zip?utm_source=github) for a comprehensive hands-on guide.
 
-Eager to start converting images to text with C# in your projects? [Download IronOCR now](https://ironsoftware.com/csharp/ocr/download/?utm_source=github) and begin your [free trial](https://ironsoftware.com/csharp/ocr/trial-license?utm_source=github) immediately.
+Eager to start converting images to text with C# in your projects? [Download IronOCR now](https://ironsoftware.com/csharp/ocr/?utm_source=github#download-modal) and begin your [free trial](https://ironsoftware.com/csharp/ocr/?utm_source=github#trial-license) immediately.
 
