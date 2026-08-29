@@ -1,6 +1,6 @@
 # How to Read Specialized Documents
 
-> Full guide: [How to Read Specialized Documents](https://ironsoftware.com/tutorials/read-specific-document/)
+> Full guide: [How to Read Specialized Documents](https://ironsoftware.com/csharp/ocr/tutorials/read-specific-document/)
 
 
 Reading specialized documents such as text, license plates, passports, and images effectively is challenging. These challenges arise from the varying formats, layouts, content, image quality, distortion, and specialized content these documents present. Additionally, understanding context and managing performance and efficiency increases in complexity with an increasing range of document types.

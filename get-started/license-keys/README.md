@@ -1,6 +1,6 @@
 # Utilizing IronOCR License Keys
 
-> Full guide: [Utilizing IronOCR License Keys](https://ironsoftware.com/get-started/license-keys/)
+> Full guide: [Utilizing IronOCR License Keys](https://ironsoftware.com/csharp/barcode/get-started/license-keys/)
 
 ## Acquiring a License Key
 

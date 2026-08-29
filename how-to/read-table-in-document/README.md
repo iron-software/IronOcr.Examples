@@ -1,6 +1,6 @@
 # Introduction to Table Extraction from Documents
 
-> Full guide: [Introduction to Table Extraction from Documents](https://ironsoftware.com/how-to/read-table-in-document/)
+> Full guide: [Introduction to Table Extraction from Documents](https://ironsoftware.com/csharp/ocr/how-to/read-table-in-document/)
 
 
 Diving into the world of document parsing, specifically table extraction can be quite a maze if you're using basic tools like vanilla Tesseract due to text being confined within cells and spread unevenly across documents. Fear not, as our library uses a fine-tuned machine learning model tailored for precise detection and extraction of table data from various document formats.

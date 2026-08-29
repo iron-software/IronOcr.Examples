@@ -1,6 +1,6 @@
 # Guide to Using IronOCR Filters
 
-> Full guide: [Guide to Using IronOCR Filters](https://ironsoftware.com/tutorials/c-sharp-ocr-image-filters/)
+> Full guide: [Guide to Using IronOCR Filters](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/)
 
 
 IronOCR equips developers with an array of image preprocessing tools to tweak and prepare images for Optical Character Recognition (OCR). These tools include a variety of filters specifically designed to refine images for better OCR results.

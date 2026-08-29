@@ -1,6 +1,6 @@
 # How to Read Images
 
-> Full guide: [How to Read Images](https://ironsoftware.com/how-to/input-images/)
+> Full guide: [How to Read Images](https://ironsoftware.com/csharp/ocr/how-to/input-images/)
 
 
 Optical Character Recognition, or OCR, is a technology that is used to recognize text within images. This technology is particularly beneficial for converting printed documents into a digital format, allowing for the extraction and manipulation of text from scanned documents, photographs, or other image types.

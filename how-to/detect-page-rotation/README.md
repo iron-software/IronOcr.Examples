@@ -1,6 +1,6 @@
 # Assessing Document Page Rotation
 
-> Full guide: [Assessing Document Page Rotation](https://ironsoftware.com/how-to/detect-page-rotation/)
+> Full guide: [Assessing Document Page Rotation](https://ironsoftware.com/csharp/ocr/how-to/detect-page-rotation/)
 
 
 Identifying the rotational angle of a page within a document is essential for ensuring it is displayed or printed correctly. This detection process checks if the page has been rotated by 0, 90, 180, or 270 degrees, either clockwise or counterclockwise. It is a vital step for accurately handling documents.

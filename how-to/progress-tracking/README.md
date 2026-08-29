@@ -1,6 +1,6 @@
 # Utilizing Progress Tracking with IronOCR
 
-> Full guide: [Utilizing Progress Tracking with IronOCR](https://ironsoftware.com/how-to/progress-tracking/)
+> Full guide: [Utilizing Progress Tracking with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/progress-tracking/)
 
 
 IronOCR includes a feature where you can subscribe to an event to monitor the progress of the OCR (Optical Character Recognition) operations. These capabilities provide key insights into the OCR process's progress, total duration, and completion status, allowing for effective monitoring and reporting.

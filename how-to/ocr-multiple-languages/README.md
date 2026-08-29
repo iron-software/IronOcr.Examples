@@ -1,6 +1,6 @@
 # Utilizing Multiple Languages with Tesseract
 
-> Full guide: [Utilizing Multiple Languages with Tesseract](https://ironsoftware.com/how-to/ocr-multiple-languages/)
+> Full guide: [Utilizing Multiple Languages with Tesseract](https://ironsoftware.com/csharp/ocr/how-to/ocr-multiple-languages/)
 
 
 IronOCR runs on the Tesseract Engine and extracts text across a wide range of languages and scripts. This guide covers how it handles text in several languages at once.

@@ -1,6 +1,6 @@
 # How to Output OCR Data as hOCR into HTML Format
 
-> Full guide: [How to Output OCR Data as hOCR into HTML Format](https://ironsoftware.com/how-to/html-hocr-export/)
+> Full guide: [How to Output OCR Data as hOCR into HTML Format](https://ironsoftware.com/csharp/ocr/how-to/html-hocr-export/)
 
 
 hOCR, which stands for "HTML-based OCR," characterizes a file format designed to document the outcomes of Optical Character Recognition (OCR). This format is embedded into HTML (Hypertext Markup Language) and effectively stores the recognized text, spatial arrangement, and precise coordinates of each detected character from images or documents.

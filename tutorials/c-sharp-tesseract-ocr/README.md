@@ -1,6 +1,6 @@
 # Implementing OCR in C# with IronOCR as an Alternative to Google Tesseract
 
-> Full guide: [Implementing OCR in C# with IronOCR as an Alternative to Google Tesseract](https://ironsoftware.com/tutorials/c-sharp-tesseract-ocr/)
+> Full guide: [Implementing OCR in C# with IronOCR as an Alternative to Google Tesseract](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-tesseract-ocr/)
 
 Are you considering incorporating optical character recognition (OCR) into your C# projects? While Google Tesseract is a well-known free option, it often involves complicated configurations, suboptimal accuracy on diverse document types, and difficult C++ integrations. Our detailed guide demonstrates how you can achieve between 99.8% to 100% OCR accuracy using IronOCR, a C# library that removes the setup work.
 

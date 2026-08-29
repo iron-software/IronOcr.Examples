@@ -1,6 +1,6 @@
 # How to Extract Passport Data with IronOCR
 
-> Full guide: [How to Extract Passport Data with IronOCR](https://ironsoftware.com/how-to/read-passport/)
+> Full guide: [How to Extract Passport Data with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-passport/)
 
 
 For platforms like airport check-in and security, where agents handle numerous passports daily, having a system that can efficiently extract vital information from these passports is key. This ensures a smoother, faster process through immigration controls.

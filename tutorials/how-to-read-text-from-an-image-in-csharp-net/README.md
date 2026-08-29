@@ -1,6 +1,6 @@
 # C# OCR Image to Text Guide: Text Conversion Without Using Tesseract
 
-> Full guide: [C# OCR Image to Text Guide: Text Conversion Without Using Tesseract](https://ironsoftware.com/tutorials/how-to-read-text-from-an-image-in-csharp-net/)
+> Full guide: [C# OCR Image to Text Guide: Text Conversion Without Using Tesseract](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/)
 
 Are you interested in transforming images into text using C# but want to avoid the intricate setups of Tesseract? This IronOCR C# guide adds optical character recognition to a .NET application in very little code.
 

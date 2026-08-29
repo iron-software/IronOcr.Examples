@@ -1,6 +1,6 @@
 # How to Utilize IronOCR to Read Images
 
-> Full guide: [How to Utilize IronOCR to Read Images](https://ironsoftware.com/how-to/read-photo/)
+> Full guide: [How to Utilize IronOCR to Read Images](https://ironsoftware.com/csharp/ocr/how-to/read-photo/)
 
 
 Optical Character Recognition (OCR), especially in the context of processing large quantities of image documents like TIFF files, provides a powerful tool to convert image-based text into editable and searchable digital formats efficiently and accurately. OCR technology excels in decoding complex images, such as scanned documents or photos, into actionable text data. This capability not only accelerates the handling of documents but also significantly enhances the accuracy of the data extracted when compared to manual techniques.
