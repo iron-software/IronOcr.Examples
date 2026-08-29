@@ -1,6 +1,6 @@
 # Developing an Azure OCR Service with IronOCR
 
-> Full guide: [Developing an Azure OCR Service with IronOCR](https://ironsoftware.com/csharp/ocr/get-started/azure/)
+> Full guide: [Developing an Azure OCR Service with IronOCR](https://ironsoftware.com/csharp/ocr/get-started/azure/?utm_source=github)
 
 
 IronOCR is Iron Software's Optical Character Recognition library. OCR libraries have historically been awkward to run on Azure; IronOCR deploys there without special handling.
@@ -143,11 +143,11 @@ using (var Input = new OcrInput("Images\\Purgatory.PNG"))
 
 ## Options for Licensing
 
-IronOCR offers three [licensing tiers available for purchase](https://ironsoftware.com/csharp/ocr/licensing/), which provide lifetime licenses and are free for development use.
+IronOCR offers three [licensing tiers available for purchase](https://ironsoftware.com/csharp/ocr/licensing/?utm_source=github), which provide lifetime licenses and are free for development use.
 
 ## Additional Resources
-- Learn more from our [tutorial resources](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/).
-- Access [API References](https://ironsoftware.com/csharp/ocr/object-reference/api/) for developer support.
-- Get Support for IronOCR products or [reach out to Iron Software](https://ironsoftware.com/contact-us/).
+- Learn more from our [tutorial resources](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github).
+- Access [API References](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github) for developer support.
+- Get Support for IronOCR products or [reach out to Iron Software](https://ironsoftware.com/contact-us/?utm_source=github).
 
 IronOCR supports 125 languages across .NET applications on Azure and elsewhere.

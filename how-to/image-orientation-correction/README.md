@@ -1,6 +1,6 @@
 # Correcting Image Orientation for Text Recognition
 
-> Full guide: [Correcting Image Orientation for Text Recognition](https://ironsoftware.com/csharp/barcode/how-to/image-orientation-correction/)
+> Full guide: [Correcting Image Orientation for Text Recognition](https://ironsoftware.com/csharp/barcode/how-to/image-orientation-correction/?utm_source=github)
 
 
 Adjusting the orientation of an image is a key step in image processing, particularly for applications like text recognition. IronOcr, a library by Iron Software, excels in refining image orientation, which includes tasks like rotating, deskewing, and scaling the image.

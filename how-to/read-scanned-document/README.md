@@ -1,6 +1,6 @@
 # Guide to Reading Scanned Documents with IronOCR
 
-> Full guide: [Guide to Reading Scanned Documents with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-scanned-document/)
+> Full guide: [Guide to Reading Scanned Documents with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-scanned-document/?utm_source=github)
 
 
 IronOCR excels at transforming the non-searchable, image-based text commonly found in many PDFs into fully searchable content. This facilitates easier information retrieval and increases document accessibility, benefiting those with visual impairments significantly.
@@ -25,7 +25,7 @@ var text = new IronOcr.IronTesseract().ReadDocument(new IronOcr.OcrInput().LoadP
 
 ## Example: Reading Scanned Documents
 
-To retrieve text from all images in a document, apply the `ReadDocument` method. This method processes the document and yields an object with the extracted text, available via the Text property. Below is how to employ this method with a [sample TIFF](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/potter.tiff) image.
+To retrieve text from all images in a document, apply the `ReadDocument` method. This method processes the document and yields an object with the extracted text, available via the Text property. Below is how to employ this method with a [sample TIFF](https://ironsoftware.com/static-assets/ocr/how-to/read-scanned-document/potter.tiff?utm_source=github) image.
 
 
 - Currently, the method supports languages including English, Chinese, Japanese, Korean, and the Latin Alphabet.

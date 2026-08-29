@@ -1,8 +1,8 @@
-> Full guide: [OCR tesseract custom languages](https://ironsoftware.com/csharp/ocr/examples/ocr-tesseract-custom-languages/)
+> Full guide: [OCR tesseract custom languages](https://ironsoftware.com/csharp/ocr/examples/ocr-tesseract-custom-languages/?utm_source=github)
 
 Iron Tesseract OCR fully supports custom or downloaded languages and fonts, compatible with the Tesseract `.traineddata` file format (version 4 or higher). You can usually find these files on [Github.com]().
 
-If you're interested in creating your own custom fonts or language packs, consider checking out our [tutorial on creating custom Tesseract language packs](https://ironsoftware.com/csharp/ocr/troubleshooting/custom-ocr-language-packs/).
+If you're interested in creating your own custom fonts or language packs, consider checking out our [tutorial on creating custom Tesseract language packs](https://ironsoftware.com/csharp/ocr/troubleshooting/custom-ocr-language-packs/?utm_source=github).
 
 <div class="hsg-featured-snippet examples__featured-snippet">
 <h2>Utilizing Tesseract Languages for OCR Processes</h2>
@@ -14,4 +14,4 @@ If you're interested in creating your own custom fonts or language packs, consid
 </ol>
 </div>
 
-<a href="https://ironsoftware.com/csharp/ocr/how-to/ocr-multiple-languages/" class="code_content__related-link__doc-cta-link">Discover Multi-Language OCR Capabilities in C# with IronOCR</a>
+<a href="https://ironsoftware.com/csharp/ocr/how-to/ocr-multiple-languages/?utm_source=github" class="code_content__related-link__doc-cta-link">Discover Multi-Language OCR Capabilities in C# with IronOCR</a>

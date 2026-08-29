@@ -1,4 +1,4 @@
-> Full guide: [C# OCR input for iron tesseract](https://ironsoftware.com/csharp/ocr/examples/csharp-ocr-input-for-iron-tesseract/)
+> Full guide: [C# OCR input for iron tesseract](https://ironsoftware.com/csharp/ocr/examples/csharp-ocr-input-for-iron-tesseract/?utm_source=github)
 
 Introducing the `OcrInput` code framework, enhancing developer authority over OCR function manipulation.
 
@@ -10,4 +10,4 @@ Here’s a practical demonstration on the effective utilization of the `OcrInput
 
 You should replace `"SomeOcrLibrary"` with the appropriate namespace depending on the OCR library you are employing. This snippet serves as a basic outline and may require adjustments to fit the nuances of your specific software library or framework.
 
-[Learn to Read Text from Images in C# with IronOCR](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/)
+[Learn to Read Text from Images in C# with IronOCR](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github)

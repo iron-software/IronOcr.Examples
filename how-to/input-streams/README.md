@@ -1,6 +1,6 @@
 # How to Read from Streams
 
-> Full guide: [How to Read from Streams](https://ironsoftware.com/csharp/ocr/how-to/input-streams/)
+> Full guide: [How to Read from Streams](https://ironsoftware.com/csharp/ocr/how-to/input-streams/?utm_source=github)
 
 
 In programming, stream data represents an ongoing flow of binary data that can be incrementally read or written. This technique is vital for handling large datasets that cannot be stored entirely in memory, allowing parts of the data to be processed individually.

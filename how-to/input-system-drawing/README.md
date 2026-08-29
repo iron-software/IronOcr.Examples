@@ -1,13 +1,13 @@
 # How to Work with System.Drawing Objects
 
-> Full guide: [How to Work with System.Drawing Objects](https://ironsoftware.com/csharp/ocr/how-to/input-system-drawing/)
+> Full guide: [How to Work with System.Drawing Objects](https://ironsoftware.com/csharp/ocr/how-to/input-system-drawing/?utm_source=github)
 
 
 The `.NET Framework` provides the `System.Drawing.Bitmap` class, which is an essential tool for handling bitmap images. It offers features for creating, manipulating, and displaying bitmaps.
 
 For more generalized image handling, `.NET` uses `System.Drawing.Image`. This base class supports all GDI+ image types and serves as the parent class for `System.Drawing.Bitmap`.
 
-The `IronSoftware.Drawing.AnyBitmap` extends the capabilities originally found in `System.Drawing.Common`, allowing cross-platform image processing. It's a core class of the [IronDrawing](https://ironsoftware.com/open-source/csharp/drawing/docs/) library, a project by Iron Software designed to aid C# developers in their graphic handling tasks on Windows, macOS, and Linux.
+The `IronSoftware.Drawing.AnyBitmap` extends the capabilities originally found in `System.Drawing.Common`, allowing cross-platform image processing. It's a core class of the [IronDrawing](https://ironsoftware.com/open-source/csharp/drawing/docs/?utm_source=github) library, a project by Iron Software designed to aid C# developers in their graphic handling tasks on Windows, macOS, and Linux.
 
 ## Quickstart: Extract Text from a System.Drawing.Bitmap
 

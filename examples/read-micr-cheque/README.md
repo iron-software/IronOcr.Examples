@@ -1,4 +1,4 @@
-> Full guide: [Read MICR cheque](https://ironsoftware.com/csharp/ocr/examples/read-micr-cheque/)
+> Full guide: [Read MICR cheque](https://ironsoftware.com/csharp/ocr/examples/read-micr-cheque/?utm_source=github)
 
 Cheques continue to be a reliable medium for executing large financial transactions. IronOCR digitizes E-13B MICR cheque processing, reading routing, account, and cheque numbers off the line.
 
@@ -23,4 +23,4 @@ Next, a specific region is framed by a rectangle to target the MICR section on t
 
 The `LoadImage` function then prepares the cheque image with the specified content area. Following this, the `Read` method is employed to scan the cheque and the resulting text is printed from the OCR process.
 
-Discover MICR cheque recognition in C# by visiting our in-depth tutorial at [Reading MICR cheque codes in C#](https://ironsoftware.com/csharp/ocr/how-to/read-micr-cheque/)
+Discover MICR cheque recognition in C# by visiting our in-depth tutorial at [Reading MICR cheque codes in C#](https://ironsoftware.com/csharp/ocr/how-to/read-micr-cheque/?utm_source=github)

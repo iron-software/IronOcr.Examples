@@ -1,12 +1,12 @@
 # Utilizing IronOCR License Keys
 
-> Full guide: [Utilizing IronOCR License Keys](https://ironsoftware.com/csharp/barcode/get-started/license-keys/)
+> Full guide: [Utilizing IronOCR License Keys](https://ironsoftware.com/csharp/barcode/get-started/license-keys/?utm_source=github)
 
 ## Acquiring a License Key
 
 Integrate an IronOCR license key into your projects for unrestricted deployment and watermark-free operation.
 
-You can [purchase a license key here <i class="fa-regular fa-cart-shopping"></i>](https://ironsoftware.com/csharp/ocr/licensing/) or choose to [sign up for a free 30-day trial key <i class="fa-regular fa-key"></i>](https://ironsoftware.com/trial-license).
+You can [purchase a license key here <i class="fa-regular fa-cart-shopping"></i>](https://ironsoftware.com/csharp/ocr/licensing/?utm_source=github) or choose to [sign up for a free 30-day trial key <i class="fa-regular fa-key"></i>](https://ironsoftware.com/trial-license?utm_source=github).
 
 <hr class="separator">
 
@@ -14,7 +14,7 @@ You can [purchase a license key here <i class="fa-regular fa-cart-shopping"></i>
 
 ### Installation via DLL
 
-Directly download the [IronOcr DLL here](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip) which provides easy access.
+Directly download the [IronOcr DLL here](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github) which provides easy access.
 
 ### Installation via NuGet
 
@@ -61,7 +61,7 @@ Be aware of a licensing complication from versions [2023.4.13](https://www.nuget
 - **ASP.NET** applications
 - **.NET Framework version >= 4.6.2**
 
-If using `Web.config`, the key might not be properly utilized and recognized. Refer to the [guide on setting license keys in Web.config](https://ironsoftware.com/csharp/ocr/troubleshooting/license-key-web.config/) for troubleshooting.
+If using `Web.config`, the key might not be properly utilized and recognized. Refer to the [guide on setting license keys in Web.config](https://ironsoftware.com/csharp/ocr/troubleshooting/license-key-web.config/?utm_source=github) for troubleshooting.
 
 <hr class="separator">
 
@@ -97,7 +97,7 @@ bool result = IronOcr.License.IsValidLicense("IRONOCR-MYLICENSE-KEY-1EF01");
 
 ## Step 4: Initiate Your Project
 
-Kick-off your project by following the [Get Started with IronOCR guide](https://ironsoftware.com/csharp/ocr/docs/).
+Kick-off your project by following the [Get Started with IronOCR guide](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github).
 
 <hr class="separator">
 

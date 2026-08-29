@@ -1,8 +1,8 @@
-> Full guide: [Tune tesseract for speed in dotnet](https://ironsoftware.com/csharp/ocr/examples/tune-tesseract-for-speed-in-dotnet/)
+> Full guide: [Tune tesseract for speed in dotnet](https://ironsoftware.com/csharp/ocr/examples/tune-tesseract-for-speed-in-dotnet/?utm_source=github)
 
 The example highlights a notable enhancement in processing speed—over 35% faster—while only sacrificing a minimal 0.2% in accuracy.
 
-Additionally, for those looking to focus OCR on specific image areas, consider viewing the guide on [how to OCR a specific area within an image](https://ironsoftware.com/csharp/ocr/examples/net-tesseract-content-area-rectangle-crop/), which can also contribute to improved processing speed.
+Additionally, for those looking to focus OCR on specific image areas, consider viewing the guide on [how to OCR a specific area within an image](https://ironsoftware.com/csharp/ocr/examples/net-tesseract-content-area-rectangle-crop/?utm_source=github), which can also contribute to improved processing speed.
 
 <div class="hsg-featured-snippet examples__featured-snippet">
     <h2>How to Enhance Tesseract Performance in .NET</h2>
@@ -15,6 +15,6 @@ Additionally, for those looking to focus OCR on specific image areas, consider v
     </ol>
 </div>
 
-IronOCR is available for download on NuGet or directly as a [DLL file](https://ironsoftware.com/csharp/ocr/downloads/tesseract-ocr-speed.zip).
+IronOCR is available for download on NuGet or directly as a [DLL file](https://ironsoftware.com/csharp/ocr/downloads/tesseract-ocr-speed.zip?utm_source=github).
 
-For further exploration of IronTesseract and to enhance your .NET OCR capabilities, visit [Explore IronTesseract for Enhanced OCR in .NET](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/).
+For further exploration of IronTesseract and to enhance your .NET OCR capabilities, visit [Explore IronTesseract for Enhanced OCR in .NET](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/?utm_source=github).

@@ -1,6 +1,6 @@
 # Implementing OCR in C# with IronOCR as an Alternative to Google Tesseract
 
-> Full guide: [Implementing OCR in C# with IronOCR as an Alternative to Google Tesseract](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-tesseract-ocr/)
+> Full guide: [Implementing OCR in C# with IronOCR as an Alternative to Google Tesseract](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-tesseract-ocr/?utm_source=github)
 
 Are you considering incorporating optical character recognition (OCR) into your C# projects? While Google Tesseract is a well-known free option, it often involves complicated configurations, suboptimal accuracy on diverse document types, and difficult C++ integrations. Our detailed guide demonstrates how you can achieve between 99.8% to 100% OCR accuracy using IronOCR, a C# library that removes the setup work.
 
@@ -74,7 +74,7 @@ Console.WriteLine(ocrResult.Text);
 
 The `IronTesseract` class is a managed interface to Tesseract 5, so there is no C++ interop to deal with. `OcrInput` accepts a range of image formats and page configurations, and carries optional preprocessing calls such as `DeNoise()` and `Deskew()` that measurably improve accuracy on real-world scans.
 
-Furthermore, the `OcrResult` object delivers detailed structured outputs such as confidence scores at the word level, character locations, and overall document architecture. These features facilitate sophisticated functionalities, including the creation of [searchable PDFs](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/) and [accurate text position identification](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrPhotoResult.TextRegion.html).
+Furthermore, the `OcrResult` object delivers detailed structured outputs such as confidence scores at the word level, character locations, and overall document architecture. These features facilitate sophisticated functionalities, including the creation of [searchable PDFs](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/?utm_source=github) and [accurate text position identification](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrPhotoResult.TextRegion.html?utm_source=github).
 
 ## Installation Distinctions: Tesseract vs. IronOCR
 
@@ -134,9 +134,9 @@ Tesseract 5 is a capable OCR engine, but it is awkward to build on Windows. The 
 
 ### IronOCR Tesseract for .NET
 
-IronOCR comes equipped with a customized [Tesseract 5 engine](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/), specifically enhanced for .NET frameworks. This version supports native multi-threading, automatically preprocesses images, and facilitates memory-efficient processing of extensive documents. It's meticulously updated to ensure it remains compatible with all modern and future .NET versions while also preserving backward compatibility.
+IronOCR comes equipped with a customized [Tesseract 5 engine](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/?utm_source=github), specifically enhanced for .NET frameworks. This version supports native multi-threading, automatically preprocesses images, and facilitates memory-efficient processing of extensive documents. It's meticulously updated to ensure it remains compatible with all modern and future .NET versions while also preserving backward compatibility.
 
-The library extends [multilingual OCR capabilities](https://ironsoftware.com/csharp/ocr/languages/) through dedicated NuGet packages, allowing for the straightforward integration of OCR functionalities for over 127 dialects without the hassle of external dictionary files management.
+The library extends [multilingual OCR capabilities](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github) through dedicated NuGet packages, allowing for the straightforward integration of OCR functionalities for over 127 dialects without the hassle of external dictionary files management.
 
 ### Google Cloud OCR Comparison
 
@@ -150,11 +150,11 @@ These latest versions necessitate cross-compilation via MinGW, a process that se
 
 ### IronOCR Tesseract for .NET Framework
 
-IronOCR is equipped with a [specially engineered Tesseract 5 engine](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/) that's fine-tuned for .NET applications.
+IronOCR is equipped with a [specially engineered Tesseract 5 engine](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/?utm_source=github) that's fine-tuned for .NET applications.
 
 This version boasts improvements including built-in multithreading capabilities, preemptive image preprocessing, and optimized handling of large document volumes. It receives continual updates to stay aligned with new .NET frameworks and retains compatibility with older versions.
 
-Moreover, IronOCR offers [broad linguistic support](https://ironsoftware.com/csharp/ocr/languages/) accessible via NuGet packages, covering more than 127 languages with no external dictionary files to manage.
+Moreover, IronOCR offers [broad linguistic support](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github) accessible via NuGet packages, covering more than 127 languages with no external dictionary files to manage.
 
 ### Comparison with Google Cloud Vision OCR
 
@@ -268,7 +268,7 @@ Console.WriteLine(ocrResult.Text);
 
 The built-in preprocessing filters efficiently manage typical issues found in document quality, negating the need for manual adjustments. The `DeNoise()` function is designed to clear out digital artifacts that occur during scanning, and the `Deskew()` function adjusts any misalignments in document orientation, both essential for achieving optimal accuracy.
 
-For those with more specific needs, [enhancing accuracy with tailored settings](https://ironsoftware.com/csharp/ocr/how-to/async/) is possible. This includes setting preferences for character recognition, processing by specific regions, and applying language models tailored to the vocabulary of particular industries.
+For those with more specific needs, [enhancing accuracy with tailored settings](https://ironsoftware.com/csharp/ocr/how-to/async/?utm_source=github) is possible. This includes setting preferences for character recognition, processing by specific regions, and applying language models tailored to the vocabulary of particular industries.
 
 ## Supported Image Formats and Sources for OCR Processing
 
@@ -322,9 +322,9 @@ Console.WriteLine(result.Text);
 // This approach eliminates the need for format-specific implementations, and ensures handling of diverse content types from a single API point. The `OcrInput` class manages memory effectively and delivers consistent outcomes irrespective of the source.
 ```
 
-This unified interface for document handling removes the need for specialized code for different formats. Whether processing digitized paper documents, PDF files, or images captured on mobile devices, a single IronOCR API covers all of them. The [`OcrInput` class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html) returns consistent results regardless of the input format.
+This unified interface for document handling removes the need for specialized code for different formats. Whether processing digitized paper documents, PDF files, or images captured on mobile devices, a single IronOCR API covers all of them. The [`OcrInput` class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html?utm_source=github) returns consistent results regardless of the input format.
 
-In addition to managing various file types, IronOCR also supports [reading barcodes and QR codes](https://ironsoftware.com/csharp/ocr/how-to/barcodes/) from documents in a single operation, further enhancing its utility in comprehensive document data extraction tasks.
+In addition to managing various file types, IronOCR also supports [reading barcodes and QR codes](https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github) from documents in a single operation, further enhancing its utility in comprehensive document data extraction tasks.
 
 ### Working with Google Tesseract in .NET Environments
 
@@ -342,7 +342,7 @@ IronOCR reads a wide range of image formats, converting them as needed:
 - Works with more complex image types like JPEG2000 and WBMP
 - Compatible with .NET image types such as `System.Drawing.Image` and `System.Drawing.Bitmap`
 - Capable of reading from various data sources, including streams, byte arrays, and file paths
-- Features [integrated direct scanner support](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/) for efficient image input directly from scanning devices
+- Features [integrated direct scanner support](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github) for efficient image input directly from scanning devices
 
 ### Detailed Example of Format Support by IronOCR
 
@@ -385,9 +385,9 @@ Console.WriteLine(result.Text);
 // - Preserve the order of content across varying formats
 ```
 
-This unified approach ensures that regardless of the input document format — whether it's scanned TIFFs, encrypted PDFs, or images snapped from smartphones — IronOCR's singular API effectively manages them. The [`OcrInput` class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html) simplifies memory management and consistently delivers reliable results, regardless of the data source.
+This unified approach ensures that regardless of the input document format — whether it's scanned TIFFs, encrypted PDFs, or images snapped from smartphones — IronOCR's singular API effectively manages them. The [`OcrInput` class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html?utm_source=github) simplifies memory management and consistently delivers reliable results, regardless of the data source.
 
-For niche cases, IronOCR also supports functionalities like [decoding barcodes and QR codes](https://ironsoftware.com/csharp/ocr/how-to/barcodes/) embedded in documents, facilitating comprehensive data extraction within a single operation.
+For niche cases, IronOCR also supports functionalities like [decoding barcodes and QR codes](https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github) embedded in documents, facilitating comprehensive data extraction within a single operation.
 
 ```csharp
 using IronOcr;
@@ -423,9 +423,9 @@ Console.WriteLine(ocrResult.Text);
 // - Ensuring the correct sequence in documents combining multiple formats
 ``` 
 
-IronOCR's cohesive methodology for loading documents removes the need for format-specific programming. It effectively handles every scenario from scanning TIFFs and digital PDFs to processing images from smartphones using the same application interface. The [`OcrInput` class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html) deftly manages memory allocation and delivers uniform outcomes, irrespective of the source format.
+IronOCR's cohesive methodology for loading documents removes the need for format-specific programming. It effectively handles every scenario from scanning TIFFs and digital PDFs to processing images from smartphones using the same application interface. The [`OcrInput` class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html?utm_source=github) deftly manages memory allocation and delivers uniform outcomes, irrespective of the source format.
 
-Additionally, IronOCR is equipped to extract not only text but also machine-readable codes like barcodes and QR codes from documents in a single operation. This capability allows for a more comprehensive data extraction process. Learn more about this feature [here](https://ironsoftware.com/csharp/ocr/how-to/barcodes/).
+Additionally, IronOCR is equipped to extract not only text but also machine-readable codes like barcodes and QR codes from documents in a single operation. This capability allows for a more comprehensive data extraction process. Learn more about this feature [here](https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github).
 
 ## Comparing OCR Efficiency in Practical Scenarios
 
@@ -478,7 +478,7 @@ Console.WriteLine(result.Text);
 
 Through these enhancements, IronOCR showcases a design that’s primed for the demands of enterprise applications. Configurations like `BlackListCharacters` alone can amplify processing speed by 20-30% when special characters are redundant. Rapid language packs strike a balance between speed and accuracy, especially important in high-volume scenarios.
 
-For large-scale operations, IronOCR’s [multi-threading capabilities](https://ironsoftware.com/csharp/ocr/how-to/async/) allow simultaneous document processing that can significantly outperform Tesseract's single-threaded approach by using modern multi-core processors to increase throughput four- to eight-fold.
+For large-scale operations, IronOCR’s [multi-threading capabilities](https://ironsoftware.com/csharp/ocr/how-to/async/?utm_source=github) allow simultaneous document processing that can significantly outperform Tesseract's single-threaded approach by using modern multi-core processors to increase throughput four- to eight-fold.
 
 ### Performance of Basic Google Tesseract
 
@@ -569,7 +569,7 @@ Console.WriteLine(scanResult.Text);
 
 These enhancements showcase the readiness of IronOCR for production environments. Adjusting `BlackListCharacters` can lead to a 20-30% speed increase by omitting unnecessary special characters. Additionally, selecting fast language packs strikes a good balance for handling large volumes of data efficiently, even if absolute accuracy is not essential.
 
-On an enterprise scale, IronOCR's [support for multi-threading](https://ironsoftware.com/csharp/ocr/how-to/async/) allows for the concurrent processing of numerous documents, resulting in performance gains of 4-8 times over traditional single-threaded Tesseract implementations, especially on systems with multiple CPU cores.
+On an enterprise scale, IronOCR's [support for multi-threading](https://ironsoftware.com/csharp/ocr/how-to/async/?utm_source=github) allows for the concurrent processing of numerous documents, resulting in performance gains of 4-8 times over traditional single-threaded Tesseract implementations, especially on systems with multiple CPU cores.
 
 ## Distinguishing Features of API Designs: Tesseract vs. IronOCR
 
@@ -608,7 +608,7 @@ Console.WriteLine(extractedText);
 // - Read barcodes with `result.Barcodes`
 ```
 
-This easy-to-use API removes the complexity typically found with traditional Tesseract integrations. Within your development environment, every function is accompanied by in-depth XML documentation, enhancing the developer's experience by providing immediately accessible, detailed guidance. The [expanded API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/) enriches developer resources with practical examples covering all functionalities.
+This easy-to-use API removes the complexity typically found with traditional Tesseract integrations. Within your development environment, every function is accompanied by in-depth XML documentation, enhancing the developer's experience by providing immediately accessible, detailed guidance. The [expanded API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github) enriches developer resources with practical examples covering all functionalities.
 
 Additionally, Iron Software provides expert technical support from seasoned engineers, ensuring solutions are promptly available for integration challenges. This proactive support combined with continual updates secures API compatibility with the latest .NET versions, integrating new features driven by real-world developer feedback.
 
@@ -653,7 +653,7 @@ Console.WriteLine(extractedText);
 // - result.Barcodes: Extracts and shows barcode values when present
 ```
 
-This hassle-free approach eliminates the complexities associated with traditional Tesseract integration. Each function includes detailed XML documentation, enhancing discoverability and ease of use directly within your IDE. Comprehensive [API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/) is available with examples for every feature, ensuring that you have all the information needed to implement advanced OCR features effectively.
+This hassle-free approach eliminates the complexities associated with traditional Tesseract integration. Each function includes detailed XML documentation, enhancing discoverability and ease of use directly within your IDE. Comprehensive [API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github) is available with examples for every feature, ensuring that you have all the information needed to implement advanced OCR features effectively.
 
 Our team of experienced engineers offers professional support to ensure smooth implementation and to address any challenges swiftly. Regular updates enrich the library, ensuring it remains compatible with the latest .NET versions and continually improving based on user feedback.
 
@@ -679,7 +679,7 @@ Console.WriteLine(recognizedText);
 ```
 
 -----
-IronOCR's API design simplifies the incorporation of OCR functionality by removing the obstacles commonly encountered with traditional Tesseract integrations. Each method in the API is thoroughly documented in XML, allowing developers to quickly understand and utilize the available features directly within their Integrated Development Environment (IDE). For more intricate usage scenarios, the [comprehensive API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/) offers detailed examples for each functionality.
+IronOCR's API design simplifies the incorporation of OCR functionality by removing the obstacles commonly encountered with traditional Tesseract integrations. Each method in the API is thoroughly documented in XML, allowing developers to quickly understand and utilize the available features directly within their Integrated Development Environment (IDE). For more intricate usage scenarios, the [comprehensive API documentation](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github) offers detailed examples for each functionality.
 
 Additionally, IronOCR is supported by a team of seasoned engineers who provide professional assistance to ensure smooth implementation and operation. Regular updates to the library are made to ensure it remains compatible with new versions of .NET, simultaneously introducing innovative features influenced by feedback from the developer community.
 
@@ -711,7 +711,7 @@ The library is also equipped to integrate smoothly with:
 - The comprehensive .NET Standard 2.0 and later.
 - Other implementations like Mono framework and Xamarin.Mac.
 
-By managing platform differences internally, IronOCR enables consistent functionality regardless of the deployment environment. Extensive [deployment documentation](https://ironsoftware.com/csharp/ocr/docs/) provides tailored guidance for deploying in these various environments, including setting up serverless functions, configuring high-availability systems, and implementing effective containerization strategies.
+By managing platform differences internally, IronOCR enables consistent functionality regardless of the deployment environment. Extensive [deployment documentation](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github) provides tailored guidance for deploying in these various environments, including setting up serverless functions, configuring high-availability systems, and implementing effective containerization strategies.
 
 ### Google Tesseract and Interop Integration for .NET
 
@@ -747,7 +747,7 @@ IronOCR runs the same way on each of these platforms.
 - Adheres to .NET Standard 2.0 and higher
 - Integration with Mono framework and Xamarin for macOS
 
-IronOCR adeptly manages differences between platforms internally, ensuring uniform functionality regardless of deployment surroundings. Extensive [deployment guidance](https://ironsoftware.com/csharp/ocr/docs/) is available, addressing diverse setups such as containerized applications, serverless computing environments, and systems requiring high availability.
+IronOCR adeptly manages differences between platforms internally, ensuring uniform functionality regardless of deployment surroundings. Extensive [deployment guidance](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github) is available, addressing diverse setups such as containerized applications, serverless computing environments, and systems requiring high availability.
 
 ## Comparing Multi-Language OCR Capabilities
 
@@ -815,7 +815,7 @@ result.SaveAsTextFile("results.txt");
 // - International business documents combining multiple scripts
 ```
 
-The [language package system](https://ironsoftware.com/csharp/ocr/languages/) IronOCR uses supports over 127 languages, each fine-tuned for specific scripts and writing styles. By facilitating installation via NuGet, users benefit from ensured compatibility and simpler deployment across varying environments.
+The [language package system](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github) IronOCR uses supports over 127 languages, each fine-tuned for specific scripts and writing styles. By facilitating installation via NuGet, users benefit from ensured compatibility and simpler deployment across varying environments.
 
 ### Google Tesseract Language Management
 
@@ -928,7 +928,7 @@ result.SaveAsTextFile("results.txt");
 // - Content that contains a mix of scripts and languages
 ```
 
-The [language management system](https://ironsoftware.com/csharp/ocr/languages/) via NuGet simplifies set-up, ensuring scripts and writing systems are optimally configured for accuracy and performance. This avoids managing language files by hand, and the version mismatches that come with them.
+The [language management system](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github) via NuGet simplifies set-up, ensuring scripts and writing systems are optimally configured for accuracy and performance. This avoids managing language files by hand, and the version mismatches that come with them.
 
 ```csharp
 using IronOcr;
@@ -964,7 +964,7 @@ ocrResult.SaveAsTextFile("results.txt");
 // - Content that incorporates various scripts like Latin, CJK, and Arabic
 ```
 
-The [language pack system](https://ironsoftware.com/csharp/ocr/languages/) accommodates more than 127 languages, each fine-tuned for distinct scripts and alphabets. Installing through NuGet keeps versions matched and simplifies deployment across platforms.
+The [language pack system](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github) accommodates more than 127 languages, each fine-tuned for distinct scripts and alphabets. Installing through NuGet keeps versions matched and simplifies deployment across platforms.
 
 ## Enhanced Capabilities of IronOCR Beyond Simple OCR
 
@@ -972,19 +972,19 @@ IronOCR goes well beyond mere text recognition, offering a suite of advanced, en
 
 - **Automatic Image Analysis**: Automatically adjusts settings based on the characteristics of the input image.
   
-- **[Searchable PDF Creation](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/)**: Converts scanned documents into searchable PDF formats.
+- **[Searchable PDF Creation](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/?utm_source=github)**: Converts scanned documents into searchable PDF formats.
   
-- **[Advanced PDF OCR](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/)**: Retrieves text while maintaining the integrity of the document layout.
+- **[Advanced PDF OCR](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/?utm_source=github)**: Retrieves text while maintaining the integrity of the document layout.
   
-- **[Barcode and QR Code Reading](https://ironsoftware.com/csharp/ocr/how-to/barcodes/)**: Simultaneously identifies and decodes barcodes during the OCR process.
+- **[Barcode and QR Code Reading](https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github)**: Simultaneously identifies and decodes barcodes during the OCR process.
   
-- **[HTML Export](https://ironsoftware.com/csharp/ocr/how-to/html-hocr-export/)**: Produces structured HTML output from OCR data.
+- **[HTML Export](https://ironsoftware.com/csharp/ocr/how-to/html-hocr-export/?utm_source=github)**: Produces structured HTML output from OCR data.
 
-- **[TIFF to PDF Conversion](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/)**: Converts multi-page TIFF files into searchable PDF documents.
+- **[TIFF to PDF Conversion](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/?utm_source=github)**: Converts multi-page TIFF files into searchable PDF documents.
   
 - **Multi-threading Support**: Enables concurrent processing of multiple documents for increased efficiency.
   
-- **[Detailed Result Analysis](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrResult.html)**: Offers deep insights with confidence scores at the character level.
+- **[Detailed Result Analysis](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrResult.html?utm_source=github)**: Offers deep insights with confidence scores at the character level.
 
 The `OcrResult` class provides detailed access to the processed content, facilitating advanced post-processing and thorough validation workflows.
 
@@ -1021,15 +1021,15 @@ Get started on integrating high-precision OCR in your Visual Studio project:
 Install-Package IronOcr
 ```
 
-Alternatively, [download the IronOCR .NET DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip) directly for hands-on installation.
+Alternatively, [download the IronOCR .NET DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github) directly for hands-on installation.
 
-Read the [starter guide](https://ironsoftware.com/csharp/ocr/docs/), browse the [code samples](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/), and contact [support](https://ironsoftware.com/contact-us/support/) if you need it.
+Read the [starter guide](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github), browse the [code samples](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/?utm_source=github), and contact [support](https://ironsoftware.com/contact-us/support/?utm_source=github) if you need it.
 
-Discover the transformative impact of professional OCR – [begin your no-cost trial](https://ironsoftware.com/csharp/ocr/trial-license) today and join over 10,000 organizations experiencing above 99.8% accuracy in their document processing tasks.
+Discover the transformative impact of professional OCR – [begin your no-cost trial](https://ironsoftware.com/csharp/ocr/trial-license?utm_source=github) today and join over 10,000 organizations experiencing above 99.8% accuracy in their document processing tasks.
 
 ![Corporate brands including NASA, LEGO, and 3M rely on Iron Software products for their OCR requirements](https://ironsoftware.com/img/ocr/c-tesseract-ocr-2.png "Major global enterprises entrust Iron Software for essential OCR applications")
 
-For comprehensive evaluations against other OCR services, see our comparative analysis: [AWS Textract versus Google Vision OCR – A Comprehensive Enterprise Feature Showdown](https://ironsoftware.com/csharp/ocr/blog/compare-to-other-components/aws-vs-google-vision-comparison/).
+For comprehensive evaluations against other OCR services, see our comparative analysis: [AWS Textract versus Google Vision OCR – A Comprehensive Enterprise Feature Showdown](https://ironsoftware.com/csharp/ocr/blog/compare-to-other-components/aws-vs-google-vision-comparison/?utm_source=github).
 
 ### Utilizing Google Tesseract for C# OCR Projects
 
@@ -1062,15 +1062,15 @@ Embark on integrating high-precision OCR capabilities into your Visual Studio pr
 Install-Package IronOcr
 ```
 
-Alternatively, you can [manually download the IronOCR .NET DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip) for manual integration into your project.
+Alternatively, you can [manually download the IronOCR .NET DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github) for manual integration into your project.
 
-Initiate your project with our [detailed introductory guide](https://ironsoftware.com/csharp/ocr/docs/), examine [sample code](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/), and utilize [expert support](https://ironsoftware.com/contact-us/support/) as needed.
+Initiate your project with our [detailed introductory guide](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github), examine [sample code](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/?utm_source=github), and utilize [expert support](https://ironsoftware.com/contact-us/support/?utm_source=github) as needed.
 
-Discover how professional OCR can transform your document processing — [begin your free trial](https://ironsoftware.com/trial-license) today and join the ranks of over 10,000 companies that enjoy 99.8%+ accuracy with their document management.
+Discover how professional OCR can transform your document processing — [begin your free trial](https://ironsoftware.com/trial-license?utm_source=github) today and join the ranks of over 10,000 companies that enjoy 99.8%+ accuracy with their document management.
 
 ![Logos of major corporations including NASA, LEGO, and 3M that rely on Iron Software for their OCR needs](https://ironsoftware.com/img/ocr/c-tesseract-ocr-2.png "Global enterprises and government entities depend on Iron Software for crucial OCR tasks")
 
 *Iron Software's OCR technology is endorsed by global Fortune 500 companies and public sector organizations for critical document management.*
 
-Explore in-depth comparisons with other OCR tools in our review: [AWS Textract vs Google Vision OCR - Comprehensive Enterprise Feature Comparison](https://ironsoftware.com/csharp/ocr/blog/compare-to-other-components/aws-vs-google-vision-comparison/).
+Explore in-depth comparisons with other OCR tools in our review: [AWS Textract vs Google Vision OCR - Comprehensive Enterprise Feature Comparison](https://ironsoftware.com/csharp/ocr/blog/compare-to-other-components/aws-vs-google-vision-comparison/?utm_source=github).
 

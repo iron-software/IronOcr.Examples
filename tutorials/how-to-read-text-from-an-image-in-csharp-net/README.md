@@ -1,6 +1,6 @@
 # C# OCR Image to Text Guide: Text Conversion Without Using Tesseract
 
-> Full guide: [C# OCR Image to Text Guide: Text Conversion Without Using Tesseract](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/)
+> Full guide: [C# OCR Image to Text Guide: Text Conversion Without Using Tesseract](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github)
 
 Are you interested in transforming images into text using C# but want to avoid the intricate setups of Tesseract? This IronOCR C# guide adds optical character recognition to a .NET application in very little code.
 
@@ -184,7 +184,7 @@ The setup described delivers consistently high accuracy for scans of medium qual
 </center>
 *Sample TIFF document demonstrating IronOCR's multi-page text extraction capabilities*
 
-IronOCR handles optical character recognition and barcode scanning on real-world documents, including multi-page TIFFs and text extraction from PDFs. For more information on text extraction from PDFs, visit the [PDF Text Extraction page](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/).
+IronOCR handles optical character recognition and barcode scanning on real-world documents, including multi-page TIFFs and text extraction from PDFs. For more information on text extraction from PDFs, visit the [PDF Text Extraction page](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/?utm_source=github).
 
 ### Managing Low-Quality Scans with IronOCR
 
@@ -226,7 +226,7 @@ With `Input.Deskew()`, **IronOCR reaches close to 99.8% accuracy** on poor-quali
 
 Adjusting image filters incrementally extends OCR processing time but significantly slashes the total duration required for OCR. Finding the ideal balance is key, typically depending on the quality of the document at hand.
 
-For most setups, utilizing both `Input.Deskew()` and `Input.DeNoise()` markedly improves OCR accuracy. Further explore more about [image preprocessing techniques](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/).
+For most setups, utilizing both `Input.Deskew()` and `Input.DeNoise()` markedly improves OCR accuracy. Further explore more about [image preprocessing techniques](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/?utm_source=github).
 
 <br>
 <center>
@@ -274,7 +274,7 @@ By applying the `Input.Deskew()` function, IronOCR can enhance the accuracy of O
 
 While implementing image filters might modestly extend the processing time, they substantially decrease the overall duration needed for OCR. The key is to adapt the use of these filters based on the quality of the document being processed.
 
-For consistently better OCR results, using a combination of `Input.Deskew()` and `Input.DeNoise()` has proven to be effective. For the detail on each of these preprocessing methods, see the guide to [image preprocessing techniques](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/).
+For consistently better OCR results, using a combination of `Input.Deskew()` and `Input.DeNoise()` has proven to be effective. For the detail on each of these preprocessing methods, see the guide to [image preprocessing techniques](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/?utm_source=github).
 
 ## Enhancing OCR Efficiency and Speed
 
@@ -405,7 +405,7 @@ using (var ocrInput = new OcrInput())
 }
 ```
 
-This precise method achieves a **41% speed boost** by isolating pertinent text, making it perfect for processing structured documents such as [invoices](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/invoice-ocr-csharp-tutorial/), checks, and forms. Additionally, this cropping strategy integrates flawlessly with [PDF OCR operations](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/).
+This precise method achieves a **41% speed boost** by isolating pertinent text, making it perfect for processing structured documents such as [invoices](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/invoice-ocr-csharp-tutorial/?utm_source=github), checks, and forms. Additionally, this cropping strategy integrates flawlessly with [PDF OCR operations](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/?utm_source=github).
 
 ![Computer Science document showing targeted OCR region extraction in C#](https://ironsoftware.com/img/tutorials/how-to-read-text-from-an-image-in-csharp-net/ComSci.png)
 
@@ -415,7 +415,7 @@ This precise method achieves a **41% speed boost** by isolating pertinent text, 
 
 IronOCR offers support for **125 international languages** through user-friendly language packs. These can be acquired as DLLs directly from our website or through the [NuGet Package Manager](https://www.nuget.org/packages?q=IronOcr.Languages).
 
-You can install these language packs using the NuGet interface by [searching for "IronOcr.Languages"](https://www.nuget.org/packages?q=IronOcr.Languages) or by exploring the [full list of language packs](https://ironsoftware.com/csharp/ocr/languages/).
+You can install these language packs using the NuGet interface by [searching for "IronOcr.Languages"](https://www.nuget.org/packages?q=IronOcr.Languages) or by exploring the [full list of language packs](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github).
 
 The array of supported languages includes, but is not limited to, Arabic, Chinese (Simplified and Traditional), Japanese, Korean, Hindi, Russian, German, French, and Spanish, covering over 115 languages in total. Each language pack is meticulously tailored to deliver high precision in text recognition tasks.
 
@@ -496,7 +496,7 @@ using (var input = new OcrInput())
 
 ## Processing Multiple Page Documents Using C# OCR
 
-IronOCR efficiently aggregates content from various pages or imagery into a singular `OcrResult`. This functionality is critical for producing searchable PDFs and derived texts from complete document collections, accessible via [Searchable PDF Generation](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/).
+IronOCR efficiently aggregates content from various pages or imagery into a singular `OcrResult`. This functionality is critical for producing searchable PDFs and derived texts from complete document collections, accessible via [Searchable PDF Generation](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/?utm_source=github).
 
 You can integrate diverse sources such as images, TIFF frames, and PDF pages into one OCR process, simplifying document handling and enhancing workflow efficiency.
 
@@ -786,7 +786,7 @@ using (var ocrInput = new OcrInput())
 
 ## Can IronOCR Simultaneously Process Text and Barcodes?
 
-IronOCR stands out by integrating text recognition with [barcode scanning features](https://ironsoftware.com/csharp/ocr/how-to/barcodes/), thus eliminating the requirement for additional dedicated libraries:
+IronOCR stands out by integrating text recognition with [barcode scanning features](https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github), thus eliminating the requirement for additional dedicated libraries:
 
 ```csharp
 // Activate text and barcode recognition capabilities within IronOCR
@@ -905,7 +905,7 @@ foreach (var page in result.Pages)
 
 ## Summary
 
-IronOCR equips C# developers with a sophisticated [Tesseract API implementation](https://ironsoftware.com/csharp/ocr/), functioning flawlessly on Windows, Linux, and macOS. Its precision in extracting text from images using IronOCR, even from less-than-ideal documents, distinguishes it from conventional OCR tools.
+IronOCR equips C# developers with a sophisticated [Tesseract API implementation](https://ironsoftware.com/csharp/ocr/?utm_source=github), functioning flawlessly on Windows, Linux, and macOS. Its precision in extracting text from images using IronOCR, even from less-than-ideal documents, distinguishes it from conventional OCR tools.
 
 The library boasts distinctive attributes such as built-in barcode reading and the functionality to save outcomes as searchable PDFs or HOCR HTML, features not found in typical Tesseract setups.
 
@@ -913,17 +913,17 @@ The library boasts distinctive attributes such as built-in barcode reading and t
 
 To further enhance your proficiency with IronOCR:
 
-- Read the [introductory guide](https://ironsoftware.com/csharp/ocr/docs/).
+- Read the [introductory guide](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github).
 
-- Examine [useful C# code samples](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/).
+- Examine [useful C# code samples](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/?utm_source=github).
 
-- Consult the [extensive API documentation](https://ironsoftware.com/csharp/ocr/object-reference/).
+- Consult the [extensive API documentation](https://ironsoftware.com/csharp/ocr/object-reference/?utm_source=github).
 
 ### Download the Source Code
 
 - Access the full examples on our [GitHub Repository](https://github.com/iron-software/IronOcr.Examples/tree/main/src/IronSoftware.IronOCR.Examples/IronSoftware.IronOCR.Examples).
 
-- [Download the Complete Source Code](https://ironsoftware.com/downloads/assets/tutorials/how-to-read-text-from-an-image-in-csharp-net/CSharp-Image-to-Text.zip) for a comprehensive hands-on guide.
+- [Download the Complete Source Code](https://ironsoftware.com/downloads/assets/tutorials/how-to-read-text-from-an-image-in-csharp-net/CSharp-Image-to-Text.zip?utm_source=github) for a comprehensive hands-on guide.
 
-Eager to start converting images to text with C# in your projects? [Download IronOCR now](https://ironsoftware.com/csharp/ocr/download/) and begin your [free trial](https://ironsoftware.com/csharp/ocr/trial-license) immediately.
+Eager to start converting images to text with C# in your projects? [Download IronOCR now](https://ironsoftware.com/csharp/ocr/download/?utm_source=github) and begin your [free trial](https://ironsoftware.com/csharp/ocr/trial-license?utm_source=github) immediately.
 

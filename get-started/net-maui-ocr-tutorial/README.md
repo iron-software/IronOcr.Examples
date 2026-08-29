@@ -1,6 +1,6 @@
 # OCR Processing in .NET MAUI with IronOCR
 
-> Full guide: [OCR Processing in .NET MAUI with IronOCR](https://ironsoftware.com/csharp/ocr/get-started/net-maui-ocr-tutorial/)
+> Full guide: [OCR Processing in .NET MAUI with IronOCR](https://ironsoftware.com/csharp/ocr/get-started/net-maui-ocr-tutorial/?utm_source=github)
 
 
 ## Overview
@@ -11,7 +11,7 @@ This guide will focus on how to develop an OCR application using IronOCR within 
 
 ## IronOCR: .NET OCR Library
 
-[IronOCR](https://ironsoftware.com/csharp/ocr/) provides a powerful .NET OCR NuGet package that lets developers integrate Optical Character Recognition capabilities into their software solutions. The library enables the scanning of PDF files to extract searchable and editable text without compromising data integrity. This functionality is particularly valuable for users needing to locate and modify content within PDF documents easily.
+[IronOCR](https://ironsoftware.com/csharp/ocr/?utm_source=github) provides a powerful .NET OCR NuGet package that lets developers integrate Optical Character Recognition capabilities into their software solutions. The library enables the scanning of PDF files to extract searchable and editable text without compromising data integrity. This functionality is particularly valuable for users needing to locate and modify content within PDF documents easily.
 
 Using the latest Tesseract binaries, IronOCR delivers enhanced performance and accuracy. It comes with built-in support for Tesseract versions ranging from 3 to 5, simplifying installation. The library supports 125 international languages by default, with English pre-installed and additional languages easily added via NuGet or manually with DLLs.
 
@@ -101,6 +101,6 @@ Upon running the application, a UI will prompt you to select an image or PDF. Th
 
 ## Summary
 
-For additional information on utilizing IronOCR to extract text from images, refer to this [tutorial](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/).
+For additional information on utilizing IronOCR to extract text from images, refer to this [tutorial](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github).
 
-Though IronOCR is free for development, commercial use requires a purchase, starting at a minimal cost. Explore various licensing options [here](https://ironsoftware.com/csharp/ocr/licensing/).
+Though IronOCR is free for development, commercial use requires a purchase, starting at a minimal cost. Explore various licensing options [here](https://ironsoftware.com/csharp/ocr/licensing/?utm_source=github).

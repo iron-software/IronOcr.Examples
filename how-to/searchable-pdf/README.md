@@ -1,6 +1,6 @@
 # Creating a Searchable PDF with OCR
 
-> Full guide: [Creating a Searchable PDF with OCR](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/)
+> Full guide: [Creating a Searchable PDF with OCR](https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/?utm_source=github)
 
 
 A searchable PDF is essentially a document that integrates both image data and text which is readable by machines. This kind of PDF is generated via Optical Character Recognition (OCR), which converts photographed or scanned documents into text while preserving the original image, allowing the text to be searched and selected.

@@ -1,6 +1,6 @@
 # Utilizing Computer Vision to Identify Text with IronOCR
 
-> Full guide: [Utilizing Computer Vision to Identify Text with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/computer-vision/)
+> Full guide: [Utilizing Computer Vision to Identify Text with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/computer-vision/?utm_source=github)
 
 
 IronOCR integrates OpenCV to use Computer Vision, which is instrumental in locating text within images. This is particularly beneficial for images with substantial background noise, multiple text locations, or distorted text. IronOCR uses this technology to pinpoint text regions, which are then processed by Tesseract for text extraction.
@@ -13,10 +13,10 @@ Getting started is straightforward: simply load your image and use IronOCR’s C
 using var result = new IronTesseract().Read(new OcrInput().LoadImage("image.png").FindTextRegion());
 ```
 
-- [Tutorial: OCR for License Plates in C#](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/license-plate-ocr-csharp-tutorial/)
-- [Extracting Text from Invoices in C# Tutorial](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/invoice-ocr-csharp-tutorial/)
-- [Retrieving Text from Screenshots in C#](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/get-text-ocr-screenshot-csharp-tutorial/)
-- [Subtitle OCR in C#: A Tutorial](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/subtitle-ocr-csharp-tutorial/)
+- [Tutorial: OCR for License Plates in C#](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/license-plate-ocr-csharp-tutorial/?utm_source=github)
+- [Extracting Text from Invoices in C# Tutorial](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/invoice-ocr-csharp-tutorial/?utm_source=github)
+- [Retrieving Text from Screenshots in C#](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/get-text-ocr-screenshot-csharp-tutorial/?utm_source=github)
+- [Subtitle OCR in C#: A Tutorial](https://ironsoftware.com/csharp/ocr/blog/using-ironocr/subtitle-ocr-csharp-tutorial/?utm_source=github)
 
 
 ## Installation of IronOCR.ComputerVision via NuGet Package

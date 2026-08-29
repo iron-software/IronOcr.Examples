@@ -1,6 +1,6 @@
 # Understanding OCR Read Confidence
 
-> Full guide: [Understanding OCR Read Confidence](https://ironsoftware.com/csharp/ocr/how-to/tesseract-result-confidence/)
+> Full guide: [Understanding OCR Read Confidence](https://ironsoftware.com/csharp/ocr/how-to/tesseract-result-confidence/?utm_source=github)
 
 
 OCR (Optical Character Recognition) read confidence pertains to the degree of certainty that an OCR system has regarding the precision of the text it has deciphered from an image or document. Essentially, it gauges how assured the OCR technology is about the correctness of the interpreted text.

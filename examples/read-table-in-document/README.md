@@ -1,4 +1,4 @@
-> Full guide: [Read table in document](https://ironsoftware.com/csharp/ocr/examples/read-table-in-document/)
+> Full guide: [Read table in document](https://ironsoftware.com/csharp/ocr/examples/read-table-in-document/?utm_source=github)
 
 This coding tutorial illustrates the application of the IronTesseract OCR library to recognize and parse both text and tables from a PDF file.
 
@@ -9,4 +9,4 @@ This coding tutorial illustrates the application of the IronTesseract OCR librar
 5. Subsequently, an array named `cellList` is populated with the details of the table cells including text content, and metadata such as position and dimensions.
 6. This approach is particularly effective for parsing structured data from PDF files, enabling systematic extraction and manipulation of the text embedded in each cell of the table.
 
-[Learn more about extracting tables from PDFs using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/read-table-in-document/)
+[Learn more about extracting tables from PDFs using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/read-table-in-document/?utm_source=github)

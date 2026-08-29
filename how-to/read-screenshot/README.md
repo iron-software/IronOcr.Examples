@@ -1,6 +1,6 @@
 # Utilizing IronOCR to Extract Text from Screenshots
 
-> Full guide: [Utilizing IronOCR to Extract Text from Screenshots](https://ironsoftware.com/csharp/ocr/how-to/read-screenshot/)
+> Full guide: [Utilizing IronOCR to Extract Text from Screenshots](https://ironsoftware.com/csharp/ocr/how-to/read-screenshot/?utm_source=github)
 
 
 Screenshots represent a convenient method for quickly sharing and capturing essential information, which you can distribute among colleagues and peers. However, extracting text from screenshots can be challenging due to the inherent noise and dimensions of these images. This often reduces the effectiveness of OCR technology when applied to screenshots.

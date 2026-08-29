@@ -1,6 +1,6 @@
 # Getting Started with IronOCR on Windows
 
-> Full guide: [Getting Started with IronOCR on Windows](https://ironsoftware.com/csharp/ocr/get-started/windows/)
+> Full guide: [Getting Started with IronOCR on Windows](https://ironsoftware.com/csharp/ocr/get-started/windows/?utm_source=github)
 
 
 IronOCR is an effective .NET OCR library that enables developers to extract text from images, scanned documents, PDFs, and more. It is compatible with various languages and fits into Windows development using .NET Framework as well as .NET 6, 7, and 8.
@@ -48,7 +48,7 @@ PM > Install-Package IronOcr.Languages.German
 
 For manual installations, particularly when offline, the necessary DLLs can be downloaded here:
 
-- [IronOCR.zip](https://ironsoftware.com/static-assets/ocr/packages/IronOcr.zip)
+- [IronOCR.zip](https://ironsoftware.com/static-assets/ocr/packages/IronOcr.zip?utm_source=github)
 
 After downloading, integrate them into your project by:
 
@@ -61,7 +61,7 @@ After downloading, integrate them into your project by:
 
 IronOCR provides a Windows Installer suitable for those preferring manual library installations via setup files, beneficial in offline or enterprise scenarios.
 
-- [Download IronOCR Installer (IronOcrInstaller.zip)](https://ironsoftware.com/csharp/ocr/packages/IronOcrInstaller.zip)
+- [Download IronOCR Installer (IronOcrInstaller.zip)](https://ironsoftware.com/csharp/ocr/packages/IronOcrInstaller.zip?utm_source=github)
 
 Installation process:
 

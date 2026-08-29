@@ -1,6 +1,6 @@
 # Implementing Tesseract Custom Language in C#
 
-> Full guide: [Implementing Tesseract Custom Language in C#](https://ironsoftware.com/csharp/ocr/how-to/ocr-custom-language/)
+> Full guide: [Implementing Tesseract Custom Language in C#](https://ironsoftware.com/csharp/ocr/how-to/ocr-custom-language/?utm_source=github)
 
 In optical character recognition (OCR), there are scenarios where one must handle non-standard languages, unique scripts, or codes. For the Tesseract engine to process an image containing such specialized content, it needs to be furnished with appropriate training data for that custom language, which is encapsulated in a `.traineddata` file.
 
@@ -22,7 +22,7 @@ The final step involves invoking the `Read` method to extract the text from the 
 
 We will process this specific PDF, which includes passages in our custom language.
 
-Our demonstration will employ this [custom language `.traindata`](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-language/AMGDT.traineddata).
+Our demonstration will employ this [custom language `.traindata`](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-language/AMGDT.traineddata?utm_source=github).
 
 <iframe loading="lazy" src="https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-language/custom.pdf" width="100%" height="500px">
 </iframe>
@@ -65,4 +65,4 @@ Console.WriteLine($"\nText successfully written to {savedFilePath}");
     </div>
 </div>
 
-Here you can observe the output from our custom language model. Notice how with the correct training data, IronOCR accurately interprets the text, rendering it in readable English. Here is the [text file](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-language/ocr_output.txt) generated as a result of the code.
+Here you can observe the output from our custom language model. Notice how with the correct training data, IronOCR accurately interprets the text, rendering it in readable English. Here is the [text file](https://ironsoftware.com/static-assets/ocr/how-to/ocr-custom-language/ocr_output.txt?utm_source=github) generated as a result of the code.

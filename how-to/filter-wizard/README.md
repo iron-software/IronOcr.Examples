@@ -1,6 +1,6 @@
 # Using the Filter Wizard
 
-> Full guide: [Using the Filter Wizard](https://ironsoftware.com/csharp/ocr/how-to/filter-wizard/)
+> Full guide: [Using the Filter Wizard](https://ironsoftware.com/csharp/ocr/how-to/filter-wizard/?utm_source=github)
 
 
 Navigating the realm of image preprocessing for Optical Character Recognition (OCR) can indeed be complex. Testing various combinations of filters on images to ascertain the most effective arrangement often demands substantial time as it involves trial and error. Each image presents its unique challenges, so there is no one-size-fits-all approach.
@@ -37,7 +37,7 @@ The filters available for this process, all part of the IronOCR library, include
 - `input.EnhanceResolution()`
 - `input.Dilate()`, `input.Erode()`
 
-For detailed explanations of each filter, consult our comprehensive [tutorial on OCR image filters](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/).
+For detailed explanations of each filter, consult our comprehensive [tutorial on OCR image filters](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/?utm_source=github).
 
 Since this is a thorough and exploratory method, expect the process to be time-intensive as it seeks out the optimal result.
 

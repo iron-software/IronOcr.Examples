@@ -1,4 +1,4 @@
-> Full guide: [Replace color](https://ironsoftware.com/csharp/ocr/examples/replace-color/)
+> Full guide: [Replace color](https://ironsoftware.com/csharp/ocr/examples/replace-color/?utm_source=github)
 
 OCR performance enhances significantly when analyzing black text against a white background.
 
@@ -14,4 +14,4 @@ Using the `OcrInput.ReplaceColor` method, it's possible to substitute one color 
 - The second parameter is the new color that will replace the original.
 - An optional third parameter determines the tolerance level required for color matching, accommodating variations within the defined percentage.
 
-[Learn More About Image Color Correction in OCR](https://ironsoftware.com/csharp/ocr/how-to/image-color-correction/)
+[Learn More About Image Color Correction in OCR](https://ironsoftware.com/csharp/ocr/how-to/image-color-correction/?utm_source=github)

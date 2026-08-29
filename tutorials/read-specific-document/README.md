@@ -1,6 +1,6 @@
 # How to Read Specialized Documents
 
-> Full guide: [How to Read Specialized Documents](https://ironsoftware.com/csharp/ocr/tutorials/read-specific-document/)
+> Full guide: [How to Read Specialized Documents](https://ironsoftware.com/csharp/ocr/tutorials/read-specific-document/?utm_source=github)
 
 
 Reading specialized documents such as text, license plates, passports, and images effectively is challenging. These challenges arise from the varying formats, layouts, content, image quality, distortion, and specialized content these documents present. Additionally, understanding context and managing performance and efficiency increases in complexity with an increasing range of document types.
@@ -21,7 +21,7 @@ IronOCR provides specialized methods including `ReadLicensePlate`, `ReadPassport
 
 These methods support multiple OCR engine configurations and languages such as Chinese, Japanese, Korean, and languages using the Latin alphabet (except for the `ReadPassport` method). For each additional language, a corresponding language package from [IronOcr.Languages](https://www.nuget.org/packages?q=ironocr.languages&includeComputedFrameworks=true&prerel=true&sortby=relevance) needs to be installed.
 
-Using advanced scan features on .NET Framework necessitates running the project in x64 architecture. You'll need to navigate to the project settings and disable "Prefer 32-bit" to enable this configuration. More details are available in the troubleshooting guide here: "[Optimizing Advanced Scan on .NET Framework](https://ironsoftware.com/csharp/ocr/troubleshooting/advanced-scan-on-net-framework/)."
+Using advanced scan features on .NET Framework necessitates running the project in x64 architecture. You'll need to navigate to the project settings and disable "Prefer 32-bit" to enable this configuration. More details are available in the troubleshooting guide here: "[Optimizing Advanced Scan on .NET Framework](https://ironsoftware.com/csharp/ocr/troubleshooting/advanced-scan-on-net-framework/?utm_source=github)."
 
 ## Reading Document Example
 

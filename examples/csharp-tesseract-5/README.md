@@ -1,4 +1,4 @@
-> Full guide: [C# tesseract 5](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/)
+> Full guide: [C# tesseract 5](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-5/?utm_source=github)
 
 Most business documents now arrive as files rather than paper, and many of them are not in English, so an OCR tool has to read more than one language.
 
@@ -19,4 +19,4 @@ Tesseract 5 stands out as the most sophisticated OCR library currently available
 
 This concise guide offers a clear method for integrating `IronTesseract` using `IronOCR` in .NET applications, simplifying the use of Tesseract 5.
 
-[Learn more about Implementing IronTesseract in C#](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/ "See detailed documentation on IronTesseract integration")
+[Learn more about Implementing IronTesseract in C#](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/?utm_source=github "See detailed documentation on IronTesseract integration")

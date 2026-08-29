@@ -1,6 +1,6 @@
 # IronOCR Advanced Installation Guide
 
-> Full guide: [IronOCR Advanced Installation Guide](https://ironsoftware.com/get-started/advanced-installation-nuget/)
+> Full guide: [IronOCR Advanced Installation Guide](https://ironsoftware.com/get-started/advanced-installation-nuget/?utm_source=github)
 
 
 Experience the power of Optical Character Recognition (OCR) with IronOcr! Our comprehensive toolkit, crafted especially for developers, facilitates superior performance on multiple platforms and programming languages.
@@ -31,7 +31,7 @@ IronOCR supports over 125 languages, making it the ideal choice for any OCR task
 <img src="https://ironsoftware.com/img/icons8.com/fluency/72/000000/azure-1.png" style="display:inline" />
 <img src="https://ironsoftware.com/img/icons8.com/color/72/000000/amazon-web-services.png" style="display:inline" />
 
-Ideal for [setting up IronOCR on Linux platforms](https://ironsoftware.com/csharp/ocr/get-started/linux/), this solution integrates smoothly with cloud services and operates with AWS & Lambda, Azure Functions, and Linux Web Apps.
+Ideal for [setting up IronOCR on Linux platforms](https://ironsoftware.com/csharp/ocr/get-started/linux/?utm_source=github), this solution integrates smoothly with cloud services and operates with AWS & Lambda, Azure Functions, and Linux Web Apps.
 
 [**PM > Install-Package IronOcr.Linux**](https://www.nuget.org/packages/IronOcr.Linux)
 - Optimized for Linux environments, especially Ubuntu and Debian
@@ -45,7 +45,7 @@ Ideal for [setting up IronOCR on Linux platforms](https://ironsoftware.com/cshar
 <img src="https://ironsoftware.com/img/icons8.com/fluency/72/000000/azure-1.png" style="display:inline" />
 <img src="https://ironsoftware.com/img/icons8.com/color/72/000000/amazon-web-services.png" style="display:inline" />
 
-IronOCR provides macOS-specific packages tailored for both standard macOS and macOS on ARM processors. Click below for the [installation guidelines](https://ironsoftware.com/csharp/ocr/get-started/mac/).
+IronOCR provides macOS-specific packages tailored for both standard macOS and macOS on ARM processors. Click below for the [installation guidelines](https://ironsoftware.com/csharp/ocr/get-started/mac/?utm_source=github).
 
 [**PM > Install-Package IronOcr.MacOs**](https://www.nuget.org/packages/IronOcr.MacOs)<br>
 [**PM > Install-Package IronOcr.MacOs.ARM**](https://www.nuget.org/packages/IronPdf.MacOs.ARM/)
@@ -57,7 +57,7 @@ IronOCR provides macOS-specific packages tailored for both standard macOS and ma
 <img src="https://ironsoftware.com/img/icons8.com/?size=72&id=20822&format=png&color=000000" style="display:inline" />
 <img src="https://ironsoftware.com/img/icons8.com/windows/72/000000/nuget.png" style="display:inline" />
 
-IronOcr introduces an iOS package specifically designed for mobile iOS applications. For installation instructions, please see [this guide](https://ironsoftware.com/csharp/ocr/get-started/ios/).
+IronOcr introduces an iOS package specifically designed for mobile iOS applications. For installation instructions, please see [this guide](https://ironsoftware.com/csharp/ocr/get-started/ios/?utm_source=github).
 
 [**PM > Install-Package IronOcr.iOS**](https://www.nuget.org/packages/IronOcr.iOS)
 
@@ -68,7 +68,7 @@ IronOcr introduces an iOS package specifically designed for mobile iOS applicati
 <img src="https://ironsoftware.com/img/icons8.com/?size=72&id=P2AnGyiJxMpp&format=png&color=000000" style="display:inline" />
 <img src="https://ironsoftware.com/img/icons8.com/windows/72/000000/nuget.png" style="display:inline" />
 
-IronOcr also provides an Android package, specifically designed for mobile-based Android applications. For setup details, please refer to [this guide](https://ironsoftware.com/csharp/ocr/get-started/android/).
+IronOcr also provides an Android package, specifically designed for mobile-based Android applications. For setup details, please refer to [this guide](https://ironsoftware.com/csharp/ocr/get-started/android/?utm_source=github).
 
 [**PM > Install-Package IronOcr.Android**](https://www.nuget.org/packages/IronOcr.Android)
 

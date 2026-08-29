@@ -1,4 +1,4 @@
-> Full guide: [Read passport](https://ironsoftware.com/csharp/ocr/examples/read-passport/)
+> Full guide: [Read passport](https://ironsoftware.com/csharp/ocr/examples/read-passport/?utm_source=github)
 
 The following example illustrates how to employ the IronTesseract OCR engine to analyze and obtain information from a passport image.
 
@@ -11,4 +11,4 @@ Firstly, an instance of the IronTesseract OCR engine is created. We then initiat
 - The date of birth is displayed using `result.PassportInfo.DateOfBirth`.
 - Finally, the expiry date is presented through `result.PassportInfo.DateOfExpiry`.
 
-[Learn how to extract passport information with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-passport/)
+[Learn how to extract passport information with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-passport/?utm_source=github)

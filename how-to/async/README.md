@@ -1,6 +1,6 @@
 # Utilizing Async and Multithreading in OCR
 
-> Full guide: [Utilizing Async and Multithreading in OCR](https://ironsoftware.com/csharp/ocr/how-to/async/)
+> Full guide: [Utilizing Async and Multithreading in OCR](https://ironsoftware.com/csharp/ocr/how-to/async/?utm_source=github)
 
 
 This guide combines async support with multithreading in IronOCR and Tesseract. Asynchronous calls keep an application responsive during OCR, and multithreading runs recognition in parallel. Let’s look at how to combine the two.

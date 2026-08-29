@@ -1,6 +1,6 @@
 # How to Install IronOCR on Windows Using the Installer
 
-> Full guide: [How to Install IronOCR on Windows Using the Installer](https://ironsoftware.com/csharp/ocr/get-started/windows-installer/)
+> Full guide: [How to Install IronOCR on Windows Using the Installer](https://ironsoftware.com/csharp/ocr/get-started/windows-installer/?utm_source=github)
 
 
 IronOCR is a .NET library designed for Optical Character Recognition (OCR). It allows .NET developers to harvest text from images and scanned PDFs within their C# or VB.NET applications. Although NuGet is commonly used for installing IronOCR, an alternative is available through the Windows Installer for those preferring offline or GUI-based installations.
@@ -9,7 +9,7 @@ IronOCR is a .NET library designed for Optical Character Recognition (OCR). It a
 
 Begin by downloading the IronOCR Installation package:
 
-- [Download the IronOCR installer here](https://ironsoftware.com/csharp/ocr/packages/IronOcrInstaller.zip)
+- [Download the IronOCR installer here](https://ironsoftware.com/csharp/ocr/packages/IronOcrInstaller.zip?utm_source=github)
 
 After downloading, unzip the ZIP file and execute the IronOCR Installer.exe file to start.
 
@@ -71,6 +71,6 @@ For users on Windows 10, follow these steps for the same setup:
 
 Should you face any challenges during the installation, numerous resources are available:
 
-- [IronOCR Troubleshooting Guide](https://ironsoftware.com/csharp/ocr/troubleshooting/general-troubleshooting-ocr/)
-- [Technical Support Page](https://ironsoftware.com/csharp/ocr/troubleshooting/engineering-request-ocr/)
-- Contact our [support team directly](https://ironsoftware.com/contact-us/support/) for further assistance.
+- [IronOCR Troubleshooting Guide](https://ironsoftware.com/csharp/ocr/troubleshooting/general-troubleshooting-ocr/?utm_source=github)
+- [Technical Support Page](https://ironsoftware.com/csharp/ocr/troubleshooting/engineering-request-ocr/?utm_source=github)
+- Contact our [support team directly](https://ironsoftware.com/contact-us/support/?utm_source=github) for further assistance.

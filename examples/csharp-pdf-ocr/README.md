@@ -1,4 +1,4 @@
-> Full guide: [C# PDF OCR](https://ironsoftware.com/csharp/ocr/examples/csharp-pdf-ocr/)
+> Full guide: [C# PDF OCR](https://ironsoftware.com/csharp/ocr/examples/csharp-pdf-ocr/?utm_source=github)
 
 Iron Tesseract is capable of interpreting a variety of image formats along with PDF documents, an advantage not commonly found in standard free Tesseract engines.
 
@@ -61,7 +61,7 @@ IronOCR supports 125 languages through language packs that are delivered as DLL 
 
 ### How To Install OCR Language Packs
 
-A vast selection of over one hundred and twenty languages is supported. Acquire any necessary [OCR language packs](https://ironsoftware.com/csharp/ocr/languages/) using the following methods:
+A vast selection of over one hundred and twenty languages is supported. Acquire any necessary [OCR language packs](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github) using the following methods:
 
 #### Install Through NuGet
 

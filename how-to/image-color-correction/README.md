@@ -1,6 +1,6 @@
 # How to Enhance Image Colors for Optimal Reading
 
-> Full guide: [How to Enhance Image Colors for Optimal Reading](https://ironsoftware.com/csharp/ocr/how-to/image-color-correction/)
+> Full guide: [How to Enhance Image Colors for Optimal Reading](https://ironsoftware.com/csharp/ocr/how-to/image-color-correction/?utm_source=github)
 
 
 Improving the clarity and readability of images is crucial, especially when extracting text using OCR (Optical Character Recognition). IronOcr provides powerful tools like binarization, grayscale transformation, color inversion, and color replacement to optimize the visibility and aesthetics of text within images. You can even isolate and read text based on specific colors.

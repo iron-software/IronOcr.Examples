@@ -1,6 +1,6 @@
 # How to Read PDFs
 
-> Full guide: [How to Read PDFs](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/)
+> Full guide: [How to Read PDFs](https://ironsoftware.com/csharp/ocr/how-to/input-pdfs/?utm_source=github)
 
 
 PDF, an acronym for "Portable Document Format," was devised by Adobe as a method to maintain the originality of documents, making them look consistent irrespective of the tools employed to develop them. PDFs are commonly utilized for the distribution and viewing of documents, maintaining the same visual format across different platforms and devices. IronOcr is proficient at managing various types of PDF documents.

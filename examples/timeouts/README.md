@@ -1,4 +1,4 @@
-> Full guide: [Timeouts](https://ironsoftware.com/csharp/ocr/examples/timeouts/)
+> Full guide: [Timeouts](https://ironsoftware.com/csharp/ocr/examples/timeouts/?utm_source=github)
 
 The `TimeoutMs` property sets a cap on the time, in milliseconds, allocated for the OCR operation before it terminates.
 
@@ -6,4 +6,4 @@ Like `AbortToken`, `TimeoutMs` is beneficial when dealing with substantial input
 
 It's important to note that this functionality is not available in .NET Framework 4.x.x.
 
-[Learn more about Asynchronous OCR Processing with IronOCR in C#](https://ironsoftware.com/csharp/ocr/how-to/async/)
+[Learn more about Asynchronous OCR Processing with IronOCR in C#](https://ironsoftware.com/csharp/ocr/how-to/async/?utm_source=github)

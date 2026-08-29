@@ -1,9 +1,9 @@
 # Implementing IronOCR within Docker Environments
 
-> Full guide: [Implementing IronOCR within Docker Environments](https://ironsoftware.com/csharp/ocr/get-started/docker/)
+> Full guide: [Implementing IronOCR within Docker Environments](https://ironsoftware.com/csharp/ocr/get-started/docker/?utm_source=github)
 
 
-Want to [perform OCR on images or PDF files using C#](https://ironsoftware.com/csharp/ocr/)?
+Want to [perform OCR on images or PDF files using C#](https://ironsoftware.com/csharp/ocr/?utm_source=github)?
 
 IronOCR supports Docker, accommodating environments such as Azure Docker Containers across both Linux and Windows platforms.
 
@@ -17,7 +17,7 @@ Docker provides developers the ability to package, distribute, and run applicati
 
 For those new to Docker and .NET, we suggest reviewing this informative article on [configuring Docker for debugging and integration with Visual Studio](https://docs.microsoft.com/en-us/visualstudio/containers/edit-and-refresh?view=vs-2019).
 
-Additionally, it's highly beneficial to explore our [IronOCR Linux Setup and Compatibility Guide](https://ironsoftware.com/csharp/ocr/how-to/tesseract-ocr-setup-linux-ubuntu-debian/).
+Additionally, it's highly beneficial to explore our [IronOCR Linux Setup and Compatibility Guide](https://ironsoftware.com/csharp/ocr/how-to/tesseract-ocr-setup-linux-ubuntu-debian/?utm_source=github).
 
 ### Recommended Linux Docker Distributions for IronOCR
 
@@ -28,7 +28,7 @@ For a setup of IronOCR on Linux, we advocate for the following 64-bit distributi
 - Debian 11
 - Debian 10 _[Currently the default distribution on Microsoft Azure]_
 
-We suggest utilizing Microsoft's [Official Docker Images](https://hub.docker.com/_/microsoft-dotnet-runtime/). While other distributions are partially supported, they might need manual setup using `apt-get`. For more details, refer to our "[Linux Manual Setup](https://ironsoftware.com/csharp/ocr/how-to/tesseract-ocr-setup-linux-ubuntu-debian/)" guide.
+We suggest utilizing Microsoft's [Official Docker Images](https://hub.docker.com/_/microsoft-dotnet-runtime/). While other distributions are partially supported, they might need manual setup using `apt-get`. For more details, refer to our "[Linux Manual Setup](https://ironsoftware.com/csharp/ocr/how-to/tesseract-ocr-setup-linux-ubuntu-debian/?utm_source=github)" guide.
 
 Included below are the Dockerfiles for Ubuntu and Debian setups:
 

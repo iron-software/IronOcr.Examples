@@ -1,6 +1,6 @@
 # Utilizing Progress Tracking with IronOCR
 
-> Full guide: [Utilizing Progress Tracking with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/progress-tracking/)
+> Full guide: [Utilizing Progress Tracking with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/progress-tracking/?utm_source=github)
 
 
 IronOCR includes a feature where you can subscribe to an event to monitor the progress of the OCR (Optical Character Recognition) operations. These capabilities provide key insights into the OCR process's progress, total duration, and completion status, allowing for effective monitoring and reporting.
@@ -17,7 +17,7 @@ var readResults = ocrEngine.Read(new IronOcr.OcrInput().LoadPdf("path/to/file.pd
 
 ## Detailed Progress Tracking Example
 
-To receive detailed updates during the OCR process, you can subscribe to the `OcrProgress` event. This event provides an object packed with comprehensive information, such as the OCR job's start and end times, total pages, completion percentage, and operation duration. The example uses a document named "[Experiences in Biodiversity Research: A Field Course](https://ironsoftware.com/static-assets/ocr/how-to/progress-tracking/Experiences-in-Biodiversity-Research-A-Field-Course.pdf)" by Thea B. Gessler, from Iowa State University.
+To receive detailed updates during the OCR process, you can subscribe to the `OcrProgress` event. This event provides an object packed with comprehensive information, such as the OCR job's start and end times, total pages, completion percentage, and operation duration. The example uses a document named "[Experiences in Biodiversity Research: A Field Course](https://ironsoftware.com/static-assets/ocr/how-to/progress-tracking/Experiences-in-Biodiversity-Research-A-Field-Course.pdf?utm_source=github)" by Thea B. Gessler, from Iowa State University.
 
 ```csharp
 using IronOcr;

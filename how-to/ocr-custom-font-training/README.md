@@ -1,6 +1,6 @@
 # C# Custom Font Training for Tesseract 5 (Windows Users Edition)
 
-> Full guide: [C# Custom Font Training for Tesseract 5 (Windows Users Edition)](https://ironsoftware.com/csharp/ocr/how-to/ocr-custom-font-training/)
+> Full guide: [C# Custom Font Training for Tesseract 5 (Windows Users Edition)](https://ironsoftware.com/csharp/ocr/how-to/ocr-custom-font-training/?utm_source=github)
 
 
 Enhance the precision and recognition performance of the OCR engine using custom font training with Tesseract 5. This is especially useful for unique or complex font styles that are typically not well-supported by default.
@@ -21,7 +21,7 @@ string extractedText = ocrEngine.Read(new IronOcr.OcrInput("image-containing-uni
 
 ### Direct DLL Installation
 
-Acquire the [IronOcr DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip) and add it to your project manually.
+Acquire the [IronOcr DLL](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github) and add it to your project manually.
 
 ### Installation via NuGet
 

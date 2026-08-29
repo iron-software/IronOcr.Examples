@@ -1,9 +1,9 @@
 # IronOCR Linux Compatibility & Setup Guide
 
-> Full guide: [IronOCR Linux Compatibility & Setup Guide](https://ironsoftware.com/csharp/ocr/get-started/linux/)
+> Full guide: [IronOCR Linux Compatibility & Setup Guide](https://ironsoftware.com/csharp/ocr/get-started/linux/?utm_source=github)
 
 
-IronOCR is compatible with Linux for **.NET Core** and **.NET 5** applications, including environments like [Docker](https://ironsoftware.com/csharp/ocr/get-started/docker/), Azure, macOS, and of course, Windows.
+IronOCR is compatible with Linux for **.NET Core** and **.NET 5** applications, including environments like [Docker](https://ironsoftware.com/csharp/ocr/get-started/docker/?utm_source=github), Azure, macOS, and of course, Windows.
 
 ![Linux](https://img.icons8.com/color/96/000000/linux--v1.png) ![Docker](https://img.icons8.com/color/96/000000/docker.png) ![Azure](https://img.icons8.com/fluency/96/000000/azure-1.png) ![AWS](https://img.icons8.com/color/96/000000/amazon-web-services.png) ![Ubuntu](https://img.icons8.com/color/96/000000/ubuntu--v1.png) ![Debian](https://img.icons8.com/color/96/000000/debian--v1.png)
 

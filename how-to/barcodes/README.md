@@ -1,6 +1,6 @@
 # How to Read Barcodes and QR Codes
 
-> Full guide: [How to Read Barcodes and QR Codes](https://ironsoftware.com/csharp/ocr/how-to/barcodes/)
+> Full guide: [How to Read Barcodes and QR Codes](https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github)
 
 
 Utilizing OCR technology to read barcodes and QR codes can significantly enhance automation and data handling, especially when these elements appear in printed or digital documents. This method simplifies data collection from various sources, providing a tool for developers and businesses.

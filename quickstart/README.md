@@ -1,6 +1,6 @@
 # Start Using OCR with C# and VB.NET
 
-> Docs: [IronOCR documentation](https://ironsoftware.com/csharp/ocr/docs/)
+> Docs: [IronOCR documentation](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github)
 
 
 IronOCR is an advanced C# library designed for .NET developers to extract text from images and PDFs. It employs the highly acclaimed Tesseract engine, making it a top choice for OCR tasks on the .NET platform.
@@ -46,7 +46,7 @@ You can remove the OpenCV namespaces and the issue will be resolved.
 
 ### Manual Installation via .ZIP File
 
-Alternatively, IronOCR can be manually installed using a .ZIP file. Download it [here](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip).
+Alternatively, IronOCR can be manually installed using a .ZIP file. Download it [here](https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github).
 
 #### Setup for .NET Framework 4.0+:
 
@@ -62,7 +62,7 @@ Alternatively, IronOCR can be manually installed using a .ZIP file. Download it 
 
 ### IronOCR Installer for Windows
 
-For Windows users, an installer is provided to simplify setup for IronOCR resources necessary for immediate use. Download the installer [here](https://ironsoftware.com/csharp/ocr/packages/IronOcrInstaller.zip).
+For Windows users, an installer is provided to simplify setup for IronOCR resources necessary for immediate use. Download the installer [here](https://ironsoftware.com/csharp/ocr/packages/IronOcrInstaller.zip?utm_source=github).
 
 Instructions for .NET Framework 4.0+ and newer platforms mirror those provided above for the .ZIP file.
 
@@ -90,10 +90,10 @@ Here are examples demonstrating the straightforward approach to extracting text 
 
 ### Code Samples for Various Scenarios:
 
-- C# One-liner: [Get Started](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-1.cs)
-- Hello World with Options: [Configurable Example](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-2.cs)
-- Extracting Text from PDFs: [C# PDF OCR Example](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-3.cs)
-- Handling MultiPage TIFFs: [MultiPage TIFF OCR Example](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-4.cs)
+- C# One-liner: [Get Started](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-1.cs?utm_source=github)
+- Hello World with Options: [Configurable Example](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-2.cs?utm_source=github)
+- Extracting Text from PDFs: [C# PDF OCR Example](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-3.cs?utm_source=github)
+- Handling MultiPage TIFFs: [MultiPage TIFF OCR Example](https://ironsoftware.com/static-assets/ocr/content-code-examples/get-started/get-started-4.cs?utm_source=github)
 
 For more detailed scenarios like reading barcodes and specifying OCR regions, further examples are provided in the document.
 
@@ -101,4 +101,4 @@ For more detailed scenarios like reading barcodes and specifying OCR regions, fu
 
 IronOCR offers built-in image enhancement filters to improve OCR accuracy and supports 125 international languages.
 
-To learn more about using OCR technology in C#, VB, or other .NET languages, explore our [community tutorials](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/) and the [full API reference](https://ironsoftware.com/csharp/ocr/object-reference/).
+To learn more about using OCR technology in C#, VB, or other .NET languages, explore our [community tutorials](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github) and the [full API reference](https://ironsoftware.com/csharp/ocr/object-reference/?utm_source=github).

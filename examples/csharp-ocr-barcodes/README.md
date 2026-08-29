@@ -1,4 +1,4 @@
-> Full guide: [C# OCR barcodes](https://ironsoftware.com/csharp/ocr/examples/csharp-ocr-barcodes/)
+> Full guide: [C# OCR barcodes](https://ironsoftware.com/csharp/ocr/examples/csharp-ocr-barcodes/?utm_source=github)
 
 The `OcrResult` object from Iron Tesseract offers a significant feature to recognize barcodes and QR Codes during the OCR process by setting `Ocr.Configuration.ReadBarCodes = true;`.
 
@@ -17,4 +17,4 @@ This enhancement is part of Iron Software's comprehensive suite of features whic
 
 This method effectively facilitates the extraction and application of information contained in QR Codes utilizing the IronOcr library within a C# environment.
 
-<a href="https://ironsoftware.com/csharp/ocr/how-to/barcodes/" class="code_content__related-link__doc-cta-link">Explore Techniques for Reading Barcodes with IronOCR</a>
+<a href="https://ironsoftware.com/csharp/ocr/how-to/barcodes/?utm_source=github" class="code_content__related-link__doc-cta-link">Explore Techniques for Reading Barcodes with IronOCR</a>
