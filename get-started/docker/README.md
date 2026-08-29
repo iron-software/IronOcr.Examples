@@ -5,7 +5,7 @@
 
 Want to [perform OCR on images or PDF files using C#](https://ironsoftware.com/csharp/ocr/)?
 
-IronOCR offers robust support for Docker, accommodating environments such as Azure Docker Containers across both Linux and Windows platforms.
+IronOCR supports Docker, accommodating environments such as Azure Docker Containers across both Linux and Windows platforms.
 
 <img style="display:inline-block;" src="https://img.icons8.com/color/96/000000/docker--v1.png" alt="Docker"> <img style="display:inline-block;" src="https://img.icons8.com/color/96/000000/linux--v1.png" alt="Linux"> <img style="display:inline-block;" src="https://img.icons8.com/color/96/000000/amazon-web-services--v1.png" alt="AWS"> <img style="display:inline-block;" src="https://img.icons8.com/color/96/000000/windows-logo--v1.png" alt="Windows">
 
@@ -87,11 +87,240 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Example.dll"]
 ```
 
-### Configuration for Ubuntu 20 with .NET 3.1 LTS
+### Ubuntu 20 with .NET 3.1 LTS
 
 ```dockerfile
-# Initialize with the base runtime image for Ubuntu 20 equipped with .NET 3.1
-
+# Use the base runtime image for Ubuntu 20 with .NET runtime
 FROM mcr.microsoft.com/dotnet/runtime:3.1-focal AS base
-WORK ...
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+# Use the base development image for Ubuntu 20 with .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:3.1-focal AS build
+WORKDIR /src
+
+# Restore NuGet packages
+COPY ["Example/Example.csproj", "Example/"]
+RUN dotnet restore "Example/Example.csproj"
+
+# Build the project
+COPY . .
+WORKDIR "/src/Example"
+RUN dotnet build "Example.csproj" -c Release -o /app/build
+
+# Publish the project
+FROM build AS publish
+RUN dotnet publish "Example.csproj" -c Release -o /app/publish
+
+# Run the application
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Example.dll"]
 ```
+
+### Ubuntu 18 with .NET 3.1 LTS
+
+```dockerfile
+# Use the base runtime image for Ubuntu 18 with .NET runtime
+FROM mcr.microsoft.com/dotnet/runtime:3.1-bionic AS base
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+# Use the base development image for Ubuntu 18 with .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:3.1-bionic AS build
+WORKDIR /src
+
+# Restore NuGet packages
+COPY ["Example/Example.csproj", "Example/"]
+RUN dotnet restore "Example/Example.csproj"
+
+# Build the project
+COPY . .
+WORKDIR "/src/Example"
+RUN dotnet build "Example.csproj" -c Release -o /app/build
+
+# Publish the project
+FROM build AS publish
+RUN dotnet publish "Example.csproj" -c Release -o /app/publish
+
+# Run the application
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Example.dll"]
+```
+
+## DockerFiles for Debian Linux
+
+### Debian 11 with .NET 5
+
+```dockerfile
+# Use the base runtime image for Debian 11 with .NET runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-bullseye-slim AS base
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+# Use the base development image for Debian 11 with .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:5.0-bullseye-slim AS build
+WORKDIR /src
+
+# Restore NuGet packages
+COPY ["Example/Example.csproj", "Example/"]
+RUN dotnet restore "Example/Example.csproj"
+
+# Build the project
+COPY . .
+WORKDIR "/src/Example"
+RUN dotnet build "Example.csproj" -c Release -o /app/build
+
+# Publish the project
+FROM build AS publish
+RUN dotnet publish "Example.csproj" -c Release -o /app/publish
+
+# Run the application
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Example.dll"]
+```
+
+### Debian 11 with .NET 3.1 LTS
+
+```dockerfile
+# Use the base runtime image for Debian 11 with .NET runtime
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-bullseye-slim AS base
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+# Use the base development image for Debian 11 with .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:3.1-bullseye-slim AS build
+WORKDIR /src
+
+# Restore NuGet packages
+COPY ["Example/Example.csproj", "Example/"]
+RUN dotnet restore "Example/Example.csproj"
+
+# Build the project
+COPY . .
+WORKDIR "/src/Example"
+RUN dotnet build "Example.csproj" -c Release -o /app/build
+
+# Publish the project
+FROM build AS publish
+RUN dotnet publish "Example.csproj" -c Release -o /app/publish
+
+# Run the application
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Example.dll"]
+```
+
+### Debian 10 with .NET 5
+
+```dockerfile
+# Use the base runtime image for Debian 10 with .NET runtime
+FROM mcr.microsoft.com/dotnet/runtime:5.0 AS base
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+# Use the base development image for Debian 10 with .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+
+# Restore NuGet packages
+COPY ["Example/Example.csproj", "Example/"]
+RUN dotnet restore "Example/Example.csproj"
+
+# Build the project
+COPY . .
+WORKDIR "/src/Example"
+RUN dotnet build "Example.csproj" -c Release -o /app/build
+
+# Publish the project
+FROM build AS publish
+RUN dotnet publish "Example.csproj" -c Release -o /app/publish
+
+# Run the application
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Example.dll"]
+```
+
+### Debian 10 with .NET 3.1 LTS
+
+```dockerfile
+# Use the base runtime image for Debian 10 with .NET runtime
+FROM mcr.microsoft.com/dotnet/runtime:3.1 AS base
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+# Use the base development image for Debian 10 with .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+WORKDIR /src
+
+# Restore NuGet packages
+COPY ["Example/Example.csproj", "Example/"]
+RUN dotnet restore "Example/Example.csproj"
+
+# Build the project
+COPY . .
+WORKDIR "/src/Example"
+RUN dotnet build "Example.csproj" -c Release -o /app/build
+
+# Publish the project
+FROM build AS publish
+RUN dotnet publish "Example.csproj" -c Release -o /app/publish
+
+# Run the application
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Example.dll"]
+```
+
+## Frequently Asked Questions
+
+**How can I deploy C# OCR applications in Docker containers?**
+You can deploy C# OCR applications in Docker containers by using IronOCR, a C# OCR library that integrates with Docker. You'll need to set up the Docker containers with the necessary packages like apt-utils, libgdiplus, and libc6-dev, and use Microsoft's official Docker images for optimal performance.
+
+**Which operating systems are best for running IronOCR in Docker?**
+For running IronOCR in Docker, it is recommended to use the latest 64-bit Linux distributions such as Ubuntu 20, Ubuntu 18, Debian 11, and Debian 10, as they offer easy configuration and support.
+
+**How do I configure IronOCR on Azure Docker Containers?**
+To configure IronOCR on Azure Docker Containers, you would follow the same steps as for other Docker environments. Use the IronOcr NuGet package, set up the recommended Linux distributions, and ensure all necessary dependencies are included in your Dockerfile.
+
+**What are the steps to set up IronOCR using .NET 5 in Docker?**
+To set up IronOCR using .NET 5 in Docker, you need to create a Dockerfile that installs the IronOcr NuGet package, adds required packages like apt-utils and libgdiplus, and uses Microsoft's official .NET 5 Docker images for the base image.
+
+**Can IronOCR be used in Docker environments on Windows?**
+Yes, IronOCR can be used in Docker environments on Windows. The process involves using the IronOcr NuGet package and configuring the Dockerfile to include necessary dependencies and configurations specific to Windows operating systems.
+
+**What are the benefits of using Docker for hosting .NET OCR applications?**
+Using Docker for hosting .NET OCR applications allows for easy deployment, better resource management, and greater portability across different environments. Docker containers are self-sufficient, ensuring that the applications run consistently regardless of where they are deployed.
+
+**Is manual configuration required for non-recommended Linux distributions in Docker?**
+Yes, if you are using Linux distributions other than the recommended ones (Ubuntu 20, Ubuntu 18, Debian 11, Debian 10), you might need to perform manual configurations using apt-get. Guidance on manual setup is available in the 'Linux Manual Setup' guide provided by IronOCR.
+
+**Does IronOCR offer any image preprocessing capabilities?**
+IronOCR includes image preprocessing features to enhance OCR accuracy, such as noise reduction, rotation correction, and contrast adjustment.
+
+**Can IronOCR be used in cloud applications?**
+Indeed, IronOCR can be deployed in cloud environments, making it suitable for web applications and services that require OCR capabilities.
+
+**How can I improve the accuracy of OCR results with IronOCR?**
+To improve OCR accuracy with IronOCR, ensure high-quality input images, use the appropriate language packs, and run the library's image preprocessing first.
