@@ -2,7 +2,6 @@
 
 > Full guide: [Optical Character Recognition (OCR) on AWS Lambda Using IronOCR](https://ironsoftware.com/csharp/ocr/get-started/aws/)
 
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
@@ -25,8 +24,6 @@ var awsTemporaryFolderPath = @"/tmp/";
 IronOcr.Installation.InstallationPath = awsTemporaryFolderPath;
 IronOcr.Installation.LogFilePath = awsTemporaryFolderPath;
 ```
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
 
 ## Initializing an AWS Lambda Project
 

@@ -2,7 +2,6 @@
 
 > Full guide: [Utilizing IronOCR License Keys](https://ironsoftware.com/get-started/license-keys/)
 
-
 ## Acquiring a License Key
 
 Integrate an IronOCR license key into your projects for unrestricted deployment and watermark-free operation.
@@ -12,8 +11,6 @@ You can [purchase a license key here <i class="fa-regular fa-cart-shopping"></i>
 <hr class="separator">
 
 ## Step 1: Obtain the Most Recent Version of IronOCR
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
 
 ### Installation via DLL
 

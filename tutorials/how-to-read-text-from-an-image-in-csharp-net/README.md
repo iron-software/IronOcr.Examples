@@ -36,8 +36,6 @@ When it comes to translating images into text using C#, IronOCR stands out from 
 - Automatically accommodates PDFs, MultiFrame TIFFs, and all principal image formats
 - Automatically corrects images of poor quality or distorted orientation to deliver superior results
 
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
-
 ## Basic OCR with IronOCR in C#
 
 In this section, we illustrate the most straightforward method to perform OCR on images using IronOCR in C#. Utilizing the `IronOcr.IronTesseract` class, you can easily extract text from images and convert it directly into a string form.

@@ -2,14 +2,11 @@
 
 > Full guide: [Extracting Specific Text Sections from Images Using IronOCR in C#](https://ironsoftware.com/how-to/ocr-region-of-an-image/)
 
-
 When working with images that contain text, it's often necessary to extract text from just a part of the image, such as specific numbers or text fields. Processing the entire image not only consumes more resources, but it also increases the likelihood of errors due to unwanted textual content.
 
 IronOCR addresses these issues by providing the capability to precisely determine which part of the image to analyze. This tutorial delineates how to specify these areas, conduct OCR on them, and ensure that you are focusing on the correct part of the image.
 
 <h3>Initiating IronOCR</h3>
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
 
 ----------------------------------------
 
