@@ -1,6 +1,6 @@
 # Text Highlighting as Images
 
-> Full guide: [Text Highlighting as Images](https://ironsoftware.com/csharp/ocr/how-to/highlight-texts-as-images/)
+> Full guide: [Text Highlighting as Images](https://ironsoftware.com/csharp/ocr/how-to/highlight-texts-as-images/?utm_source=github)
 
 
 When working with OCR technology, it's often useful to visually demonstrate the results by marking the detected text elements directly on the image. This involves drawing boxes around characters, words, lines, or paragraphs, effectively mapping out where the text was recognized within the image. 

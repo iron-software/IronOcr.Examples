@@ -1,4 +1,4 @@
-> Full guide: [Read license plate](https://ironsoftware.com/csharp/ocr/examples/read-license-plate/)
+> Full guide: [Read license plate](https://ironsoftware.com/csharp/ocr/examples/read-license-plate/?utm_source=github)
 
 This technique demonstrates how to decipher license plate numbers from images using the IronTesseract OCR engine. The steps involved include:
 
@@ -9,4 +9,4 @@ This technique demonstrates how to decipher license plate numbers from images us
 
 This functionality is highly applicable in scenarios such as parking lot management, vehicle entry systems, and automated identification technologies.
 
-[Learn how to extract license plate information with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-license-plate/)
+[Learn how to extract license plate information with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/read-license-plate/?utm_source=github)

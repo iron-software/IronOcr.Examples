@@ -1,4 +1,4 @@
-> Full guide: [Tesseract create searchable PDF](https://ironsoftware.com/csharp/ocr/examples/tesseract-create-searchable-pdf/)
+> Full guide: [Tesseract create searchable PDF](https://ironsoftware.com/csharp/ocr/examples/tesseract-create-searchable-pdf/?utm_source=github)
 
 Iron Software's Tesseract engine, a part of IronOCR, has the capability to convert images into searchable PDFs and make existing PDFs searchable. This functionality enriches SEO efforts and enhances search capabilities within internal networks and databases.
 
@@ -14,4 +14,4 @@ Iron Software's Tesseract engine, a part of IronOCR, has the capability to conve
     </ol>
 </div>
 
-<a href="https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/" class="code_content__related-link__doc-cta-link">Discover Methods to Generate Searchable PDFs with IronOCR</a>
+<a href="https://ironsoftware.com/csharp/ocr/how-to/searchable-pdf/?utm_source=github" class="code_content__related-link__doc-cta-link">Discover Methods to Generate Searchable PDFs with IronOCR</a>

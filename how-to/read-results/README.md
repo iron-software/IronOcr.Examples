@@ -1,11 +1,11 @@
 # How to Extract Read Results
 
-> Full guide: [How to Extract Read Results](https://ironsoftware.com/csharp/ocr/how-to/read-results/)
+> Full guide: [How to Extract Read Results](https://ironsoftware.com/csharp/ocr/how-to/read-results/?utm_source=github)
 
 
 The OCR or read results contain detailed information about the recognized paragraphs, lines, words, and individual characters from the scanned document. Each of these components includes detailed specifics.
 
-For each element, details such as the text content, exact X and Y coordinates, dimensions (width and height), text direction (Left to Right or Top to Bottom), and a location inside a [CropRectangle](https://ironsoftware.com/open-source/csharp/drawing/examples/convert-measurement-unit-of-croprectangle/) object are provided.
+For each element, details such as the text content, exact X and Y coordinates, dimensions (width and height), text direction (Left to Right or Top to Bottom), and a location inside a [CropRectangle](https://ironsoftware.com/open-source/csharp/drawing/examples/convert-measurement-unit-of-croprectangle/?utm_source=github) object are provided.
 
 ### Quick Start: Extracting the First Detected Word’s Text
 
@@ -107,7 +107,7 @@ Here's how different text components look when detected and processed:
 
 Indeed, IronOcr is capable of recognizing barcodes and QR codes. While this feature might not be as exhaustive as IronBarcode, it supports common barcode formats effectively. Enable barcode detection by setting the `Configuration.ReadBarCodes` property to true.
 
-Furthermore, you can extract crucial details from every detected barcode, including its type, value, coordinates, dimensions, and location defined by the **Rectangle** class from [IronDrawing](https://ironsoftware.com/open-source/csharp/drawing/docs/).
+Furthermore, you can extract crucial details from every detected barcode, including its type, value, coordinates, dimensions, and location defined by the **Rectangle** class from [IronDrawing](https://ironsoftware.com/open-source/csharp/drawing/docs/?utm_source=github).
 
 ```csharp
 using IronOcr;

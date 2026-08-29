@@ -1,6 +1,6 @@
 # How to Read Images
 
-> Full guide: [How to Read Images](https://ironsoftware.com/csharp/ocr/how-to/input-images/)
+> Full guide: [How to Read Images](https://ironsoftware.com/csharp/ocr/how-to/input-images/?utm_source=github)
 
 
 Optical Character Recognition, or OCR, is a technology that is used to recognize text within images. This technology is particularly beneficial for converting printed documents into a digital format, allowing for the extraction and manipulation of text from scanned documents, photographs, or other image types.
@@ -42,11 +42,11 @@ OcrResult ocrResult = ocrTesseract.Read(imageInput);
   </div>
 </div>
 
-Explore further by reading the [How to Read Multi-Frame/Page GIFs and TIFFs](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/) article.
+Explore further by reading the [How to Read Multi-Frame/Page GIFs and TIFFs](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/?utm_source=github) article.
 
 ## Import Images as Bytes
 
-In addition to file paths, the `OcrImageInput` class also accepts images as byte arrays, `AnyBitmap`, `Stream`, or `Image`. The `AnyBitmap` is a representation of a bitmap image from [IronSoftware.Drawing.AnyBitmap](https://ironsoftware.com/open-source/csharp/drawing/examples/bitmap-to-stream/).
+In addition to file paths, the `OcrImageInput` class also accepts images as byte arrays, `AnyBitmap`, `Stream`, or `Image`. The `AnyBitmap` is a representation of a bitmap image from [IronSoftware.Drawing.AnyBitmap](https://ironsoftware.com/open-source/csharp/drawing/examples/bitmap-to-stream/?utm_source=github).
 
 ```csharp
 using IronOcr;

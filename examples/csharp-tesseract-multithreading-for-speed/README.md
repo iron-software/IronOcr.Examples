@@ -1,4 +1,4 @@
-> Full guide: [C# tesseract multithreading for speed](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-multithreading-for-speed/)
+> Full guide: [C# tesseract multithreading for speed](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-multithreading-for-speed/?utm_source=github)
 
 In the 2021 version of `IronTesseract`, there was a method known as `ReadMultithreaded`, designed to enhance the efficiency with which .NET developers processed images and PDFs through multithreading.
 
@@ -17,4 +17,4 @@ Fast forward to 2022, this approach has undergone significant improvement. The l
     </ol>
 </div>
 
-<a href="https://ironsoftware.com/csharp/ocr/how-to/async/" class="code_content__related-link__doc-cta-link">Explore Asynchronous OCR Strategies with IronOCR!</a>
+<a href="https://ironsoftware.com/csharp/ocr/how-to/async/?utm_source=github" class="code_content__related-link__doc-cta-link">Explore Asynchronous OCR Strategies with IronOCR!</a>

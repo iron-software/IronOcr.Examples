@@ -1,4 +1,4 @@
-> Full guide: [Progress tracking](https://ironsoftware.com/csharp/ocr/examples/progress-tracking/)
+> Full guide: [Progress tracking](https://ironsoftware.com/csharp/ocr/examples/progress-tracking/?utm_source=github)
 
 The `IronTesseract` class includes an `OcrProgress` event, which is beneficial for monitoring the progress of OCR operations. This feature works by dispatching the `OcrProgressEventArgs` each time a page is processed, assisting in gauging the OCR's current status.
 
@@ -14,4 +14,4 @@ This functionality proves vital across various application types such as graphic
 5. Implement any necessary image preprocessing techniques.
 6. Invoke the `Read` method on an `OcrInput` to extract text.
 
-[Learn how to effectively monitor OCR progress in .NET applications using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/progress-tracking/)
+[Learn how to effectively monitor OCR progress in .NET applications using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/progress-tracking/?utm_source=github)

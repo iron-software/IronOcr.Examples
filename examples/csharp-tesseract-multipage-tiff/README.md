@@ -1,4 +1,4 @@
-> Full guide: [C# tesseract multipage TIFF](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-multipage-tiff/)
+> Full guide: [C# tesseract multipage TIFF](https://ironsoftware.com/csharp/ocr/examples/csharp-tesseract-multipage-tiff/?utm_source=github)
 
 The `OcrInput` class in IronOCR smoothly handles TIFF files that the standard Tesseract engine may struggle with.
 
@@ -14,4 +14,4 @@ To successfully execute OCR on TIFF files, follow these steps:
 
 These procedures will help you efficiently carry out OCR on TIFF files, particularly multi-page ones, with the help of the Iron OCR library.
 
-[Discover how to OCR TIFF and GIF files using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/)
+[Discover how to OCR TIFF and GIF files using IronOCR.](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/?utm_source=github)

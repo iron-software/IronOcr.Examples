@@ -1,6 +1,6 @@
 # IronOcr.Examples
 
-Runnable C# examples for [IronOCR](https://ironsoftware.com/csharp/ocr/), a .NET OCR library built on a tuned Tesseract 5 engine. Extracts text from images, scanned PDFs, and multi-page documents in 125 languages.
+Runnable C# examples for [IronOCR](https://ironsoftware.com/csharp/ocr/?utm_source=github), a .NET OCR library built on a tuned Tesseract 5 engine. Extracts text from images, scanned PDFs, and multi-page documents in 125 languages.
 
 ## Install
 
@@ -47,15 +47,15 @@ Each folder contains a self-contained .NET project you can open and run:
 
 ## Platform support
 
-.NET 8, 7, 6, 5, .NET Core, .NET Standard 2, and .NET Framework 4.6.2+. Windows, macOS, Linux, Docker, Azure, and AWS. 64-bit architecture is required. See the [installation docs](https://ironsoftware.com/csharp/ocr/docs/) for environment-specific notes.
+.NET 8, 7, 6, 5, .NET Core, .NET Standard 2, and .NET Framework 4.6.2+. Windows, macOS, Linux, Docker, Azure, and AWS. 64-bit architecture is required. See the [installation docs](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github) for environment-specific notes.
 
 ## Documentation and support
 
-- Full documentation: [ironsoftware.com/csharp/ocr/docs](https://ironsoftware.com/csharp/ocr/docs/)
-- API reference: [ironsoftware.com/csharp/ocr/object-reference/api](https://ironsoftware.com/csharp/ocr/object-reference/api/)
+- Full documentation: [ironsoftware.com/csharp/ocr/docs](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github)
+- API reference: [ironsoftware.com/csharp/ocr/object-reference/api](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github)
 - Issues with these examples: file directly on this repository
 - Product support: [support@ironsoftware.com](mailto:support@ironsoftware.com)
 
 ## About
 
-This repository is maintained by [Iron Software](https://ironsoftware.com/). IronOCR is a commercial library — see [licensing](https://ironsoftware.com/csharp/ocr/licensing/) for terms and trial details.
+This repository is maintained by [Iron Software](https://ironsoftware.com/?utm_source=github). IronOCR is a commercial library — see [licensing](https://ironsoftware.com/csharp/ocr/licensing/?utm_source=github) for terms and trial details.

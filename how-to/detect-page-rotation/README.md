@@ -1,6 +1,6 @@
 # Assessing Document Page Rotation
 
-> Full guide: [Assessing Document Page Rotation](https://ironsoftware.com/csharp/ocr/how-to/detect-page-rotation/)
+> Full guide: [Assessing Document Page Rotation](https://ironsoftware.com/csharp/ocr/how-to/detect-page-rotation/?utm_source=github)
 
 
 Identifying the rotational angle of a page within a document is essential for ensuring it is displayed or printed correctly. This detection process checks if the page has been rotated by 0, 90, 180, or 270 degrees, either clockwise or counterclockwise. It is a vital step for accurately handling documents.
@@ -16,7 +16,7 @@ Console.WriteLine("Rotation Angle: " + rotationResults.First().RotationAngle);
 
 ## Detailed Example of Detecting Page Rotation
 
-After uploading your document, employ the `DetectPageOrientation` method to find out each page's rotation. This supports rotations at 0, 90, 180, and 270 degrees. For correcting skewed images, consider using the `Deskew` method, followed by readjusting the image to its original position using the detected rotation degrees. We will use a [sample PDF](https://ironsoftware.com/static-assets/ocr/how-to/detect-page-rotation/Clockwise90.pdf) for this walkthrough.
+After uploading your document, employ the `DetectPageOrientation` method to find out each page's rotation. This supports rotations at 0, 90, 180, and 270 degrees. For correcting skewed images, consider using the `Deskew` method, followed by readjusting the image to its original position using the detected rotation degrees. We will use a [sample PDF](https://ironsoftware.com/static-assets/ocr/how-to/detect-page-rotation/Clockwise90.pdf?utm_source=github) for this walkthrough.
 
 This method is particularly reliable with text-rich documents.
 

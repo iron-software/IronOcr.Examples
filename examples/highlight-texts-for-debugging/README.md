@@ -1,4 +1,4 @@
-> Full guide: [Highlight texts for debugging](https://ironsoftware.com/csharp/ocr/examples/highlight-texts-for-debugging/)
+> Full guide: [Highlight texts for debugging](https://ironsoftware.com/csharp/ocr/examples/highlight-texts-for-debugging/?utm_source=github)
 
 IronOCR incorporates built-in functionalities that allow for the visual marking of OCR-detected elements such as characters, words, lines, or paragraphs on images or document pages, offering the capability to export these as PNG images for troubleshooting purposes.
 
@@ -14,4 +14,4 @@ For scenarios where manual intervention is preferred in handling OCR bounding bo
 - Accessing `result.WordBounds` (or `.LineBounds`, `.ParagraphBounds`) returns a `Rectangle[]` that contains the coordinates for identified text regions.
 - The function `StampCropRectanglesAndSaveAs(...)` visually represents these bounding rectangles and outputs the images to a storage medium.
 
-[Explore Computer Vision Techniques with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/computer-vision/)
+[Explore Computer Vision Techniques with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/computer-vision/?utm_source=github)

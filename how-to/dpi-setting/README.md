@@ -1,6 +1,6 @@
 # Adjusting OCR DPI Settings
 
-> Full guide: [Adjusting OCR DPI Settings](https://ironsoftware.com/csharp/ocr/how-to/dpi-setting/)
+> Full guide: [Adjusting OCR DPI Settings](https://ironsoftware.com/csharp/ocr/how-to/dpi-setting/?utm_source=github)
 
 
 Dots Per Inch (DPI) serves as a critical indicator of image quality, reflecting the granularity of detail in both scanned documents and digital photographs. Commonly, scanning processes aimed at digitizing hardcopy materials quickly often generate images of subpar resolution due to default or expedited settings. This results in blurred or pixelated text, which hampers effective data extraction.

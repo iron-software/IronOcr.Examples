@@ -1,6 +1,6 @@
 # Optical Character Recognition (OCR) on AWS Lambda Using IronOCR
 
-> Full guide: [Optical Character Recognition (OCR) on AWS Lambda Using IronOCR](https://ironsoftware.com/csharp/ocr/get-started/aws/)
+> Full guide: [Optical Character Recognition (OCR) on AWS Lambda Using IronOCR](https://ironsoftware.com/csharp/ocr/get-started/aws/?utm_source=github)
 
 <div class="container-fluid">
     <div class="row">
@@ -124,7 +124,7 @@ Memory allocation and timeout settings should be configured based on document si
 }
 ```
 
-Be aware that low memory availability might cause the function to fail, as indicated by 'Runtime exited with error: signal: killed'. Refer to [AWS Lambda - Runtime Exited Signal: Killed](https://ironsoftware.com/csharp/ocr/troubleshooting/aws-lambda-runtime-exited-signal-killed/) for troubleshooting.
+Be aware that low memory availability might cause the function to fail, as indicated by 'Runtime exited with error: signal: killed'. Refer to [AWS Lambda - Runtime Exited Signal: Killed](https://ironsoftware.com/csharp/ocr/troubleshooting/aws-lambda-runtime-exited-signal-killed/?utm_source=github) for troubleshooting.
 
 ## Publishing the Function
 

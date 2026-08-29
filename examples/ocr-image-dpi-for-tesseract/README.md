@@ -1,4 +1,4 @@
-> Full guide: [OCR image DPI for tesseract](https://ironsoftware.com/csharp/ocr/examples/ocr-image-dpi-for-tesseract/)
+> Full guide: [OCR image DPI for tesseract](https://ironsoftware.com/csharp/ocr/examples/ocr-image-dpi-for-tesseract/?utm_source=github)
 
 The `OcrInput` class from Iron Software is programmed to adjust lower-resolution images for use with `IronTesseract`.
 
@@ -9,7 +9,7 @@ High DPI values can reduce speed whereas very low DPI values might decrease accu
 <div class="hsg-featured-snippet examples__featured-snippet">
     <h2>Enhancing Low-Quality DPI Images in Tesseract</h2>
     <ol>
-        <li><a class="js-modal-open" data-modal-id="trial-license-after-download" href="https://ironsoftware.com/csharp/ocr/packages/IronOcr/">Install the OCR library explicitly designed to enhance poor-quality DPI images.</a></li>
+        <li><a class="js-modal-open" data-modal-id="trial-license-after-download" href="https://ironsoftware.com/csharp/ocr/packages/IronOcr.zip?utm_source=github">Install the OCR library explicitly designed to enhance poor-quality DPI images.</a></li>
         <li>Create an instance of <code>IronTesseract</code>.</li>
         <li>Set up an <code>OcrInput</code> with your image's file path.</li>
         <li>Select the desired DPI figure.</li>
@@ -17,4 +17,4 @@ High DPI values can reduce speed whereas very low DPI values might decrease accu
     </ol>
 </div>
 
-<a href="https://ironsoftware.com/csharp/ocr/how-to/input-images/" class="code_content__related-link__doc-cta-link">Discover Techniques for Inputting Images with IronOCR</a>
+<a href="https://ironsoftware.com/csharp/ocr/how-to/input-images/?utm_source=github" class="code_content__related-link__doc-cta-link">Discover Techniques for Inputting Images with IronOCR</a>

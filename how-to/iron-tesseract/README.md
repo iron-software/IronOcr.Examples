@@ -1,6 +1,6 @@
 # Utilizing Iron Tesseract with IronOCR
 
-> Full guide: [Utilizing Iron Tesseract with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/)
+> Full guide: [Utilizing Iron Tesseract with IronOCR](https://ironsoftware.com/csharp/ocr/how-to/iron-tesseract/?utm_source=github)
 
 IronOCR offers a straightforward API that uses the enhanced capabilities of Tesseract 5, also known as Iron Tesseract. By integrating IronOCR alongside IronTesseract, users can efficiently transform text from images and scanned documents into editable text and searchable PDF formats.
 
@@ -74,7 +74,7 @@ string extractedText = ocrScanResult.Text;
 
 ## Detailed Tesseract Settings Customization
 
-You can take advantage of the complete management of Tesseract's settings using IronOcr's [`IronOcr.TesseractConfiguration` Class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.TesseractConfiguration.html).
+You can take advantage of the complete management of Tesseract's settings using IronOcr's [`IronOcr.TesseractConfiguration` Class](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.TesseractConfiguration.html?utm_source=github).
 
 ### Example: Configuring Tesseract with IronOCR
 

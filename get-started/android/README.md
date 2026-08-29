@@ -1,6 +1,6 @@
 # How to Implement OCR on Android Using .NET MAUI
 
-> Full guide: [How to Implement OCR on Android Using .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/android/)
+> Full guide: [How to Implement OCR on Android Using .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/android/?utm_source=github)
 
 
 <div class="container-fluid">
@@ -207,10 +207,10 @@ This demonstrates how to configure, run the project, and execute OCR.
 
 Access the full project code. It's available as a zipped file, ready for use in Visual Studio as a .NET MAUI App project.
 
-[Download the project here.](https://ironsoftware.com/static-assets/ocr/how-to/setup-android/MAUIIronOCRAndroidSample.zip)
+[Download the project here.](https://ironsoftware.com/static-assets/ocr/how-to/setup-android/MAUIIronOCRAndroidSample.zip?utm_source=github)
 
 ### Utilizing IronOcr.Android in Avalonia
 
 Just like in MAUI, IronOcr.Android can also be integrated within an Avalonia project following the same procedures outlined here.
 
-For OCR capabilities on iOS, refer to: "[How to Implement OCR on iOS in .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/ios/)"
+For OCR capabilities on iOS, refer to: "[How to Implement OCR on iOS in .NET MAUI](https://ironsoftware.com/csharp/ocr/get-started/ios/?utm_source=github)"

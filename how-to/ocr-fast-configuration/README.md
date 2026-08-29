@@ -1,6 +1,6 @@
 # Optimizing OCR Performance in C# with IronOCR's Fast Configuration
 
-> Full guide: [Optimizing OCR Performance in C# with IronOCR's Fast Configuration](https://ironsoftware.com/csharp/ocr/how-to/ocr-fast-configuration/)
+> Full guide: [Optimizing OCR Performance in C# with IronOCR's Fast Configuration](https://ironsoftware.com/csharp/ocr/how-to/ocr-fast-configuration/?utm_source=github)
 
 IronOCR is a tool that allows developers to integrate efficient OCR capabilities. Offering a fast configuration option, IronOCR understands the need for speed in certain applications, trading off slight accuracy to deliver faster scanning speeds. This piece explores how to utilize this configuration for enhanced performance.
 
@@ -65,7 +65,7 @@ We will evaluate the effectiveness of both the standard and fast configuration s
 
 The default settings are used for the standard configuration for a baseline comparison.
 
-Check out the sample [inputs](https://ironsoftware.com/static-assets/ocr/how-to/ocr-fast-configuration/images.zip) used for this benchmark.
+Check out the sample [inputs](https://ironsoftware.com/static-assets/ocr/how-to/ocr-fast-configuration/images.zip?utm_source=github) used for this benchmark.
 
 ### Benchmark Code
 
@@ -184,4 +184,4 @@ Console.WriteLine($"\nResults successfully saved to {outputFilePath}");
 
 The benchmark underscores a significant time-saving advantage with the fast configuration, achieving the same batch of 10 images in only 8.60 seconds—a notable 17.31% faster than the standard mode. Importantly, this increase in speed did not compromise the quality of the OCR results.
 
-For further validation, download the [fast text output](https://ironsoftware.com/static-assets/ocr/how-to/ocr-fast-configuration/ocr_results_fast.txt) and the [standard text output](https://ironsoftware.com/static-assets/ocr/how-to/ocr-fast-configuration/ocr_results_standard.txt).
+For further validation, download the [fast text output](https://ironsoftware.com/static-assets/ocr/how-to/ocr-fast-configuration/ocr_results_fast.txt?utm_source=github) and the [standard text output](https://ironsoftware.com/static-assets/ocr/how-to/ocr-fast-configuration/ocr_results_standard.txt?utm_source=github).

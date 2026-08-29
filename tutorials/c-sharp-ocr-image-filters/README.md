@@ -1,6 +1,6 @@
 # Guide to Using IronOCR Filters
 
-> Full guide: [Guide to Using IronOCR Filters](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/)
+> Full guide: [Guide to Using IronOCR Filters](https://ironsoftware.com/csharp/ocr/tutorials/c-sharp-ocr-image-filters/?utm_source=github)
 
 
 IronOCR equips developers with an array of image preprocessing tools to tweak and prepare images for Optical Character Recognition (OCR). These tools include a variety of filters specifically designed to refine images for better OCR results.
@@ -79,7 +79,7 @@ Console.WriteLine(result.Text);
 
 ### Rotate Filter Example
 
-[API Reference](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html#IronOcr_OcrInput_Rotate_System_Double_)
+[API Reference](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html?utm_source=github#IronOcr_OcrInput_Rotate_System_Double_)
 
 Rotating images properly ensures they are in the best position for OCR recognition. Here’s how you can correct a completely inverted image:
 
@@ -102,7 +102,7 @@ Console.WriteLine(result.Text);
 
 ### Binarize Filter Example
 
-[API Reference](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html#IronOcr_OcrInput_Binarize)
+[API Reference](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html?utm_source=github#IronOcr_OcrInput_Binarize)
 
 Enhance text clarity by eliminating background colors and aligning text colors:
 
@@ -125,7 +125,7 @@ Console.WriteLine(result.Text);
 
 ### Invert Filter Example
 
-[API Reference](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html#IronOcr_OcrInput_Invert_System_Boolean_)
+[API Reference](https://ironsoftware.com/csharp/ocr/object-reference/api/IronOcr.OcrInput.html?utm_source=github#IronOcr_OcrInput_Invert_System_Boolean_)
 
 Switch from white text on a black background to its inverse, maximizing OCR accuracy:
 

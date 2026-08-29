@@ -1,6 +1,6 @@
 # Introduction to Table Extraction from Documents
 
-> Full guide: [Introduction to Table Extraction from Documents](https://ironsoftware.com/csharp/ocr/how-to/read-table-in-document/)
+> Full guide: [Introduction to Table Extraction from Documents](https://ironsoftware.com/csharp/ocr/how-to/read-table-in-document/?utm_source=github)
 
 
 Diving into the world of document parsing, specifically table extraction can be quite a maze if you're using basic tools like vanilla Tesseract due to text being confined within cells and spread unevenly across documents. Fear not, as our library uses a fine-tuned machine learning model tailored for precise detection and extraction of table data from various document formats.
@@ -19,7 +19,7 @@ Below we outline the steps for integrating table reading capabilities using Iron
 
 ## Simple Table Extraction
 
-Activate the `ReadDataTables` property by setting it to true to begin table detection using Tesseract. I tested with a basic table PDF available here: '[simple-table.pdf](https://ironsoftware.com/static-assets/ocr/how-to/read-table-in-document/simple-table.pdf)'. This method is well-suited for basic tables without complex cell merging. When dealing with more intricate table structures, utilize the advanced method documented further below.
+Activate the `ReadDataTables` property by setting it to true to begin table detection using Tesseract. I tested with a basic table PDF available here: '[simple-table.pdf](https://ironsoftware.com/static-assets/ocr/how-to/read-table-in-document/simple-table.pdf?utm_source=github)'. This method is well-suited for basic tables without complex cell merging. When dealing with more intricate table structures, utilize the advanced method documented further below.
 
 ```csharp
 using IronOcr;
@@ -50,11 +50,11 @@ foreach (DataRow row in dataTable.Rows)
 
 ## Complex Table Processing: Reading Invoices
 
-Complex document formats such as invoices are more systematically managed with IronOCR's `ReadDocumentAdvanced` method, which is ideal for documents rich in tabular data. Our demonstration will utilize the '[invoiceTable.pdf](https://ironsoftware.com/static-assets/ocr/how-to/read-table-in-document/invoiceTable.pdf)' file to show how complete table information is captured meticulously.
+Complex document formats such as invoices are more systematically managed with IronOCR's `ReadDocumentAdvanced` method, which is ideal for documents rich in tabular data. Our demonstration will utilize the '[invoiceTable.pdf](https://ironsoftware.com/static-assets/ocr/how-to/read-table-in-document/invoiceTable.pdf?utm_source=github)' file to show how complete table information is captured meticulously.
 
 Make sure to install both the [IronOcr](https://www.nuget.org/packages/IronOcr) and [IronOcr.Extensions.AdvancedScan](https://www.nuget.org/packages/IronOcr.Extensions.AdvancedScan) packages. For applications in .NET Framework, configure your project to run on 64-bit architecture by deselecting "Prefer 32-bit" under project properties.
 
-For setup and troubleshooting, see our guide on "[Advanced Scan on .NET Framework](https://ironsoftware.com/csharp/ocr/troubleshooting/advanced-scan-on-net-framework/)."
+For setup and troubleshooting, see our guide on "[Advanced Scan on .NET Framework](https://ironsoftware.com/csharp/ocr/troubleshooting/advanced-scan-on-net-framework/?utm_source=github)."
 
 ```csharp
 using IronOcr;

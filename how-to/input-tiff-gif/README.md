@@ -1,6 +1,6 @@
 # Reading Multi-Frame/Page GIFs and TIFFs
 
-> Full guide: [Reading Multi-Frame/Page GIFs and TIFFs](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/)
+> Full guide: [Reading Multi-Frame/Page GIFs and TIFFs](https://ironsoftware.com/csharp/ocr/how-to/input-tiff-gif/?utm_source=github)
 
 
 TIFF (Tagged Image File Format) is an ideal format for storing high-quality images. It uses lossless compression to preserve the pristine condition of images, which is crucial for scanned documents or high-resolution photography.
