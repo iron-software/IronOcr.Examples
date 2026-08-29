@@ -148,6 +148,6 @@ IronOCR offers three [licensing tiers available for purchase](https://ironsoftwa
 ## Additional Resources
 - Learn more from our [tutorial resources](https://ironsoftware.com/csharp/ocr/tutorials/how-to-read-text-from-an-image-in-csharp-net/?utm_source=github).
 - Access [API References](https://ironsoftware.com/csharp/ocr/object-reference/api/?utm_source=github) for developer support.
-- Get Support for IronOCR products or [reach out to Iron Software](https://ironsoftware.com/contact-us/?utm_source=github).
+- Get Support for IronOCR products or [reach out to Iron Software](https://ironsoftware.com/contact-us/support/?utm_source=github).
 
 IronOCR supports 125 languages across .NET applications on Azure and elsewhere.

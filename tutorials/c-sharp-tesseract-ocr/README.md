@@ -1066,7 +1066,7 @@ Alternatively, you can [manually download the IronOCR .NET DLL](https://ironsoft
 
 Initiate your project with our [detailed introductory guide](https://ironsoftware.com/csharp/ocr/docs/?utm_source=github), examine [sample code](https://ironsoftware.com/csharp/ocr/examples/simple-csharp-ocr-tesseract/?utm_source=github), and utilize [expert support](https://ironsoftware.com/contact-us/support/?utm_source=github) as needed.
 
-Discover how professional OCR can transform your document processing — [begin your free trial](https://ironsoftware.com/trial-license?utm_source=github) today and join the ranks of over 10,000 companies that enjoy 99.8%+ accuracy with their document management.
+Discover how professional OCR can transform your document processing — [begin your free trial](https://ironsoftware.com/csharp/ocr/?utm_source=github#trial-license) today and join the ranks of over 10,000 companies that enjoy 99.8%+ accuracy with their document management.
 
 ![Logos of major corporations including NASA, LEGO, and 3M that rely on Iron Software for their OCR needs](https://ironsoftware.com/img/ocr/c-tesseract-ocr-2.png "Global enterprises and government entities depend on Iron Software for crucial OCR tasks")
 

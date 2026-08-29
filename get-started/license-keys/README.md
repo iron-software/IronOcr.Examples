@@ -6,7 +6,7 @@
 
 Integrate an IronOCR license key into your projects for unrestricted deployment and watermark-free operation.
 
-You can [purchase a license key here <i class="fa-regular fa-cart-shopping"></i>](https://ironsoftware.com/csharp/ocr/licensing/?utm_source=github) or choose to [sign up for a free 30-day trial key <i class="fa-regular fa-key"></i>](https://ironsoftware.com/trial-license?utm_source=github).
+You can [purchase a license key here <i class="fa-regular fa-cart-shopping"></i>](https://ironsoftware.com/csharp/ocr/licensing/?utm_source=github) or choose to [sign up for a free 30-day trial key <i class="fa-regular fa-key"></i>](https://ironsoftware.com/csharp/ocr/?utm_source=github#trial-license).
 
 <hr class="separator">
 
