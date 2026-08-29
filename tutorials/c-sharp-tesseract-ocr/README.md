@@ -447,7 +447,7 @@ using System;
 var ocr = new IronTesseract();
 
 // Performance tweak: Exclude unneeded characters to boost processing by 20-30%
-ocr.Configuration.BlackListCharacters = "~`$#^*_}{][|\\@¢©«»°±·×‑–—''""•…′″€™←↑→↓↔⇄⇒∅∼≅≈≠≤≥≪≫⌁⌘○◔◑◕●";
+ocr.Configuration.BlackListCharacters = "~`$#^*_}{][|\\@¢©«»°±·×‑–—''\"\"•…′″€™←↑→↓↔⇄⇒∅∼≅≈≠≤≥≪≫⌁⌘○◔◑◕●";
 
 // Utilize automatic page segmentation for swifter processing
 ocr.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.Auto;
@@ -499,7 +499,7 @@ var ocr = new IronTesseract();
 
 // Exclude specific characters to increase processing speed
 // Useful when you don't require these characters for your OCR tasks
-ocr.Configuration.BlackListCharacters = "~`$#^*_}{][|\\@¢©«»°±·×‑–—''""•…′″€™←↑→↓↔⇄⇒∅∼≅≈≠≤≥≪≫⌁⌘○◔◑◕●";
+ocr.Configuration.BlackListCharacters = "~`$#^*_}{][|\\@¢©«»°±·×‑–—''\"\"•…′″€™←↑→↓↔⇄⇒∅∼≅≈≠≤≥≪≫⌁⌘○◔◑◕●";
 
 // Automatically adjust page segmentation for efficient processing
 // Adapts quickly to the layout without manual adjustments
@@ -540,7 +540,7 @@ using System;
 var ironTesseract = new IronTesseract();
 
 // Disabling recognition of non-essential characters to boost processing speed by 20-30%
-ironTesseract.Configuration.BlackListCharacters = "~`$#^*_}{][|\\@¢©«»°±·×‑–—''""•…′″€™←↑→↓↔⇄⇒∅∼≅≈≠≤≥≪≫⌁⌘○◔◑◕●";
+ironTesseract.Configuration.BlackListCharacters = "~`$#^*_}{][|\\@¢©«»°±·×‑–—''\"\"•…′″€™←↑→↓↔⇄⇒∅∼≅≈≠≤≥≪≫⌁⌘○◔◑◕●";
 
 // Employ automatic page segmentation to accelerate processing and adapt to varying document layouts
 ironTesseract.Configuration.PageSegmentationMode = TesseractPageSegmentationMode.Auto;
