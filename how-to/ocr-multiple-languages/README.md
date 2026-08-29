@@ -15,7 +15,7 @@ string extractedText = new IronTesseract { Language = OcrLanguage.Spanish }.AddS
 
 ## Example: Extracting Text from Multi-Language PDFs
 
-Although IronOCR supports the recognition in approximately 125 languages, it installs with only the English language pack by default. Additional language packs can be accessed via NuGet. View all supported [language packs here](https://ironsoftware.com/csharp/ocr/languages?utm_source=github).
+Although IronOCR supports the recognition in approximately 125 languages, it installs with only the English language pack by default. Additional language packs can be accessed via NuGet. View all supported [language packs here](https://ironsoftware.com/csharp/ocr/languages/?utm_source=github).
 
 Below is an example of how to utilize IronOCR for text extraction from a multilingual PDF document:
 
